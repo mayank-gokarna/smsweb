@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OrderList>
+	<Order DocumentType="" EnterpriseCode="" OrderHeaderKey="" OrderNo="" OrderType="">
+		<Extn ExtnCustomerOrderNo=""/>
+		<OrderLines>
+			<OrderLine CustomerPONo="" ReqShipDate="" OrderLineKey=""/>
+		</OrderLines>	
+	</Order>
+</OrderList>

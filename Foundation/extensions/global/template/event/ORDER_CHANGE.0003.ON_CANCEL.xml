@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Order DocumentType="" EnterpriseCode="" OrderHeaderKey="" OrderNo="" OrderType="" MaxOrderStatus="" MinOrderStatus="">
+   <OrderLines>
+      <OrderLine OrderLineKey="" OriginalOrderedQty="">
+      	 <Item ItemID=""/>
+         <Extn>
+            <EXTNOrderLinePropertiesList>
+               <EXTNOrderLineProperties DescribedByCharacteristic="" DescribedByCharacteristicName="" DescribedByType="" DescribedByValue="" CharacteristicEntityId="" CharacteristicPath="" />
+            </EXTNOrderLinePropertiesList>
+
+            <EXTNOrderLineLinksList>
+               <EXTNOrderLineLinks OrderLineKey="" LinkageKey="" />
+            </EXTNOrderLineLinksList>
+         </Extn>
+      </OrderLine>
+   </OrderLines>
+</Order>
+

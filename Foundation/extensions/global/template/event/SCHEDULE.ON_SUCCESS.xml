@@ -1,0 +1,13 @@
+<Order OrderHeaderKey="" OrderNo="" DocumentType="" MinOrderStatus="" MinOrderStatusDesc="">
+<Extn ExtnCustomerOrderNo=""/>
+<OrderLines>
+	<OrderLine OrderLineKey="" PrimeLineNo="" SubLineNo="" CustomerPONo="" OrderHeaderKey="" ReqShipDate="" OrderedQty="" LineType="" MaxLineStatus="" MaxLineStatusDesc="" MinLineStatus="" MinLineStatusDesc="" Purpose="" DeliveryMethod="">
+		<OrderHoldType Status="" HoldType="" ReasonText="" TransactionId="" OrderLineKey="" />
+		<OrderStatuses>
+		<OrderStatus OrderHeaderKey="" OrderLineKey="" Status="" StatusQty="">
+		<Details ExpectedDeliveryDate="" ExpectedShipmentDate="" ShipByDate="" />
+		</OrderStatus>
+		</OrderStatuses>
+	</OrderLine>
+</OrderLines>
+</Order>

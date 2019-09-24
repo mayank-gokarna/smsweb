@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle screenBundleId="extn.order.search.OrderSearchExtnBundle" screenId="extn.order.search.OrderSearchExtn">
+    <BundleEntries>
+        <BundleEntry
+            bundleEntryId="extn_radOrderStatus_RadioButtonSet_label"
+            bundleKey="OrderStatus" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_radOrderStatus"/>
+        <BundleEntry
+            bundleEntryId="extn_radOrderStatus_RadioButtonSet_BindingData_RadioBinding_1100.020_Option_label"
+            bundleKey="extn_Rejected" bundleValueFn="_scSimpleBundle"
+            childPath="RadioButtonSet_BindingData_RadioBinding_1100.020_Option"
+            property="label" type="WIDGET" uId="extn_radOrderStatus"/>
+        <BundleEntry
+            bundleEntryId="extn_radOrderStatus_RadioButtonSet_BindingData_RadioBinding_1100.050_Option_label"
+            bundleKey="extn_Suspended" bundleValueFn="_scSimpleBundle"
+            childPath="RadioButtonSet_BindingData_RadioBinding_1100.050_Option"
+            property="label" type="WIDGET" uId="extn_radOrderStatus"/>
+        <BundleEntry
+            bundleEntryId="extn_radOrderStatus_RadioButtonSet_BindingData_RadioBinding_All_Option_label"
+            bundleKey="extn_All" bundleValueFn="_scSimpleBundle"
+            childPath="RadioButtonSet_BindingData_RadioBinding_All_Option"
+            property="label" type="WIDGET" uId="extn_radOrderStatus"/>
+        <BundleEntry
+            bundleEntryId="extn_radOrderStatus_RadioButtonSet_BindingData_RadioBinding_1100.060_Option_label"
+            bundleKey="extn_Awaiting_Error_Resolution"
+            bundleValueFn="_scSimpleBundle"
+            childPath="RadioButtonSet_BindingData_RadioBinding_1100.060_Option"
+            property="label" type="WIDGET" uId="extn_radOrderStatus"/>
+        <BundleEntry
+            bundleEntryId="extn_radCustomerOrder_RadioButtonSet_label"
+            bundleKey="extn_Order_Type" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_radCustomerOrder"/>
+        <BundleEntry
+            bundleEntryId="extn_radCustomerOrder_RadioButtonSet_BindingData_RadioBinding_CustomerOrder_Option_label"
+            bundleKey="extn_Customer_Order"
+            bundleValueFn="_scSimpleBundle"
+            childPath="RadioButtonSet_BindingData_RadioBinding_CustomerOrder_Option"
+            property="label" type="WIDGET" uId="extn_radCustomerOrder"/>
+        <BundleEntry
+            bundleEntryId="extn_radCustomerOrder_RadioButtonSet_BindingData_RadioBinding_All_Option_label"
+            bundleKey="extn_All" bundleValueFn="_scSimpleBundle"
+            childPath="RadioButtonSet_BindingData_RadioBinding_All_Option"
+            property="label" type="WIDGET" uId="extn_radCustomerOrder"/>
+        <BundleEntry
+            bundleEntryId="extn_txt_custEmailId_TextField_label"
+            bundleKey="CustomerEmailStartsWith"
+            bundleValueFn="_scBundle" property="label" type="WIDGET" uId="extn_txt_custEmailId"/>
+        <BundleEntry bundleEntryId="extn_txt_custPhone_TextField_label"
+            bundleKey="CustomerPhoneNo" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_txt_custPhone"/>
+        <BundleEntry bundleEntryId="extn_txt_postalCode_TextField_label"
+            bundleKey="ZipCode" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_txt_postalCode"/>
+    </BundleEntries>
+</ScreenBundle>

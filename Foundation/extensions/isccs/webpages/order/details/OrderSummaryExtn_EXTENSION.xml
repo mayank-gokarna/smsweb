@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+	<ScreenExtension extnClassName="OrderSummaryExtn" extnPackage="extn.order.details" originalScreen="isccs.order.details.OrderSummary" originalScreenPackage="isccs.order.details" type="diffrential">
+		<Items>
+			<ContentPane _sc_extensibility_moveOrder="30" _sc_extensibility_operation="insert" _sc_extensibility_position="after" _sc_extensibility_referenceUId="DST_AdditionalPanel" class="detailsPrimaryInfoPanel" uId="extn_OrderTreePanel"/>
+			<ContentPane _sc_extensibility_moveOrder="31" _sc_extensibility_operation="move" _sc_extensibility_position="after" _sc_extensibility_referenceUId="DST_PrimaryInfoPanel" uId="extn_OrderTreePanel"/>
+			<ContentPane _sc_extensibility_operation="change" _sc_extensibility_referenceUId="pnlSecondaryInfo">
+				<TableLayout cols="2"/>
+			</ContentPane>
+			<ContentPane _sc_extensibility_moveOrder="12" _sc_extensibility_operation="move" _sc_extensibility_position="before" _sc_extensibility_referenceUId="extn_tpOrderLinks" uId="DST_MainInfoPanel"/>
+			<ContentPane _sc_extensibility_moveOrder="6" _sc_extensibility_operation="insert" _sc_extensibility_position="last" _sc_extensibility_referenceUId="tabContainer" title="$(_scSimpleBundle:extn_More_Attributes)" uId="extn_pnlMoreAttributes"/>
+			<ContentPane _sc_extensibility_operation="change" _sc_extensibility_referenceUId="DST_SecondaryInfoPanel" renderHidden="false"/>
+			<Button _sc_extensibility_moveOrder="8" _sc_extensibility_operation="insert" _sc_extensibility_position="last" _sc_extensibility_referenceUId="extn_pnlMoreAttributes" class="dxSpecialButton idxSpecialButton idxButtonIcon" label="$(_scSimpleBundle:extn_Save)" uId="extn_btnSave"/>
+			<Button _sc_extensibility_moveOrder="33" _sc_extensibility_operation="insert" _sc_extensibility_position="after" _sc_extensibility_referenceUId="extn_btnSave" class="dxSpecialButton idxSpecialButton idxButtonIcon" label="$(_scSimpleBundle:extn_Retry_Validation)" uId="extn_Retry_Validation_btn"/>
+			<Button _sc_extensibility_moveOrder="35" _sc_extensibility_operation="insert" _sc_extensibility_position="after" _sc_extensibility_referenceUId="extn_Retry_Validation_btn" class="dxSpecialButton idxSpecialButton idxButtonIcon" label="$(_scSimpleBundle:extn_Retry)" uId="extn_Retrybtn"/>
+			<Button _sc_extensibility_moveOrder="34" _sc_extensibility_operation="insert" _sc_extensibility_position="after" _sc_extensibility_referenceUId="extn_Retry_Validation_btn" class="dxSpecialButton idxSpecialButton idxButtonIcon" label="$(_scSimpleBundle:extn_Mark_as_Complete)" uId="extn_MarkAsComplete_btn"/>
+			<Link _sc_extensibility_operation="change" _sc_extensibility_referenceUId="lnkTotalAmountDisplay" disabled="true" renderHidden="true"/>
+			<DataLabel _sc_extensibility_moveOrder="5" _sc_extensibility_operation="insert" _sc_extensibility_position="before" _sc_extensibility_referenceUId="lblExchangeTypeDisplay" label="$(_scBundle:extn_Order_Type)" uId="extn_lblOrderType">
+				<BindingData>
+					<SourceBinding namespace="getCompleteOrderDetails_output" path="Order.OrderType"/>
+				</BindingData>
+			</DataLabel>
+			<DataLabel _sc_extensibility_moveOrder="9" _sc_extensibility_operation="insert" _sc_extensibility_position="before" _sc_extensibility_referenceUId="lblExchangeTypeDisplay" label="$(_scBundle:extn_Activator)" uId="extn_lblPrp">
+				<BindingData>
+					<SourceBinding namespace="getCompleteOrderDetails_output" path="Order.Purpose"/>
+				</BindingData>
+			</DataLabel>
+			<TitlePane _sc_extensibility_moveOrder="2" _sc_extensibility_operation="insert" _sc_extensibility_position="before" _sc_extensibility_referenceUId="DST_MainInfoPanel" collapsible="false" open="true" title="$(_scSimpleBundle:extn_Order_Links)" uId="extn_tpOrderLinks"/>
+			<TitlePane _sc_extensibility_moveOrder="11" _sc_extensibility_operation="move" _sc_extensibility_position="before" _sc_extensibility_referenceUId="DST_MainInfoPanel" uId="extn_tpOrderLinks"/>
+			<GridX _sc_extensibility_moveOrder="7" _sc_extensibility_operation="insert" _sc_extensibility_position="first" _sc_extensibility_referenceUId="extn_pnlMoreAttributes" autoHeight="true" cacheClass="gridx/core/model/cache/Async" renderHidden="false" title="$(_scSimpleBundle:extn_More_Attributes)" uId="extn_gridMoreAttributes">
+				<Modules>
+					<Module isExtn="true" name="columnResizer">
+						<Properties>
+							<Property initialValue="0" name="minWidth" scExtensibilityArrayItemId="extn_ModuleProperty_1" type="Number"/>
+						</Properties>
+					</Module>
+					<Module isExtn="true" name="columnWidth">
+						<Properties>
+							<Property initialValue="true" name="autoResize" scExtensibilityArrayItemId="extn_ModuleProperty_1" type="Boolean"/>
+						</Properties>
+					</Module>
+					<Module isAddedInExtn="true" isExtn="true" name="edit"/>
+					<Module isExtn="true" name="selectRow">
+						<Properties>
+							<Property initialValue="true" name="triggerOnCell" scExtensibilityArrayItemId="extn_ModuleProperty_1" type="Boolean"/>
+						</Properties>
+					</Module>
+				</Modules>
+				<Structure>
+					<Layout>
+						<View _sc_extensibility_moveOrder="8" _sc_extensibility_operation="insert" _sc_extensibility_position="first" _sc_extensibility_referenceUId="extn_gridMoreAttributes" editable="true" field="extn_Value" name="$(_scSimpleBundle:extn_Value)" scuiDataType="Text-400" uId="extn_view_97074" widgetType="TextField">
+							<BindingData>
+								<TargetBinding path="DescribedByValue"/>
+								<SourceBinding path="DescribedByValue"/>
+							</BindingData>
+						</View>
+						<View _sc_extensibility_moveOrder="10" _sc_extensibility_operation="insert" _sc_extensibility_position="after" _sc_extensibility_referenceUId="extn_gridMoreAttributes_view" field="extn_grid_Item_Id" name="$(_scSimpleBundle:extn_Item_Id)" scuiDataType="Text-400" uId="extn_ItemId">
+							<BindingData>
+								<SourceBinding path="ItemID"/>
+							</BindingData>
+						</View>
+						<View _sc_extensibility_moveOrder="13" _sc_extensibility_operation="move" _sc_extensibility_position="before" _sc_extensibility_referenceUId="extn_view_97074" uId="extn_ItemId"/>
+						<View _sc_extensibility_moveOrder="36" _sc_extensibility_operation="insert" _sc_extensibility_position="before" _sc_extensibility_referenceUId="extn_view_97074" field="extn_Characteristic_Name" name="$(_scSimpleBundle:extn_Characteristic_Name)" uId="extn_gridCharacteristicName">
+							<BindingData>
+								<TargetBinding path="DescribedByCharacteristicName"/>
+								<SourceBinding path="DescribedByCharacteristicName"/>
+							</BindingData>
+						</View>
+						<View _sc_extensibility_moveOrder="36" _sc_extensibility_operation="insert" _sc_extensibility_position="before" _sc_extensibility_referenceUId="extn_view_97074" field="extn_Characteristic" name="$(_scSimpleBundle:extn_Characteristic)" uId="extn_gridCharacteristic">
+							<BindingData>
+								<TargetBinding path="DescribedByCharacteristic"/>
+								<SourceBinding path="DescribedByCharacteristic"/>
+							</BindingData>
+						</View>
+						<View _sc_extensibility_moveOrder="37" _sc_extensibility_operation="insert" _sc_extensibility_position="before" _sc_extensibility_referenceUId="extn_gridCharacteristic" field="extn_ItemID" name="$(_scSimpleBundle:extn_Item_Id)" uId="extn_gridItemID">
+							<BindingData>
+								<SourceBinding path="ItemID"/>
+							</BindingData>
+						</View>
+						<View _sc_extensibility_moveOrder="38"
+                            _sc_extensibility_operation="insert"
+                            _sc_extensibility_position="before"
+                            _sc_extensibility_referenceUId="extn_gridCharacteristicName"
+                            field="extn_Entity_Id"
+                            name="$(_scSimpleBundle:extn_Entity_Id)" uId="extn_gridEntityId">
+                            <BindingData>
+                                <SourceBinding path="CharacteristicEntityId"/>
+                            </BindingData>
+                        </View>
+					</Layout>
+				</Structure>
+				<BindingData>
+					<HiddenCustomColumnsList>
+						<HiddenCustomColumn field="extn_PropertyKey" scExtensibilityArrayItemId="extn_HiddenCustomColumnsList_0">
+							<TargetBinding path="PropertyKey"/>
+							<SourceBinding path="PropertyKey"/>
+						</HiddenCustomColumn>
+						<HiddenCustomColumn field="extn_OrderHeaderKey" scExtensibilityArrayItemId="extn_HiddenCustomColumnsList_1">
+							<TargetBinding path="OrderHeaderKey"/>
+							<SourceBinding path="OrderHeaderKey"/>
+						</HiddenCustomColumn>
+						<HiddenCustomColumn field="extn_OrderLineKey" scExtensibilityArrayItemId="extn_HiddenCustomColumnsList_2">
+							<TargetBinding path="OrderLineKey"/>
+							<SourceBinding path="OrderLineKey"/>
+						</HiddenCustomColumn>
+					</HiddenCustomColumnsList>
+					<SourceBinding namespace="extn_orderMoreCharactersticks" path="MoreAttributeList.MoreAttribute"/>
+					<TargetBindings>
+						<TargetBinding allowEmpty="true" namespace="extn_ChangeOrderInput" path="Order.Extn.EXTNOrderHeaderPropertiesList.EXTNOrderHeaderProperties" scExtensibilityArrayItemId="extn_TargetBindings_0"/>
+					</TargetBindings>
+				</BindingData>
+				<__scModuleInfo>
+					<Modules>
+						<Module isExtn="true" name="columnResizer">
+							<Properties>
+								<Property initialValue="0" name="minWidth" scExtensibilityArrayItemId="extn_ModuleProperty_1" type="Number"/>
+							</Properties>
+						</Module>
+						<Module isExtn="true" name="columnWidth">
+							<Properties>
+								<Property initialValue="true" name="autoResize" scExtensibilityArrayItemId="extn_ModuleProperty_1" type="Boolean"/>
+							</Properties>
+						</Module>
+						<Module isAddedInExtn="true" isExtn="true" name="edit"/>
+						<Module isExtn="true" name="selectRow">
+							<Properties>
+								<Property initialValue="true" name="triggerOnCell" scExtensibilityArrayItemId="extn_ModuleProperty_1" type="Boolean"/>
+							</Properties>
+						</Module>
+					</Modules>
+				</__scModuleInfo>
+			</GridX>
+			<GridX _sc_extensibility_moveOrder="3" _sc_extensibility_operation="insert" _sc_extensibility_position="first" _sc_extensibility_referenceUId="extn_tpOrderLinks" autoHeight="true" cacheClass="gridx/core/model/cache/Async" uId="extn_gridOrderLinks">
+				<Modules>
+					<Module isExtn="true" name="columnResizer">
+						<Properties>
+							<Property initialValue="0" name="minWidth" scExtensibilityArrayItemId="extn_ModuleProperty_1" type="Number"/>
+						</Properties>
+					</Module>
+					<Module isExtn="true" name="columnWidth">
+						<Properties>
+							<Property initialValue="true" name="autoResize" scExtensibilityArrayItemId="extn_ModuleProperty_1" type="Boolean"/>
+						</Properties>
+					</Module>
+					<Module isExtn="true" name="selectRow">
+						<Properties>
+							<Property initialValue="true" name="triggerOnCell" scExtensibilityArrayItemId="extn_ModuleProperty_1" type="Boolean"/>
+						</Properties>
+					</Module>
+				</Modules>
+				<Structure>
+					<Layout>
+						<View _sc_extensibility_moveOrder="4" _sc_extensibility_operation="insert" _sc_extensibility_position="first" _sc_extensibility_referenceUId="extn_gridOrderLinks" field="extn_Relation" name="$(_scSimpleBundle:extn_Relation)" uId="extn_view_69655">
+							<BindingData>
+								<SourceBinding path="LinkageType"/>
+							</BindingData>
+						</View>
+						<View _sc_extensibility_moveOrder="4" _sc_extensibility_operation="insert" _sc_extensibility_position="last" _sc_extensibility_referenceUId="extn_gridOrderLinks" field="extn_Relation" name="$(_scSimpleBundle:extn_Relation)" uId="extn_gridOrderLinks_Relation">
+							<BindingData>
+								<SourceBinding path="LinkageType"/>
+							</BindingData>
+						</View>
+						<View _columnParentGridxUId="extn_gridOrderLinks" _sc_extensibility_moveOrder="4" _sc_extensibility_operation="remove" _sc_extensibility_position="first" _sc_extensibility_referenceUId="_extensibilityHiddenWidgetsHolder"/>
+						<View _sc_extensibility_moveOrder="4" _sc_extensibility_operation="insert" _sc_extensibility_position="last" _sc_extensibility_referenceUId="extn_gridOrderLinks" field="extn_OrderType" name="$(_scSimpleBundle:extn_Order_Type)" uId="extn_view_OrderType">
+							<BindingData>
+								<SourceBinding path="LinkedOrderType"/>
+							</BindingData>
+						</View>
+						<View _sc_extensibility_moveOrder="5" _sc_extensibility_operation="insert" _sc_extensibility_position="last" _sc_extensibility_referenceUId="extn_gridOrderLinks" field="extn_OrderNo" name="$(_scSimpleBundle:OrderNo)" uId="extn_view_OrderNo">
+							<BindingData>
+								<SourceBinding dynamicBindingClassName="CSGUtils" dynamicBindingFunc="getHTMLforLinkedOrderNo" dynamicBindingPackage="extn.extnUtils" path="LinkedOrderNo"/>
+							</BindingData>
+						</View>
+						<View _sc_extensibility_moveOrder="29" _sc_extensibility_operation="insert" _sc_extensibility_position="after" _sc_extensibility_referenceUId="extn_view_OrderNo" field="extn_ProductID" name="$(_scSimpleBundle:ItemID)" uId="extn_gridOrderLinks_ProductID">
+							<BindingData>
+								<SourceBinding path="ExtendedDisplayDescription"/>
+							</BindingData>
+						</View>
+					</Layout>
+				</Structure>
+				<BindingData>
+					<SourceBinding namespace="getCompleteOrderDetails_output" path="Order.Extn.EXTNOrderHeaderLinksList.EXTNOrderHeaderLinks"/>
+				</BindingData>
+				<__scModuleInfo>
+					<Modules>
+						<Module isExtn="true" name="columnResizer">
+							<Properties>
+								<Property initialValue="0" name="minWidth" scExtensibilityArrayItemId="extn_ModuleProperty_1" type="Number"/>
+							</Properties>
+						</Module>
+						<Module isExtn="true" name="columnWidth">
+							<Properties>
+								<Property initialValue="true" name="autoResize" scExtensibilityArrayItemId="extn_ModuleProperty_1" type="Boolean"/>
+							</Properties>
+						</Module>
+						<Module isExtn="true" name="selectRow">
+							<Properties>
+								<Property initialValue="true" name="triggerOnCell" scExtensibilityArrayItemId="extn_ModuleProperty_1" type="Boolean"/>
+							</Properties>
+						</Module>
+					</Modules>
+				</__scModuleInfo>
+			</GridX>
+		</Items>
+		<Namespaces>
+			<SourceNamespaces>
+				<Source isExtn="true" scExtensibilityArrayItemId="extn_SourceNamespaces_3" value="extn_orderMoreCharactersticks"/>
+				<Source isExtn="true" scExtensibilityArrayItemId="extn_SourceNamespaces_4" value="extn_TestNS"/>
+				<Source isExtn="true" scExtensibilityArrayItemId="extn_SourceNamespaces_5" value="extn_GetOrderHierarchy_output"/>
+			</SourceNamespaces>
+			<TargetNamespaces>
+				<Target isExtn="true" scExtensibilityArrayItemId="extn_TargetNamespaces_1" value="extn_ChangeOrderInput"/>
+			</TargetNamespaces>
+		</Namespaces>
+		<Subscribers>
+			<Local>
+				<Subscriber eventId="afterScreenInit" isExtn="true" sequence="51">
+					<Handler methodName="extnAfterScreenInit"/>
+				</Subscriber>
+				<Subscriber eventId="extn_gridOrderLinks_ScDoubleClick" isExtn="true" sequence="51">
+					<Handler methodName="CSGDoubleClickHandler"/>
+				</Subscriber>
+				<Subscriber eventId="extn_gridOrderLinks_Link_ScHandleLinkClicked" isExtn="true" sequence="51">
+					<Handler methodName="CSGDoubleClickHandler"/>
+				</Subscriber>
+				<Subscriber eventId="extn_btnSave_onClick" isExtn="true" sequence="51">
+					<Handler methodName="invokeChangeOrder"/>
+				</Subscriber>
+				<Subscriber eventId="onExtnMashupCompletion" isExtn="true" sequence="51">
+					<Handler methodName="handleMashupCompletion"/>
+				</Subscriber>
+				<Subscriber eventId="extn_contentpane_test_onShow" isExtn="true" sequence="51">
+					<Handler methodName="loadTestData"/>
+				</Subscriber>
+				<Subscriber eventId="extn_pnlMoreAttributes_onShow" isExtn="true" sequence="51">
+					<Handler methodName="loadMoreAttributes"/>
+				</Subscriber>
+				<Subscriber eventId="extn_Retry_Validation_btn_onClick" isExtn="true" sequence="51">
+					<Handler methodName="onClickRetryValidation"/>
+				</Subscriber>
+				<Subscriber eventId="extn_MarkAsComplete_btn_onClick" isExtn="true" sequence="51">
+					<Handler methodName="onClickMarkAsComplete"/>
+				</Subscriber>
+				<Subscriber eventId="extn_Retrybtn_onClick" isExtn="true" sequence="51">
+					<Handler methodName="onClickRetrybtn"/>
+				</Subscriber>
+			</Local>
+		</Subscribers>
+		<MashupRefs>
+			<Init>
+				<MashupRef extnType="ADD" mashupId="extn_GetOrderHierarchy" mashupRefId="extn_GetOrderHierarchy" sourceNamespace="extn_GetOrderHierarchy_output"/>
+			</Init>
+			<Behavior>
+				<MashupRef extnType="ADD" mashupId="orderSummary_getCompleteOrderDetails" mashupRefId="getCompleteOrderDetailsBehavior"/>
+				<MashupRef extnType="ADD" mashupId="extn_getOrderList" mashupRefId="extn_getOrderList"/>
+				<MashupRef extnType="ADD" mashupId="extn_OrderSummaryLins_getOrderList" mashupRefId="extn_OrderSummaryLins_getOrderList"/>
+				<MashupRef extnType="ADD" mashupId="extn_RetryValidationService" mashupRefId="extn_RetryValidationService"/>
+				<MashupRef extnType="ADD" mashupId="extn_UpdateServiceOrderStatus" mashupRefId="extn_UpdateServiceOrderStatus"/>
+				<MashupRef extnType="ADD" mashupId="extn_GetOrderHierarchyBehavior" mashupRefId="extn_GetOrderHierarchyBehavior"/>
+				<MashupRef extnType="ADD" mashupId="extn_OLCChangeOrder" mashupRefId="extn_OHSCChangeOrder"/>
+			</Behavior>
+		</MashupRefs>
+	</ScreenExtension>
+</ExtensionMetaData>

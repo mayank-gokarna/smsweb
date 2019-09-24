@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Licensed Materials - Property of IBM IBM Sterling Selling And Fulfillment Suite (C) Copyright IBM Corp. 2005, 2013 All Rights Reserved. US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp. -->
+<!--getOrderList Output XML - Trimmed-->
+<OrderList>
+   <Order CustomerPONo="" DocumentType="" EnterpriseCode="" EntryType="" HoldFlag="" MaxOrderStatus="" MinOrderStatus="" OrderDate="" OrderHeaderKey="" OrderName="" OrderNo="" OrderPurpose="" OrderType="" Purpose="" ReqCancelDate="" ReqDeliveryDate="" ReqShipDate="" SellerOrganizationCode="" ShipNode="" Status="">
+      <OrderHoldTypes>
+         <OrderHoldType HoldType="" OrderHeaderKey="" Status="">
+         </OrderHoldType>
+      </OrderHoldTypes>
+   </Order>
+</OrderList>
+

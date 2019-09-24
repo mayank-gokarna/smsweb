@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+Licensed Materials - Property of IBM
+IBM Sterling Selling And Fulfillment Suite
+(C) Copyright IBM Corp. 2005, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+ -->
+<!-- OrderStatusChange is not a template-driven element. It is returned same as what was passed to the api. -->
+<OrderStatusChange AuditTransactionId="" BaseDropStatus=""
+    ChangeForAllAvailableQty="" DocumentType="" EnterpriseCode=""
+    ModificationReasonCode="" ModificationReasonText=""
+    ModificationReference1="" ModificationReference2=""
+    ModificationReference3="" ModificationReference4=""
+    OrderHeaderKey="" OrderNo="" OrderReleaseKey="" ReleaseNo="" TransactionId="Required">
+    
+    <OrderAudit>
+        <Order DocumentType="" EnterpriseCode="" OrderNo=""/>
+        
+    </OrderAudit>
+</OrderStatusChange>

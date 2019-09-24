@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.return.details.ReturnSummaryLinesExtnBehaviorController"
+    requestMethodSupported="POST" screenId="extn.return.details.ReturnSummaryLinesExtn">
+	<MashupRefs>
+        <MashupRef extnType="ADD"
+            mashupId="extn_OrderSummaryLins_getCompleteOrderDetails"
+            mashupRefId="extn_OrderSummaryLins_getCompleteOrderDetails" permissionId=""/>
+        <MashupRef extnType="ADD"
+            mashupId="extn_OrderSummaryLins_getOrderList"
+            mashupRefId="extn_OrderSummaryLins_getOrderList" permissionId=""/>
+    </MashupRefs>
+</Controller>

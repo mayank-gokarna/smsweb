@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.return.search.ReturnListScreenExtnBundle" screenId="extn.return.search.ReturnListScreenExtn">
+    <BundleEntries>
+        <BundleEntry bundleEntryId="extn_listReturnGrid_view_View_name"
+            bundleKey="extn_Test_Column" bundleValueFn="_scSimpleBundle"
+            property="name" type="WIDGET" uId="extn_listReturnGrid_view"/>
+    </BundleEntries>
+</ScreenBundle>

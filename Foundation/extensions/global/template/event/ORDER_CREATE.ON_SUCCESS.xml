@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed Materials - Property of IBM
+IBM Sterling Selling And Fulfillment Suite
+(C) Copyright IBM Corp. 2005, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<!-- Order_Create.On_Success Event XML-->
+<Order Action="" BillToID="" CustomerPONo="" DocumentType="" DraftOrderFlag="" EnteredBy="" EnterpriseCode="" EntryType="" HoldFlag="" HoldReasonCode="" IsLineShipComplete="Y" IsLineShipSingleNode="Y" IsShipComplete="Y" IsShipSingleNode="Y" MaxOrderStatus="" MaxOrderStatusDesc="" MinOrderStatus="" MinOrderStatusDesc="" OrderDate="" OrderHeaderKey="" OrderName="" OrderNo="" OrderPurpose="" OrderType="" Purpose="" ReqCancelDate="" ReqDeliveryDate="" ReqShipDate="" ReturnOrderHeaderKeyForExchange="" SellerOrganizationCode="" ShipNode="" ShipToID="" ShipToKey="" Status="">
+		<OrderLines TotalNumberOfRecords="">
+			<OrderLine Action="" ConditionVariable1="" ConditionVariable2="" CustomerLinePONo="" CustomerPONo="" DeliveryMethod="" KitCode="" KitQty="" LineType="" MaxLineStatus="" MaxLineStatusDesc="" MinLineStatus="" MinLineStatusDesc="" OrderLineKey="" OrderedQty="" PrimeLineNo="" Purpose="" ReqCancelDate="" ReqDeliveryDate="" ReqShipDate="" ReservationID="" ShipNode="" ShipToID="" ShipToKey="" Status="" SubLineNo="">
+				<ItemDetails CanUseAsServiceTool="" GlobalItemID="" IsItemSuperseded="" ItemGroupCode="" ItemID="" ItemKey="" OrganizationCode="Required" SubCatalogOrganizationCode="" UnitOfMeasure="">
+					<PrimaryInformation Description="" EffectiveEndDate="" EffectiveStartDate="" ItemType="" KitCode="" ShortDescription="" Status=""/>
+					<ItemAliasList>
+						<ItemAlias AliasName="" AliasValue=""/>
+					</ItemAliasList>
+					<AdditionalAttributeList>
+						<AdditionalAttribute AdditionalAttributeKey="" AttributeDomainID="" AttributeGroupID="" DoubleValue="" IntegerValue="" IsInherited="" Name="" Value="">
+							<Extn ExtnCommercial="" ExtnMandatory="" ExtnEditable="" ExtnVisible="" ExtnMultiplicity="" ExtnAdditional=""/>
+						</AdditionalAttribute>
+					</AdditionalAttributeList>
+					<Components>
+						<Component ComponentDescription="" ComponentItemGroupCode="" ComponentItemID="" ComponentItemKey="" ComponentKitCode="" ComponentOrganizationCode="" ComponentUnitOfMeasure="" ItemKey="" KitQuantity=""/>
+					</Components>
+					<CategoryList>
+						<Category CategoryID="" CategoryKey="" CategoryPath="" OrganizationCode=""/>
+					</CategoryList>
+				</ItemDetails>
+				<Item AlternateItemID="" BundleFulfillmentMode="" CostCurrency="" CountryOfOrigin="" CustomerItem="" CustomerItemDesc="" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="" ItemID="" ItemShortDesc="" ItemWeight="" ItemWeightUOM="" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="" UnitOfMeasure="">
+				</Item>
+				<Extn ExtnParentLineSeqNo="" ExtnAppointmentID="" ExtnRequestType="" ExtnPACCode="" ExtnProdCategory="" ExtnInventoryId="" ExtnAssociatedInventoryId="">
+					<EXTNOrderLinePropertiesList>
+						<EXTNOrderLineProperties PropertyKey=" " DescribedByCharacteristic=" " DescribedByType=" " DescribedByCharacteristicName="" DescribedByValue=" " DescribSpecApplicationDN=" " DescribingSpecPrimaryKey=" " DescribingSpecType=" "  CharacteristicEntityId="" CharacteristicPath=""   />
+					</EXTNOrderLinePropertiesList>
+				</Extn>
+			</OrderLine>
+		</OrderLines>
+		<Extn>
+			<EXTNOrderHeaderLinksList>
+				<EXTNOrderHeaderLinks OrderHeaderKey=" " LinkageType=" " LinkedOrderHeaderKey=" " LinkedOrderType=" " LinkedOrderNo=" "  Createprogid=" " Createts=" " Createuserid=" " Lockid=" " Modifyprogid=" " Modifyts=" " Modifyuserid=" " LinkageKey=" " />
+			</EXTNOrderHeaderLinksList>
+			<EXTNOrderProcessingDataList>
+				<EXTNOrderProcessingData ExtnDataKey=""	ExtnDataType="" ExtnDataStore=""/>
+			</EXTNOrderProcessingDataList>
+		</Extn>
+	</Order>

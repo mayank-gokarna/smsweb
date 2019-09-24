@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- 
+Licensed Materials - Property of IBM
+IBM Sterling Selling And Fulfillment Suite
+(C) Copyright IBM Corp. 2005, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+ -->
+<DBSchema>
+    <Entities>
+    	<Sequence Cachesize="10" Increment="1" Maxvalue="999999999"
+            Minvalue="1" Name="EXTN_SEQ_ENTITY_ID_KEY" Startwith="100000000" TableType="TRANSACTION"/>
+ </Entities>
+</DBSchema>

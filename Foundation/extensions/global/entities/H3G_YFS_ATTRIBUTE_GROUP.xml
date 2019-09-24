@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed Materials - Property of IBM
+IBM Sterling Selling and Fulfillment Suite
+(C) Copyright IBM Corp. 2001, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+
+<DBSchema>
+	<Entities>   
+		<Entity TableName="YFS_ATTRIBUTE_GROUP">
+			<Attributes>
+				<Attribute ColumnName="EXTN_PARAMGROUPMINMULTIPLICITY"
+			           	DataType="Text-40"
+			           	Description="This field is for capturing min multiplicity of the attribute group"
+			           	Type="CHAR"
+			           	XMLName="ExtnParamGroupMinMultiplicity"
+			           	XMLGroup="Extn"
+			           	Name="ParameterGroupMinMultiplicity"
+			           	Nullable="true"/>
+				<Attribute ColumnName="EXTN_PARAMGROUPMAXMULTIPLICITY"
+			           	DataType="Text-40"
+			           	Description="This field is for capturing max multiplicity of the attribute group"
+			           	Type="CHAR"
+			           	XMLName="ExtnParamGroupMaxMultiplicity"
+			           	XMLGroup="Extn"
+			           	Name="ParameterGroupMaxMultiplicity"
+			           	Nullable="true"/>
+				<Attribute ColumnName="EXTN_PARAMGROUPPATH"
+			           	DataType="Text-255"
+			           	Description="This field is for capturing attribute group path"
+			           	Type="CHAR"
+			           	XMLName="ExtnParamGroupPath"
+			           	XMLGroup="Extn"
+			           	Name="ParameterGroupPath"
+			           	Nullable="true"/>
+			</Attributes>
+		</Entity>
+	</Entities>
+</DBSchema>
+
+		
+		
+		
+
+	

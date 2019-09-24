@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.shipment.shipmentTracking.lineStatePanels.ShipTrackShippingExtnBundle" screenId="extn.shipment.shipmentTracking.lineStatePanels.ShipTrackShippingExtn">
+    <BundleEntries/>
+</ScreenBundle>

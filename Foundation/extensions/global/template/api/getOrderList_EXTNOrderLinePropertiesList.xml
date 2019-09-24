@@ -1,0 +1,17 @@
+<OrderList>
+	<Order BillToID="" BillToKey="" DocumentType="" EnterpriseCode=""
+		OrderHeaderKey="" OrderName="" OrderNo="" OrderPurpose="" OrderType="">
+		<Extn ExtnCustomerType="" ExtnGroupID="" ExtnReturnNumber="" ExtnMIP27ACreated=""/>
+		<OrderLines TotalNumberOfRecords="">
+			<OrderLine OrderLineKey="" CustomerPONo="">
+				<Extn>
+					<EXTNOrderLinePropertiesList>
+						<EXTNOrderLineProperties PropertyKey=" " DescribedByCharacteristic=" " DescribedByType=" " 
+						DescribedByCharacteristicName="" DescribedByValue=" " DescribSpecApplicationDN=" " 
+						DescribingSpecPrimaryKey=" " DescribingSpecType=" "  CharacteristicEntityId="" CharacteristicPath="" />
+					</EXTNOrderLinePropertiesList>
+				</Extn>
+			</OrderLine>
+		</OrderLines>
+	</Order>
+</OrderList>

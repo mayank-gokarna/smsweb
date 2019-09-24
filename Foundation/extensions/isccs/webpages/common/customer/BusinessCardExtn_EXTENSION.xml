@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="BusinessCardExtn"
+        extnPackage="extn.common.customer"
+        originalScreen="isccs.common.customer.BusinessCard"
+        originalScreenPackage="isccs.common.customer" type="diffrential">
+        <Items>
+            <Link _sc_extensibility_operation="change" _sc_extensibility_referenceUId="lnkCustomerName"/>
+            <Link _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="remove"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="_extensibilityHiddenWidgetsHolder" uId="lnkCustomerName"/>
+            <Label _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="imgCustomer"
+                class="groupHeader" uId="extn_lblCustomerName">
+                <BindingData>
+                    <SourceBinding
+                        dynamicBindingFunc="handleCustomerDisplay"
+                        namespace="editorInput" path="Order"/>
+                </BindingData>
+            </Label>
+            <Label _sc_extensibility_moveOrder="2"
+                _sc_extensibility_operation="remove"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="_extensibilityHiddenWidgetsHolder" uId="lblCustomerName"/>
+        </Items>
+        <Subscribers>
+            <Local>
+                <Subscriber eventId="afterBehaviorMashupCall"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="handleMashupCompletion"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+    </ScreenExtension>
+</ExtensionMetaData>

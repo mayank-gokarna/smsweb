@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle screenBundleId="extn.return.search.ReturnSearchExtnBundle" screenId="extn.return.search.ReturnSearchExtn">
+    <BundleEntries>
+        <BundleEntry bundleEntryId="txt_postalCode_TextField_label"
+            bundleKey="ScreenTester" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="txt_postalCode"/>
+    </BundleEntries>
+</ScreenBundle>

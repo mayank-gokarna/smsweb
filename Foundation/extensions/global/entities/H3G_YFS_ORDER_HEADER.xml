@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed Materials - Property of IBM
+IBM Sterling Selling and Fulfillment Suite
+(C) Copyright IBM Corp. 2001, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+
+<DBSchema>
+	<Entities>   
+		<Entity TableName="YFS_ORDER_HEADER">
+			<Attributes>
+				<Attribute ColumnName="EXTN_CUSTOMER_ORDER_NO" 
+						Name="EXTN_CUSTOMER_ORDER_NO"
+	               		Nullable="true" DataType="VarcharDocumentNo"
+	               		Description="The customer order number which this order is linked to."
+	               		XMLName="ExtnCustomerOrderNo" XMLGroup="Extn">
+				</Attribute>
+				<Attribute ColumnName="EXTN_GROUP_ID" 
+						Name="EXTN_GROUP_ID"
+	               		Nullable="true" DataType="Text-128"
+	               		Description="This is the Group id to which a subscriber belongs."
+	               		XMLName="ExtnGroupID" XMLGroup="Extn">
+				</Attribute>
+				<!-- Added as part of Service Provisioning -->	
+				<Attribute ColumnName="EXTN_TARGET_OSS" 
+						Name="EXTN_TARGET_OSS"
+	               		Nullable="true" DataType="Text-128"
+	               		Description="This is the target OSS value."
+	               		XMLName="ExtnTargetOSS" XMLGroup="Extn">
+				</Attribute>
+				<Attribute ColumnName="EXTN_CUSTOMER_TYPE" 
+						Name="EXTN_CUSTOMER_TYPE"
+	               		Nullable="true" DataType="Text-40"
+	               		Description="This is the Customer Type for which the order is placed."
+	               		XMLName="ExtnCustomerType" XMLGroup="Extn">
+				</Attribute>
+				<Attribute ColumnName="EXTN_MIP27A_CREATED"
+				 		Name="EXTN_MIP27A_CREATED"
+	              		Nullable="true" DataType="Flag" Type="CHAR"
+	              		Description="Flag whether return is initiated by Anovo"
+	              		XMLName="ExtnMIP27ACreated" XMLGroup="Extn">
+				</Attribute>
+				<Attribute ColumnName="EXTN_RETURN_NUMBER"
+				 		Name="EXTN_RETURN_NUMBER"
+	              		Nullable="true" DataType="Text-40" Type="CHAR"
+	              		Description="Return Number"
+	              		XMLName="ExtnReturnNumber" XMLGroup="Extn">
+				</Attribute>
+				<Attribute ColumnName="EXTN_BILL_CYCLE_DATE" 
+						Name="EXTN_BILL_CYCLE_DATE"
+						Nullable="true" DataType="TimeStamp" 
+						Description="BillCycleDate" 
+						XMLName="ExtnBillCycleDate" XMLGroup="Extn">
+				</Attribute>		
+				<Attribute ColumnName="EXTN_OCSN_BILLING_UPDATE_FLAG"
+				 		Name="EXTN_OCSN_BILLING_UPDATE_FLAG"
+	              		Nullable="false" DataType="Flag" Type="CHAR"
+	              		DefaultValue="Y"  Description="OCSnBillingUpdateFlag"
+	              		XMLName="ExtnOCSnBillingUpdateFlag" XMLGroup="Extn">
+				</Attribute>		
+			</Attributes>
+			<Indices>
+				<Index Name="EXTN_CUSTOMER_ORDER_NO_I1">
+					<Column Name="EXTN_CUSTOMER_ORDER_NO"/>
+				</Index>
+				<Index Name="EXTN_RETURN_NUMBER_I2">
+					<Column Name="EXTN_RETURN_NUMBER"/>
+				</Index>	
+			</Indices>
+		</Entity>
+	</Entities>
+</DBSchema>

@@ -1,0 +1,89 @@
+		<div>
+		 	<div data-dojo-type="idx/form/TextBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '5' , 
+		_sc_extensibility_referenceUId : 'txtOrderNo' , 
+		uId : 'extn_txtPhoneNo' , 
+		_sc_extensibility_position : 'after'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getBundleString('Label_PhoneNo')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Order.PersonInfoBillTo.DayPhone'
+,
+		 namespace : 			'screenInput'
+	}
+,
+		 targetBinding : 	[
+	 		{
+		 path : 			'Order.PersonInfoBillTo.DayPhone'
+,
+		 scExtensibilityArrayItemId : 			'extn_TargetBindings_0'
+,
+		 namespace : 			'getOrderList'
+	}
+	]
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/TextBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'insert' , 
+		_sc_extensibility_moveOrder : '3' , 
+		_sc_extensibility_referenceUId : 'pnlSearchBar' , 
+		scuiDataType : 'EmailId' , 
+		uId : 'extn_txtEmail_Order' , 
+		_sc_extensibility_position : 'before'  
+ 		,scExtensionDataFn :
+		 function() { 
+			return { 
+			 	label : 			this.getSimpleBundleString('CustomerEmailStartsWith')
+,	
+			 	bindingData : 	{
+		 sourceBinding : 	{
+		 path : 			'Order.PersonInfoBillTo.EmailID'
+,
+		 namespace : 			'screenInput'
+	}
+,
+		 targetBinding : 	[
+	 		{
+		 path : 			'Order.PersonInfoBillTo.EmailID'
+,
+		 queryType : 			'FLIKE'
+,
+		 scExtensibilityArrayItemId : 			'extn_TargetBindings_0'
+,
+		 namespace : 			'getOrderList'
+	}
+	]
+	}
+			}
+		}
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/TextBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'remove' , 
+		_sc_extensibility_moveOrder : '4' , 
+		_sc_extensibility_referenceUId : '_extensibilityHiddenWidgetsHolder' , 
+		uId : 'txtEmail_Order' , 
+		_sc_extensibility_position : 'last'  
+	 					}">
+		 	</div>  
+		 	<div data-dojo-type="idx/form/TextBox" 
+	 					data-dojo-props="data_dojo_props_diff: {
+	 								_sc_extensibility_operation : 'remove' , 
+		_sc_extensibility_moveOrder : '6' , 
+		_sc_extensibility_referenceUId : '_extensibilityHiddenWidgetsHolder' , 
+		uId : 'txtPhoneNo' , 
+		_sc_extensibility_position : 'last'  
+	 					}">
+		 	</div>  
+		</div>

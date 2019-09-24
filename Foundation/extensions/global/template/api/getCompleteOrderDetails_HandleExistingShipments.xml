@@ -1,0 +1,5 @@
+<Order OrderNo="" OrderHeaderKey="">
+	<Shipments>
+		<Shipment ShipmentNo="" ShipmentKey="" SellerOrganizationCode="" ShipNode="" OrderNo="" Status=""/>
+	</Shipments>
+</Order>

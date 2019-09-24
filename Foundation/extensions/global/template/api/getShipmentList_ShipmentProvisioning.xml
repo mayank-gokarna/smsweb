@@ -1,0 +1,15 @@
+<Shipments>
+   <Shipment ShipmentKey="" DocumentType="" ShipmentNo="">
+      <ShipmentLines>
+         <ShipmentLine DocumentType="" OrderNo="">
+            <OrderLine DeliveryMethod="" CustomerPONo="" OrderHeaderKey="" OrderLineKey="">
+			<PersonInfoShipTo AddressID="" AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="" IsAddressVerified="" IsCommercialAddress="" JobTitle="" LastName="" Latitude="" Longitude="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="" State="" Suffix="" TaxGeoCode="" Title="" ZipCode=""/>
+			</OrderLine>
+         </ShipmentLine>
+      </ShipmentLines>
+	  <ShipmentHoldTypes>
+	  <ShipmentHoldType HoldType="" Status="">
+	  </ShipmentHoldType>
+	  </ShipmentHoldTypes>
+   </Shipment>
+</Shipments>

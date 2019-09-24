@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed Materials - Property of IBM
+IBM Sterling Selling and Fulfillment Suite
+(C) Copyright IBM Corp. 2001, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+
+<DBSchema>
+	<Entities>   
+			<Entity TableName="EXTN_ORDER_LINE_PROPERTIES"
+				Description="Hang off table for Order Line Properties"
+				HasHistory="N" AuditRequired="N" ApiNeeded="Y" Prefix="EXTN">
+			<!-- table columns -->
+			<Attributes>
+				<!-- Keys columns -->
+				<Attribute ColumnName="PROPERTY_KEY" DataType="Key"
+						Description="Order Line Property Key"
+						Nullable="false" XMLName="PropertyKey" />
+				<Attribute ColumnName="ORDER_LINE_KEY" DataType="Key"
+						Description="Order Line Key from parent table"
+						Nullable="false" XMLName="OrderLineKey" />					
+				<Attribute ColumnName="DESCRIBING_SPEC_PRIMARY_KEY" DataType="Text-128"
+						Description="Describing Spec Primary Key"
+						Nullable="true" XMLName="DescribingSpecPrimaryKey" />
+				<Attribute ColumnName="DESCRIBING_SPEC_APPLICATION_DN" DataType="Text-128"
+						Description="Describing Spec Application DN"
+						Nullable="true" XMLName="DescribingSpecApplicationDN" />
+				<Attribute ColumnName="DESCRIBING_SPEC_TYPE" DataType="Text-128"
+						Description="Describing Spec Type"
+						Nullable="true" XMLName="DescribingSpecType" />					
+				<Attribute ColumnName="DESCRIBING_BY_TYPE" DataType="Text-128"
+						Description="Describing By Type"
+						Nullable="true" XMLName="DescribedByType" />
+				<Attribute ColumnName="DESCRIBING_BY_VALUE" DataType="Text-300"
+						Description="Describing By Value"
+						Nullable="true" XMLName="DescribedByValue" />
+				<Attribute ColumnName="DESCRIBING_BY_CHARACTERISTIC" DataType="Text-128"
+						Description="Describing By Characteristic"
+						Nullable="true" XMLName="DescribedByCharacteristic" />
+				<Attribute ColumnName="DESCRIBING_BY_CHAR_NAME" DataType="Text-128"
+						Description="Charecteristic Name"
+						Nullable="true" XMLName="DescribedByCharacteristicName" />
+				<Attribute ColumnName="CREATETS" DataType="TimeStamp"
+						DefaultValue="SYSDATE" Description="create Timestamp"
+						Name="Createts" />
+				<Attribute ColumnName="MODIFYTS" DataType="TimeStamp"
+						DefaultValue="SYSDATE" Description="Modify Timestamp"
+						Name="Modifyts" />
+				<Attribute ColumnName="CREATEUSERID" DataType="UserId"
+						DefaultValue="' ' " Description="Creating User id"
+						Name="Createuserid" Nullable="false" />
+				<Attribute ColumnName="MODIFYUSERID" DataType="UserId"
+						DefaultValue="' ' " Description="Modifying User id"
+						Name="Modifyuserid" Nullable="false" />
+				<Attribute ColumnName="CREATEPROGID"
+						DataType="ProgramID" DefaultValue="' ' "
+						Description="Creating Program ID" Name="Createprogid"
+						Nullable="false" />
+				<Attribute ColumnName="MODIFYPROGID"
+						DataType="ProgramID" DefaultValue="' ' "
+						Description="Modifying Program ID" Name="Modifyprogid"
+						Nullable="false" />
+				<Attribute ColumnName="LOCKID" DataType="Lockid"
+						DefaultValue="0" Description="Lock ID" Name="Lockid"
+						Nullable="false" />
+				<Attribute ColumnName="CHAR_ENTITY_ID" DataType="Text-69" 
+						Description="Entity ID" XMLName="CharacteristicEntityId"
+						Nullable="false" />
+				<Attribute ColumnName="CHARACTERISTIC_PATH" DataType="Text-300"
+						Description="XPath Location of the the characteristic Group ID" 
+						Nullable="false" XMLName="CharacteristicPath" />		
+			</Attributes>
+			<!-- PrimaryKey is a mandatory attribute in entity definition. This element can have ONLY ONE attribute element -->
+			<PrimaryKey Name="ORD_LN_PROP_PK">
+				<Attribute ColumnName="PROPERTY_KEY" />
+			</PrimaryKey>
+
+			<Parent ParentTableName="YFS_ORDER_LINE" XMLName="YFSOrderLine">
+				<Attribute ColumnName="ORDER_LINE_KEY"
+					ParentColumnName="ORDER_LINE_KEY" />
+			</Parent>
+			<Indices>
+				<Index Name="EXTNOLPROP_I10" Unique="True"> 
+					<Column Name="ORDER_LINE_KEY" /> 
+					<Column Name="CHAR_ENTITY_ID" /> 
+				</Index>
+			</Indices>
+		</Entity>	
+	</Entities>
+</DBSchema>
+
+		
+		
+		
+
+	

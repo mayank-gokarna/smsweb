@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.return.search.ReturnSearchExtnBehaviorController"
+    requestMethodSupported="POST" screenId="extn.return.search.ReturnSearchExtn">
+	<MashupRefs>
+		<MashupRef extnType="ADD" mashupId="extn_getCompleteReturnOrderDetails" mashupRefId="getCompleteOrderDetailsBehavior" permissionId=""/>
+		<MashupRef extnType="ADD" mashupId="extn_getOrderList" mashupRefId="extn_getOrderList" permissionId=""/>
+		<MashupRef extnType="ADD" mashupId="extn_OrderSummaryLins_getOrderList" mashupRefId="extn_OrderSummaryLins_getOrderList" permissionId=""/>
+		<MashupRef extnType="ADD" mashupId="extn_GetOrderHierarchyBehavior" mashupRefId="extn_GetOrderHierarchyBehavior" permissionId=""/>
+		<MashupRef extnType="ADD" mashupId="extn_OLCChangeOrder" mashupRefId="extn_OHSCChangeOrder" permissionId=""/>
+	</MashupRefs>
+</Controller>

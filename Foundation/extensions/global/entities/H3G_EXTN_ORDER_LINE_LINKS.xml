@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed Materials - Property of IBM
+IBM Sterling Selling and Fulfillment Suite
+(C) Copyright IBM Corp. 2001, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+
+<DBSchema>
+	<Entities>   
+		<Entity TableName="EXTN_ORDER_LINE_LINKS"
+			Description="Hang off table for Order Header"
+			HasHistory="N" AuditRequired="N" ApiNeeded="Y" Prefix="EXTN">
+			<!-- table columns -->
+			<Attributes>
+				<!-- Keys columns -->
+				<Attribute ColumnName="LINKAGE_KEY" DataType="Key"
+						Description="Order Linkage Key"
+						Nullable="false" XMLName="LinkageKey" />
+				<Attribute ColumnName="ORDER_LINE_KEY" DataType="Key"
+						Description="Order Line Key from parent table"
+						Nullable="false" XMLName="OrderLineKey" />
+				<Attribute ColumnName="LINKAGE_TYPE" DataType="Text-128"
+						Description="Linkage Type"
+						Nullable="true" XMLName="LinkageType" />					
+				<Attribute ColumnName="LINKED_ORDER_LINE_TYPE" DataType="Text-128"
+						Description="Linked Order Line Type"
+						Nullable="true" XMLName="LinkedOrderLineType" />						
+				<Attribute ColumnName="LINKED_LINE_SEQ_NO" DataType="Text-128"
+						Description="Linked Line Seq No"
+						Nullable="true" XMLName="LinkedLineSeqNo" />	
+				<Attribute ColumnName="LINKED_CUSTOMER_PO_NO" DataType="Text-128"
+						Description="Linked Customer PO No"
+						Nullable="true" XMLName="LinkedCustomerPONo" />
+				<Attribute ColumnName="LINKED_ORDER_NO" DataType="Text-128"
+						Description="Linked Order No"
+						Nullable="true" XMLName="LinkedOrderNo" />	
+				<Attribute ColumnName="LINKED_ORDER_ITEM_ID" DataType="Text-128"
+						Description="Linked Order Item ID"
+						Nullable="true" XMLName="LinkedOrderItem" />	
+				<Attribute ColumnName="CREATETS" DataType="TimeStamp"
+						DefaultValue="SYSDATE" Description="create Timestamp"
+						Name="Createts" />
+				<Attribute ColumnName="MODIFYTS" DataType="TimeStamp"
+						DefaultValue="SYSDATE" Description="Modify Timestamp"
+						Name="Modifyts" />
+				<Attribute ColumnName="CREATEUSERID" DataType="UserId"
+						DefaultValue="' ' " Description="Creating User id"
+						Name="Createuserid" Nullable="false" />
+				<Attribute ColumnName="MODIFYUSERID" DataType="UserId"
+						DefaultValue="' ' " Description="Modifying User id"
+						Name="Modifyuserid" Nullable="false" />
+				<Attribute ColumnName="CREATEPROGID"
+						DataType="ProgramID" DefaultValue="' ' "
+						Description="Creating Program ID" Name="Createprogid"
+						Nullable="false" />
+				<Attribute ColumnName="MODIFYPROGID"
+						DataType="ProgramID" DefaultValue="' ' "
+						Description="Modifying Program ID" Name="Modifyprogid"
+						Nullable="false" />
+				<Attribute ColumnName="LOCKID" DataType="Lockid"
+						DefaultValue="0" Description="Lock ID" Name="Lockid"
+						Nullable="false" />
+			</Attributes>
+			<!-- PrimaryKey is a mandatory attribute in entity definition. This element can have ONLY ONE attribute element -->
+
+			<PrimaryKey Name="ORD_LINE_LINK_PK">
+				<Attribute ColumnName="LINKAGE_KEY" />
+			</PrimaryKey>
+
+			<Parent ParentTableName="YFS_ORDER_LINE" XMLName="YFSOrderLine">
+				<Attribute ColumnName="ORDER_LINE_KEY"
+					ParentColumnName="ORDER_LINE_KEY" />
+			</Parent>
+		</Entity>
+	</Entities>
+</DBSchema>
+
+		
+		
+		
+
+	

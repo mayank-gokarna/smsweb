@@ -1,0 +1,11 @@
+<OrderList>
+	<Order OrderHeaderKey="">
+		<Extn ExtnReturnNumber="" ExtnMIP27ACreated=""/>
+		<OrderLines> 
+			<OrderLine ReturnReason="" CustomerPONo="" ConditionVariable1=""  OrderLineKey="">
+				<ItemDetails ItemID="" ItemKey="" OrganizationCode="" UnitOfMeasure=""/>
+				<Extn ExtnReturnLineNumber=""/>
+			</OrderLine>
+		</OrderLines>
+	</Order>	
+</OrderList>

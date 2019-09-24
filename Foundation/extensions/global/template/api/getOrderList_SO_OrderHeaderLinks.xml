@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OrderList TotalNumberOfRecords="">
+   <Order OrderNo="" OrderHeaderKey="" OrderType="" Status="" MinOrderStatus="" MinOrderStatusDesc="">
+      <Extn ExtnCustomerOrderNo="">
+         <EXTNOrderHeaderLinksList>
+            <EXTNOrderHeaderLinks />
+         </EXTNOrderHeaderLinksList>
+      </Extn>
+
+      <OrderLines>
+         <OrderLine OrderLineKey="" CustomerPONo="" OrderedQty="" LineType="" MinLineStatus="" MinLineStatusDesc="" Purpose="" DeliveryMethod="">
+         </OrderLine>
+      </OrderLines>
+   </Order>
+</OrderList>
+

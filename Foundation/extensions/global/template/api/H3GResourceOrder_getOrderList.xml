@@ -1,0 +1,10 @@
+<OrderList>
+   <Order OrderHeaderKey="" DocumentType="">
+      <Extn ExtnCustomerOrderNo="" />
+
+      <OrderLines>
+         <OrderLine OrderLineKey="" CustomerPONo="" />
+      </OrderLines>
+   </Order>
+</OrderList>
+

@@ -1,0 +1,6 @@
+<ShipmentLines>
+	<ShipmentLine ShipmentKey="" Quantity="" ShipmentLineKey="" ShipmentLineNo="">
+<Shipment ShipmentNo="" ShipNode="" SellerOrganizationCode="" Status=""/>
+		<OrderLine CustomerPONo=""/>
+	</ShipmentLine>
+ </ShipmentLines>

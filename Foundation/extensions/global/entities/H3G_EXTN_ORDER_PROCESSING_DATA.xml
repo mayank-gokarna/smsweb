@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed Materials - Property of IBM
+IBM Sterling Selling and Fulfillment Suite
+(C) Copyright IBM Corp. 2001, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+
+<DBSchema>
+	<Entities>   
+		<Entity TableName="EXTN_ORDER_PROCESSING_DATA" Description="Hang off table for Order Processing" Prefix="EXTN" ApiNeeded="Y" AuditRequired="N" HasHistory="N">
+		<!-- table columns -->
+			<Attributes>
+				<!-- Keys columns -->
+				<Attribute XMLName="ExtnDataKey" DataType="Key" 
+						Description="Order Processing Data Key" 
+						Nullable="false" ColumnName="EXTN_DATA_KEY" />
+				<Attribute XMLName="OrderNo" Description="Order No" 
+						DataType="Text-128" Nullable="false" 
+						ColumnName="ORDER_NO"/>
+				<Attribute XMLName="OrderHeaderKey" DataType="Key"
+						Description="Order Key from parent table" 
+						Nullable="false" ColumnName="ORDER_HEADER_KEY"/>
+				<Attribute XMLName="DocumentType" DataType="Text-128"
+						Description="Document Type of the Order" 
+						Nullable="false" ColumnName="DOCUMENT_TYPE"/>
+				<Attribute XMLName="EnterpriseKey" 
+						Description="Exterprise Code of the Order" 
+						DataType="Text-128" Nullable="true" 
+						ColumnName="ENTERPRISE_KEY"/>
+				<Attribute XMLName="ExtnDataType" 
+						Description="Data Type" DataType="Text-128" 
+						Nullable="true" ColumnName="EXTN_DATA_TYPE"/>
+				<Attribute XMLName="ExtnDataStore" 
+						Description="Data store of the Order" DataType="CLOB" 
+						Nullable="false" ColumnName="EXTN_DATA_STORE" 
+						DefaultValue="' ' "/>
+				<Attribute Description="create Timestamp" 
+						DataType="TimeStamp" Name="Createts" 
+						ColumnName="CREATETS" DefaultValue="SYSDATE"/>
+				<Attribute Description="Modify Timestamp" 
+						DataType="TimeStamp" Name="Modifyts" 
+						ColumnName="MODIFYTS" DefaultValue="SYSDATE"/>
+				<Attribute Description="Creating User id" 
+						DataType="UserId" Nullable="false" 
+						Name="Createuserid" ColumnName="CREATEUSERID" 
+						DefaultValue="' ' "/>
+				<Attribute Description="Modifying User id" 
+						DataType="UserId" Nullable="false" 
+						Name="Modifyuserid" ColumnName="MODIFYUSERID" 
+						DefaultValue="' ' "/>
+				<Attribute Description="Creating Program ID"
+						DataType="ProgramID" Nullable="false" 
+						Name="Createprogid" ColumnName="CREATEPROGID" 
+						DefaultValue="' ' "/>
+				<Attribute Description="Modifying Program ID" 
+						DataType="ProgramID" Nullable="false"
+						Name="Modifyprogid" ColumnName="MODIFYPROGID" 
+						DefaultValue="' ' "/>
+				<Attribute Description="Lock ID" 
+						DataType="Lockid" Nullable="false" 
+						Name="Lockid" ColumnName="LOCKID" 
+						DefaultValue="0"/>
+			</Attributes>
+			  <!-- PrimaryKey is a mandatory attribute in entity definition. This element can have ONLY ONE attribute element -->
+			<PrimaryKey Name="EXTN_DATA_KEY_PK">
+				<Attribute ColumnName="EXTN_DATA_KEY"/>
+			</PrimaryKey>
+			<Parent XMLName="YFSOrderHeader" 
+				ParentTableName="YFS_ORDER_HEADER">
+				<Attribute ColumnName="ORDER_HEADER_KEY" 
+						ParentColumnName="ORDER_HEADER_KEY"/>
+				<Attribute ColumnName="ORDER_NO" 
+						ParentColumnName="ORDER_NO"/>
+				<Attribute ColumnName="ENTERPRISE_KEY" 
+						ParentColumnName="ENTERPRISE_KEY"/>
+				<Attribute ColumnName="DOCUMENT_TYPE" 
+						ParentColumnName="DOCUMENT_TYPE"/>
+			</Parent>
+			<Indices>
+				<Index Name="EXTNORDPROCESS_I01" Unique="True"> 
+					<Column Name="ORDER_NO" /> 
+					<Column Name="ENTERPRISE_KEY" />
+					<Column Name="DOCUMENT_TYPE" />
+					<Column Name="EXTN_DATA_TYPE" /> 
+				</Index>
+			</Indices>
+		</Entity>
+	</Entities>
+</DBSchema>
+
+		
+		
+		
+
+	

@@ -1,0 +1,16 @@
+<OrderList>
+<Order OrderHeaderKey="" CustomerPONo="" DocumentType="">
+<Extn ExtnCustomerOrderNo=""/>
+	<OrderLines>
+		<OrderLine OrderLineKey="" CustomerPONo="" OrderHeaderKey="" ConditionVariable1="" OrderedQty="">
+		<Item ItemID=""/>
+			<Extn>
+				<EXTNOrderLinePropertiesList>
+					<EXTNOrderLineProperties
+						DescribedByCharacteristicName="" DescribedByValue="" PropertyKey="" CharacteristicEntityId=""/>
+				</EXTNOrderLinePropertiesList>
+			</Extn>
+		</OrderLine>
+	</OrderLines>
+</Order>
+</OrderList>

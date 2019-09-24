@@ -1,0 +1,15 @@
+<OrderList>
+	<Order Status="" MaxOrderStatus="" OrderNo="" OrderType=""
+		EnterpriseCode="" SellerOrganizationCode="" BillToID="" BillToKey="" OrderHeaderKey="">
+		<OrderLines>
+			<OrderLine Status="">
+			</OrderLine>
+		</OrderLines>
+		<Extn>
+			<EXTNOrderHeaderLinksList>
+				<EXTNOrderHeaderLinks LinkageType=""
+					LinkedOrderType="" LinkedOrderNo="" LinkedOrderHeaderKey="" />
+					</EXTNOrderHeaderLinksList>
+		</Extn>
+	</Order>
+</OrderList>

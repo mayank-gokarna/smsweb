@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller
+    className="com.sterlingcommerce.ui.web.platform.controller.SCUIXAPIMashupController"
+    controllerId="extn.shipment.shipmentTracking.lineStatePanels.ShipTrackShippingExtnInitController"
+    requestMethodSupported="POST" screenId="extn.shipment.shipmentTracking.lineStatePanels.ShipTrackShippingExtn"/>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed Materials - Property of IBM
+IBM Sterling Selling and Fulfillment Suite
+(C) Copyright IBM Corp. 2001, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+
+<DBSchema>
+	<Entities>   
+		<Entity TableName="YFS_INBOX">
+			<Attributes>
+				<Attribute ColumnName="EXTN_INCIDENT_NO"
+			           	DataType="Text-40"
+			           	Description="This attribute stores the Incident no coming from BPM"
+						Type="CHAR"
+			           	XMLName="ExtnIncidentNo"
+			           	XMLGroup="Extn"
+			           	Nullable="true"/>
+			     <Attribute ColumnName="EXTN_RAISE_TICKET"
+			           	DataType="Flag"
+			           	Description="This attribute checks if trouble ticket is to be raised"
+						Type="CHAR"
+			           	XMLName="ExtnRaiseTicket"
+			           	XMLGroup="Extn"
+			           	Nullable="false"
+			           	DefaultValue="Y"/>
+			</Attributes>
+		</Entity>
+	</Entities>
+</DBSchema>
+
+		
+		
+		
+
+	

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed Materials - Property of IBM
+IBM Sterling Selling and Fulfillment Suite
+(C) Copyright IBM Corp. 2001, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+
+<DBSchema>
+	<Entities>   
+		<Entity TableName="YFS_ITEM">
+			<Attributes>
+				<Attribute ColumnName="EXTN_SPECVERSION"
+			           	DataType="Text-20"
+			           	Description="This flag indicates specification version for catalog specification"
+						Type="CHAR"
+			           	XMLName="ExtnSpecVersion"
+			           	XMLGroup="Extn"
+			           	Name="SpecVersion"
+			           	Nullable="true"/>
+			</Attributes>
+		</Entity>
+	</Entities>
+</DBSchema>
+
+		
+		
+		
+
+	

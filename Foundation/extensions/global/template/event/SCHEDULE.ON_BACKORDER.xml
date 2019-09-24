@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- 
+Licensed Materials - Property of IBM
+IBM Sterling Selling And Fulfillment Suite
+(C) Copyright IBM Corp. 2016 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+ -->
+<!-- SCHEDULE.ON_BACKORDER event xml -->
+<Order BuyerOrganizationCode="" DocumentType="" EnterpriseCode="" OrderHeaderKey="" OrderNo="" SellerOrganizationCode="" MinOrderStatus="" MinOrderStatusDesc="">
+   <Extn ExtnCustomerOrderNo="" />
+
+   <OrderLines>
+      <OrderLine OrderLineKey="" OrderedQty="" OriginalOrderedQty="" PrimeLineNo="" SubLineNo="" CustomerPONo="" MinLineStatus="" MinLineStatusDesc="" Purpose="" DeliveryMethod="">
+         <Item ItemID="" ProductClass="" UnitOfMeasure="" />
+
+         <StatusBreakupForBackOrderedQty>
+            <BackOrderedFrom BackOrderedQuantity="" OrderLineScheduleKey="" OrderReleaseKey="" OrderReleaseStatusKey="" Status="" StatusDate="" StatusDescription="">
+               <Details ExpectedDeliveryDate="" ExpectedShipmentDate="" OverrideItemID="" OverrideProductClass="" OverrideUnitOfMeasure="" ReceivingNode="" ShipByDate="" ShipNode="" TagNumber="" />
+            </BackOrderedFrom>
+         </StatusBreakupForBackOrderedQty>
+      </OrderLine>
+   </OrderLines>
+</Order>
+

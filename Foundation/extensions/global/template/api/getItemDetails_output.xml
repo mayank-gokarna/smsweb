@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Item ItemID="" ItemGroupCode="" OrganizationCode="" UnitOfMeasure="">
+	<Extn ExtnSpecVersion="" />
+	<ItemAttributeGroupTypeList>
+		<ItemAttributeGroupType
+			ClassificationPurposeCode="">
+			<ItemAttributeGroupList>
+				<ItemAttributeGroup
+					ItemAttributeGroupDescription="" ItemAttributeGroupID=""
+					ItemAttributeGroupKey="" ItemAttributeGroupPath=""
+					ItemAttributeGroupType="">
+					<ItemAttributeList>
+						<ItemAttribute AttributeDomainID=""
+							AttributeGroupID="" ItemAttributeDescription=""
+							ItemAttributeGroupKey="" ItemAttributeKey="" ItemAttributeName=""
+							SequenceNo="" Value="">
+							<Attribute AllowMultipleValues="" AttributeGroupID=""
+								AttributeID="" AttributeKey="" DataType=""
+								IsAllowedValueDefined="" IsValueMandatory="" LongDescription=""
+								SequenceNo="" ShortDescription="">
+								<Extn />
+								<AttributeAllowedValueList>
+									<AttributeAllowedValue IsDefaultValue=""
+										LongDescription="" SequenceNo="" ShortDescription="" Value="" />
+								</AttributeAllowedValueList>
+							</Attribute>
+							<AssignedValueList>
+								<AssignedValue DoubleValue="" IntegerValue=""
+									IsInherited="" LongDescription="" SequenceNo=""
+									ShortDescription="" Value="" />
+							</AssignedValueList>
+						</ItemAttribute>
+					</ItemAttributeList>
+				</ItemAttributeGroup>
+			</ItemAttributeGroupList>
+		</ItemAttributeGroupType>
+	</ItemAttributeGroupTypeList>
+	<PrimaryInformation Description="" ItemType=""
+		KitCode="" ShortDescription="" />
+	<ItemAliasList>
+		<ItemAlias AliasName="" AliasValue="" />
+	</ItemAliasList>
+	<AdditionalAttributeList>
+		<AdditionalAttribute AttributeDomainID=""
+			AttributeGroupID="" Name="" Value="">
+			<Extn />
+		</AdditionalAttribute>
+	</AdditionalAttributeList>
+	<Components>
+		<Component ComponentDescription="" ComponentItemGroupCode=""
+			ComponentItemID="" ComponentKitCode="" ComponentUnitOfMeasure="">
+			<Item ItemID="" ItemGroupCode="" OrganizationCode=""
+				UnitOfMeasure="">
+				<Extn ExtnSpecVersion="" />
+				<ItemAttributeGroupTypeList>
+					<ItemAttributeGroupType
+						ClassificationPurposeCode="">
+						<ItemAttributeGroupList>
+							<ItemAttributeGroup
+								ItemAttributeGroupDescription="" ItemAttributeGroupID=""
+								ItemAttributeGroupKey="" ItemAttributeGroupPath=""
+								ItemAttributeGroupType="">
+								<ItemAttributeList>
+									<ItemAttribute AttributeDomainID=""
+										AttributeGroupID="" ItemAttributeDescription=""
+										ItemAttributeGroupKey="" ItemAttributeKey=""
+										ItemAttributeName="" SequenceNo="" Value="">
+										<Attribute AllowMultipleValues="" AttributeGroupID=""
+											AttributeID="" AttributeKey="" DataType=""
+											IsAllowedValueDefined="" IsValueMandatory="" LongDescription=""
+											SequenceNo="" ShortDescription="">
+											<Extn />
+											<AttributeAllowedValueList>
+												<AttributeAllowedValue IsDefaultValue=""
+													LongDescription="" SequenceNo="" ShortDescription="" Value="" />
+											</AttributeAllowedValueList>
+										</Attribute>
+										<AssignedValueList>
+											<AssignedValue DoubleValue="" IntegerValue=""
+												IsInherited="" LongDescription="" SequenceNo=""
+												ShortDescription="" Value="" />
+										</AssignedValueList>
+									</ItemAttribute>
+								</ItemAttributeList>
+							</ItemAttributeGroup>
+						</ItemAttributeGroupList>
+					</ItemAttributeGroupType>
+				</ItemAttributeGroupTypeList>
+				<PrimaryInformation Description="" ItemType=""
+					KitCode="" ShortDescription="" />
+				<ItemAliasList>
+					<ItemAlias AliasName="" AliasValue="" />
+				</ItemAliasList>
+				<AdditionalAttributeList>
+					<AdditionalAttribute AttributeDomainID=""
+						AttributeGroupID="" Name="" Value="">
+						<Extn />
+					</AdditionalAttribute>
+				</AdditionalAttributeList>
+			</Item>
+		</Component>
+	</Components>
+	<CategoryList>
+		<Category />
+	</CategoryList>
+</Item>

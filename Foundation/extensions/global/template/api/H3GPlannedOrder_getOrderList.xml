@@ -1,0 +1,27 @@
+<OrderList>
+                    <Order DocumentType="" DisplayStatusDescription="" HoldFlag=""
+                        MashupTemplateRef="OrderEditorInput" DraftOrderFlag="" OrderHeaderKey=""
+                        MaxOrderStatusDesc="" MultipleStatusesExist=""
+						CustomerFirstName="" CustomerLastName="" CustomerEMailID=""
+                        OrderDate="" OverallStatus="" Status="" OrderType="" OrderNo="">
+                        <PriceInfo Currency="" TotalAmount=""/>
+						<OverallTotals GrandTotal="" />
+						<Extn ExtnCustomerOrderNo="" ExtnBillCycleDate="" ExtnOCSnBillingUpdateFlag=""/>
+                        <PersonInfoBillTo AddressID="" AddressLine1=""
+                        AddressLine2="" City="" Company="" Country=""
+                        CountryDesc="" DayPhone="" Department=""
+                        EMailID="" EveningPhone="" FirstName=""
+                        IsAddressVerified="" IsCommercialAddress=""
+                        LastName="" MiddleName="" MobilePhone=""
+                        PersonID="" PersonInfoKey="" State="" Suffix=""
+                        Title="" TitleDesc="" ZipCode="" isHistory=""/>
+						<PersonInfoShipTo AddressID="" AddressLine1=""
+                        AddressLine2="" City="" Company="" Country=""
+                        CountryDesc="" DayPhone="" Department=""
+                        EMailID="" EveningPhone="" FirstName=""
+                        IsAddressVerified="" IsCommercialAddress=""
+                        LastName="" MiddleName="" MobilePhone=""
+                        PersonID="" PersonInfoKey="" State="" Suffix=""
+                        Title="" TitleDesc="" ZipCode="" isHistory=""/>
+                    </Order>
+                </OrderList>

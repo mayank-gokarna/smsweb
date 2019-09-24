@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle screenBundleId="extn.order.details.OrderSummaryExtnBundle" screenId="extn.order.details.OrderSummaryExtn">
+    <BundleEntries>
+        <BundleEntry
+            bundleEntryId="extn_pnlMoreAttributes_ContentPane_title"
+            bundleKey="extn_More_Attributes"
+            bundleValueFn="_scSimpleBundle" property="title"
+            type="WIDGET" uId="extn_pnlMoreAttributes"/>
+        <BundleEntry bundleEntryId="extn_btnSave_Button_label"
+            bundleKey="extn_Save" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_btnSave"/>
+        <BundleEntry
+            bundleEntryId="extn_Retry_Validation_btn_Button_label"
+            bundleKey="extn_Retry_Validation"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_Retry_Validation_btn"/>
+        <BundleEntry bundleEntryId="extn_Retrybtn_Button_label"
+            bundleKey="extn_Retry" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_Retrybtn"/>
+        <BundleEntry
+            bundleEntryId="extn_MarkAsComplete_btn_Button_label"
+            bundleKey="extn_Mark_as_Complete"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_MarkAsComplete_btn"/>
+        <BundleEntry bundleEntryId="extn_lblOrderType_DataLabel_label"
+            bundleKey="extn_Order_Type" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_lblOrderType"/>
+        <BundleEntry bundleEntryId="extn_lblPrp_DataLabel_label"
+            bundleKey="extn_Activator" bundleValueFn="_scBundle"
+            property="label" type="WIDGET" uId="extn_lblPrp"/>
+        <BundleEntry bundleEntryId="extn_tpOrderLinks_TitlePane_title"
+            bundleKey="extn_Order_Links" bundleValueFn="_scSimpleBundle"
+            property="title" type="WIDGET" uId="extn_tpOrderLinks"/>
+        <BundleEntry bundleEntryId="extn_gridMoreAttributes_GridX_title"
+            bundleKey="extn_More_Attributes"
+            bundleValueFn="_scSimpleBundle" property="title"
+            type="WIDGET" uId="extn_gridMoreAttributes"/>
+        <BundleEntry bundleEntryId="extn_view_97074_View_name"
+            bundleKey="extn_Value" bundleValueFn="_scSimpleBundle"
+            property="name" type="WIDGET" uId="extn_view_97074"/>
+        <BundleEntry bundleEntryId="extn_ItemId_View_name"
+            bundleKey="extn_Item_Id" bundleValueFn="_scSimpleBundle"
+            property="name" type="WIDGET" uId="extn_ItemId"/>
+        <BundleEntry bundleEntryId="extn_gridCharacteristic_View_name"
+            bundleKey="extn_Characteristic"
+            bundleValueFn="_scSimpleBundle" property="name"
+            type="WIDGET" uId="extn_gridCharacteristic"/>
+        <BundleEntry bundleEntryId="extn_gridItemID_View_name"
+            bundleKey="extn_Item_Id" bundleValueFn="_scSimpleBundle"
+            property="name" type="WIDGET" uId="extn_gridItemID"/>
+        <BundleEntry bundleEntryId="extn_view_69655_View_name"
+            bundleKey="extn_Relation" bundleValueFn="_scSimpleBundle"
+            property="name" type="WIDGET" uId="extn_view_69655"/>
+        <BundleEntry
+            bundleEntryId="extn_gridOrderLinks_Relation_View_name"
+            bundleKey="extn_Relation" bundleValueFn="_scSimpleBundle"
+            property="name" type="WIDGET" uId="extn_gridOrderLinks_Relation"/>
+        <BundleEntry bundleEntryId="extn_view_OrderType_View_name"
+            bundleKey="extn_Order_Type" bundleValueFn="_scSimpleBundle"
+            property="name" type="WIDGET" uId="extn_view_OrderType"/>
+        <BundleEntry bundleEntryId="extn_view_OrderNo_View_name"
+            bundleKey="OrderNo" bundleValueFn="_scSimpleBundle"
+            property="name" type="WIDGET" uId="extn_view_OrderNo"/>
+        <BundleEntry
+            bundleEntryId="extn_gridOrderLinks_ProductID_View_name"
+            bundleKey="ItemID" bundleValueFn="_scSimpleBundle"
+            property="name" type="WIDGET" uId="extn_gridOrderLinks_ProductID"/>
+    </BundleEntries>
+</ScreenBundle>

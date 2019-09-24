@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataTypes>
+
+    <DataType Name="ItemID" Size="50" Type="NCHAR">
+        <UIType Size="20" UITableSize="25"/>
+    </DataType>
+    
+    <DataType Name="ReferenceValue" Size="50" Type="NVARCHAR">
+        <UIType Size="30" UITableSize="30"/>
+    </DataType>
+   
+</DataTypes>

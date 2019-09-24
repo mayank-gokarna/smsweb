@@ -1,0 +1,6 @@
+<OrderList>
+	<Order BillToID="" BillToKey="" DocumentType="" EnterpriseCode=""
+		OrderHeaderKey="" OrderName="" OrderNo="" OrderPurpose="" OrderType="">
+		<Extn ExtnCustomerType="" ExtnGroupID="" ExtnReturnNumber="" ExtnMIP27ACreated=""/>
+	</Order>
+</OrderList>

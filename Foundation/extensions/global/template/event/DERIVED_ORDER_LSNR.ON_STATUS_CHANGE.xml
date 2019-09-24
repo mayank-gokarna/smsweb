@@ -1,0 +1,20 @@
+<OrderLine OrderLineKey="" PrimeLineNo="" SubLineNo="" CustomerPONo="" MinLineStatusDesc="" LineType="" MaxLineStatus="" MinLineStatus="" DeliveryMethod="">
+   <Item ItemID="" ProductClass="" UnitOfMeasure="" />
+
+   <Order EnterpriseCode="" OrderNo="" DocumentType="" OrderType="" Status="" MaxOrderStatus="" MinOrderStatus="" OrderHeaderKey="" MinOrderStatusDesc="" MaxOrderStatusDesc="">
+      <Extn ExtnCustomerOrderNo="" />
+   </Order>
+
+   <FromStatuses>
+      <OrderStatus OrderHeaderKey="" OrderLineKey="" OrderLineScheduleKey="" OrderReleaseKey="" OrderReleaseStatusKey="" PipelineKey="" ReceivingNode="" ShipNode="" Status="" StatusDate="" StatusDescription="" StatusQty="" StatusReason="" TotalQuantity="">
+         <Details ExpectedDeliveryDate="" ExpectedShipmentDate="" ShipByDate="" TagNumber="" />
+      </OrderStatus>
+   </FromStatuses>
+
+   <ToStatuses>
+      <OrderStatus OrderHeaderKey="" OrderLineKey="" OrderLineScheduleKey="" OrderReleaseKey="" OrderReleaseStatusKey="" PipelineKey="" ReceivingNode="" ShipNode="" Status="" StatusDate="" StatusDescription="" StatusQty="" StatusReason="" TotalQuantity="">
+         <Details ExpectedDeliveryDate="" ExpectedShipmentDate="" ShipByDate="" TagNumber="" />
+      </OrderStatus>
+   </ToStatuses>
+</OrderLine>
+

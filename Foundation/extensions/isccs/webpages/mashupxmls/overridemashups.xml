@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mashups>
+    <mashup
+        description="This mashup is used in product browsing to list the categories when the page is launched"
+        endpoint="EP_PRODUCT" id="itemBrowsing_searchCatalogindex"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="searchCatalogIndex">
+            <Input>
+                <CatalogSearch
+                    CallingOrganizationCode="xml:scControllerInput:/CatalogSearch/@CallingOrganizationCode"
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode"
+                    PageNumber="1" PageSize="">
+                    <Item CallingOrganizationCode="" Currency=""
+                        ExcludeChildItemsOfModelItems="Y"
+                        GetAvailabilityFromCache="Y" IgnoreInvalidItems="N">
+                        <CustomerInformation BuyerUserId=""
+                            CustomerContactID="xml:scControllerInput:/CatalogSearch/CustomerInformation/@CustomerContactID" CustomerID="xml:scControllerInput:/CatalogSearch/CustomerInformation/@CustomerID"/>
+                    </Item>
+                </CatalogSearch>
+            </Input>
+            <Template>
+                <CatalogSearch PageNumber="" PageSize="" TotalHits="" TotalPages="">
+                    <CategoryList>
+                        <Category CategoryPath="" Count="" ShortDescription="">
+                            <ChildCategoryList>
+                                <Category CategoryPath="" Count="" ShortDescription=""/>
+                            </ChildCategoryList>
+                        </Category>
+                    </CategoryList>
+                    <ItemAttribute ItemAttributeDescription="" ItemAttributeName="">
+                        <AssignedValueList>
+                            <AssignedValue Count="" Value=""/>
+                        </AssignedValueList>
+                    </ItemAttribute>
+                </CatalogSearch>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.isccs.common.mashups.SCCSBaseMashup"/>
+        <APINamespace inputNS="itemBrowsing_searchCatalogindex_input" outputNS="itemBrowsing_searchCatalogindex_output"/>
+        <AlternateResourceIds>
+            <AlternateResourceId altResourceId="ISCPROD00001"/>
+        </AlternateResourceIds>
+    </mashup>
+    <mashup
+        description="This mashup is used in product browsing to list the items and the corresponding categories"
+        endpoint="EP_PRODUCT" id="itemBrowsing_searchCatalog"
+        mashuptype="XAPI" resourceId="" transactional="true">
+        <API Name="searchCatalogIndex">
+            <Input>
+                <CatalogSearch CallingOrganizationCode=""
+                    CategoryPath=""
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode"
+                    PageNumber="1" PageSize="" SortDescending="" SortField="">
+                    <Filters>
+                        <Filter IndexFieldName="" Value=""/>
+                    </Filters>
+                    <Item CallingOrganizationCode="" Currency=""
+                        ExcludeChildItemsOfModelItems="Y"
+                        GetAvailabilityFromCache="Y" IgnoreInvalidItems="N">
+                        <CustomerInformation BuyerUserId=""
+                            CustomerContactID="" CustomerID=""/>
+                    </Item>
+                    <Terms>
+                        <Term Condition="" Value=""/>
+                    </Terms>
+                </CatalogSearch>
+            </Input>
+            <Template>
+                <CatalogSearch CallingOrganizationCode="" PageNumber=""
+                    PageSize="" SortDescending="" SortField=""
+                    TotalHits="" TotalPages="">
+                    <FacetList>
+                        <ItemAttribute IndexFieldName=""
+                            ItemAttributeDescription="" ItemAttributeName="">
+                            <Attribute ShortDescription=""/>
+                            <AssignedValueList>
+                                <AssignedValue Count=""
+                                    ShortDescription="" Value=""/>
+                            </AssignedValueList>
+                        </ItemAttribute>
+                    </FacetList>
+                    <ItemList CallingOrganizationCode="" Currency="">
+                        <Item ItemGroupCode="" ItemID=""
+                            OrganizationCode="" UnitOfMeasure="">
+                            <Availability CurrentAvailableQty=""
+                                FirstFutureAvailableDate=""
+                                FutureAvailableDate=""
+                                FutureAvailableQuantity=""
+                                OnhandAvailableDate="" OnhandAvailableQuantity=""/>
+                            <ComputedPrice BundleTotal="" ListPrice="" UnitPrice=""/>
+                            <PrimaryInformation BundleFulfillmentMode=""
+                                DefaultProductClass="" Description=""
+                                ExtendedDisplayDescription="" ImageID=""
+                                ImageLocation="" IsConfigurable=""
+                                IsModelItem="" IsPickupAllowed=""
+                                IsPreConfigured="" IsShippingAllowed="" KitCode=""/>
+                        </Item>
+                    </ItemList>
+                    <CategoryList>
+                        <Category CategoryPath="" Count="" ShortDescription="">
+                            <ChildCategoryList>
+                                <Category CategoryPath="" Count="" ShortDescription=""/>
+                            </ChildCategoryList>
+                        </Category>
+                    </CategoryList>
+                    <ItemAttribute ItemAttributeDescription="" ItemAttributeName="">
+                        <AssignedValueList>
+                            <AssignedValue Count="" Value=""/>
+                        </AssignedValueList>
+                    </ItemAttribute>
+                </CatalogSearch>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.isccs.common.mashups.SCCSBaseMashup"/>
+        <APINamespace inputNS="itemBrowsing_searchCatalog_input" outputNS="itemBrowsing_searchCatalog_output"/>
+        <AlternateResourceIds>
+            <AlternateResourceId altResourceId="ISCPROD00001"/>
+        </AlternateResourceIds>
+    </mashup>
+    <mashup
+        description="Get List of Organizations applicable for current user"
+        endpoint="EP_CONFIG"
+        id="productBrowsing_getSearchIndexFieldList" mashuptype="XAPI"
+        resourceId="" transactional="true">
+        <API Name="getSearchIndexFieldList">
+            <Input>
+                <SearchIndexField
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode"
+                    IncludeCanUseAsFilter="N" IncludeSearchable="N"
+                    IncludeSortable="Y" MaximumRecords=""/>
+            </Input>
+            <Template>
+                <SearchIndexFieldList>
+                    <SearchField IndexFieldName="" Name=""/>
+                </SearchIndexFieldList>
+            </Template>
+        </API>
+        <classInformation name="com.ibm.isccs.common.mashups.SCCSBaseMashup"/>
+        <APINamespace
+            inputNS="productBrowsing_getSearchIndexFieldList_input" outputNS="productBrowsing_getSearchIndexFieldList_output"/>
+        <AlternateResourceIds>
+            <AlternateResourceId altResourceId="ISCPROD00001"/>
+        </AlternateResourceIds>
+    </mashup>
+	<mashup
+        description="This is a custom mashup to fetch sales orders with pagination. If the HoldType is at the orderline level and if OrderLine element is present in the input, OrderHoldType element will be added to the OrderLine element."
+        endpoint="EP_ORDER" id="orderList_getOrderList"
+        mashuptype="XAPI" skipDataProvider="false" transactional="true">
+        <classInformation name="com.ibm.isccs.order.mashups.SCCSSalesOrderPaginatedMashup"/>
+        <API FlowName="H3GGetOrderListSynService">
+            <Input>
+                <Order ApplyQueryTimeout="Y" BillToID=""
+                    CallingOrganizationCode="" CustomerEMailID=""
+                    CustomerEMailIDQryType="" CustomerFirstName=""
+                    CustomerLastName="" CustomerPONo=""
+                    CustomerPhoneNo="" CustomerZipCode=""
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode"
+                    DocumentType=" " DraftOrderFlag="" EnterpriseCode=""
+                    FromOrderDate="" IgnoreOrdering="N"
+                    MaximumRecords="" OrderDate="" OrderType=""
+                    OrderDateQryType="DATERANGE" OrderName=""
+                    OrderNameQryType="" OrderNo="" QueryTimeout=""
+                    ReadFromHistory="" TaxExemptFlag=""
+                    TaxExemptionCertificate="" ToOrderDate="" Status="">
+                    <OrderHoldType HoldType="" Status="" StatusQryType=""/>
+                    <OrderLine>
+                        <OrderHoldType HoldType="" Status="" StatusQryType=""/>
+                    </OrderLine>
+                    <OrderBy>
+                        <Attribute Desc="Y" Name="OrderDate"/>
+                    </OrderBy>
+					<PersonInfoBillTo DayPhone="" EMailID=""/>
+                </Order>
+            </Input>
+            <Template>
+                <OrderList>
+                    <Order DisplayStatusDescription="" HoldFlag=""
+                        MashupTemplateRef="OrderEditorInput" MaxOrderStatus=""
+                        MaxOrderStatusDesc="" MultipleStatusesExist=""
+                        OrderDate="" OverallStatus="" Status="">
+                        <PriceInfo Currency="" TotalAmount=""/>
+                        <PersonInfoBillTo AddressID="" AddressLine1=""
+                        AddressLine2="" City="" Company="" Country=""
+                        CountryDesc="" DayPhone="" Department=""
+                        EMailID="" EveningPhone="" FirstName=""
+                        IsAddressVerified="" IsCommercialAddress=""
+                        LastName="" MiddleName="" MobilePhone=""
+                        PersonID="" PersonInfoKey="" State="" Suffix=""
+                        Title="" TitleDesc="" ZipCode="" isHistory=""/>
+						<PersonInfoShipTo AddressID="" AddressLine1=""
+                        AddressLine2="" City="" Company="" Country=""
+                        CountryDesc="" DayPhone="" Department=""
+                        EMailID="" EveningPhone="" FirstName=""
+                        IsAddressVerified="" IsCommercialAddress=""
+                        LastName="" MiddleName="" MobilePhone=""
+                        PersonID="" PersonInfoKey="" State="" Suffix=""
+                        Title="" TitleDesc="" ZipCode="" isHistory=""/>
+                    </Order>
+                </OrderList>
+            </Template>
+        </API>
+        <APINamespace inputNS="getOrderList_input" outputNS="getOrderList_output"/>
+    </mashup>
+	<mashup
+        description="This mashup gets the complete order details ,and based on the no of person info elements coming in the output, HasMultipleAddresses attribute is populated to yes or no. This is used in address disaply screen to show information that there are multiple addresses of type personInfoShipTo."
+        endpoint="EP_ORDER" id="returnSummary_getCompleteOrderDetails"
+        mashuptype="XAPI" skipDataProvider="false" transactional="true">
+        <classInformation name="com.ibm.isccs.order.mashups.SCCSGetCompleteOrderDetailsWithMultipleShipping"/>
+        <API Name="getCompleteOrderDetails">
+            <Input>
+                <Order
+                    ApplicationCode="xml:ApplicationInfo:/ApplicationInfo@ApplicationCode"
+                    ApplicationVersion="xml:ApplicationInfo:/ApplicationInfo@ApplicationVersion"
+                    DisplayLocalizedFieldInLocale="xml:CurrentUser:/User/@Localecode"
+                    DocumentType="" EnterpriseCode=""
+                    IgnorePendingChange="Y"
+                    OrderHeaderKey="xml:scControllerInput:/Order/@OrderHeaderKey" OrderNo=""/>
+            </Input>
+            <Template>
+                <Order BillToID="" BuyerUserID="" CarrierServiceCode=""
+                    CreatorOrganizationCode="" CustomerContactID=""
+                    CustomerFirstName="" CustomerLastName=""
+                    DisplayStatusDescription="" DocumentType=""
+                    EnterpriseCode="" EntryType="" ExchangeType=""
+                    HasPendingChanges="" HoldFlag="" MaxOrderStatus=""
+                    MaxOrderStatusDesc="" MultipleStatusesExist=""
+                    OrderDate="" OrderHeaderKey="" OrderNo="" OrderType=""
+                    OverallStatus="" ReturnOrderHeaderKeyForExchange=""
+                    ScacAndService="" ScacAndServiceKey=""
+                    SellerOrganizationCode="" ShipToKey="" Status=""
+                    SupportLevel="" isHistory="">
+                    <PersonInfoShipTo MashupTemplateRef="PersonInfoShipTo"/>
+                    <PersonInfoBillTo MashupTemplateRef="PersonInfoBillTo"/>
+                    <OverallTotals GrandExchangeTotal=""
+                        GrandRefundTotal="" GrandTotal=""
+                        PendingRefundAmount="" RefundedAmount=""/>
+                    <PriceInfo Currency="" TotalAmount=""/>
+                    <OrderHoldTypes>
+                        <OrderHoldType Status=""/>
+                    </OrderHoldTypes>
+                    <ExchangeOrders>
+                        <ExchangeOrder DocumentType="" DraftOrderFlag=""
+                            EnterpriseCode="" ExchangeType=""
+                            MashupTemplateRef="OrderEditorInput"
+                            MaxOrderStatusDesc=""
+                            MultipleStatusesExist="" OrderHeaderKey=""
+                            OrderNo="" OverallStatus="" Status="">
+                            <PriceInfo Currency=""/>
+                            <OverallTotals GrandCharges="" GrandTotal=""/>
+                        </ExchangeOrder>
+                    </ExchangeOrders>
+					<Extn>
+						<EXTNOrderHeaderLinksList>
+							<EXTNOrderHeaderLinks/>
+						</EXTNOrderHeaderLinksList>
+						<EXTNOrderHeaderPropertiesList>
+							<EXTNOrderHeaderProperties/>
+						</EXTNOrderHeaderPropertiesList>
+					</Extn>
+					<OrderLines>
+                        <OrderLine LineSeqNo="" OrderLineKey="">
+                            <ItemDetails ItemGroupCode="" ItemID="" UnitOfMeasure=""/>
+                            <Extn ExtnParentLineSeqNo="" ExtnRequestType="" 
+							ExtnPACCode="" ExtnCompensationFlag="" ExtnPricePlanSpecId="" 
+							ExtnSpecVersion="" ExtnInventoryId="" ExtnEntityId="" >
+                                <EXTNOrderLinePropertiesList>
+                                    <EXTNOrderLineProperties
+                                    Createprogid="" Createts=""
+                                    Createuserid=""
+                                    DescribedByCharacteristic=""
+                                    DescribedByType=""
+                                    DescribedByValue=""
+                                    DescribingSpecApplicationDN=""
+                                    DescribingSpecPrimaryKey=""
+                                    DescribingSpecType="" Lockid=""
+                                    Modifyprogid="" Modifyts=""
+                                    Modifyuserid="" OrderLineKey="" PropertyKey="" DescribedByCharacteristicName="" CharacteristicEntityId=""/>
+                                </EXTNOrderLinePropertiesList>
+                            </Extn>
+                        </OrderLine>
+                    </OrderLines>
+                </Order>
+            </Template>
+        </API>
+        <APINamespace inputNS="getCompleteOrderDetails_input" outputNS="getCompleteOrderDetails_output"/>
+        <AlternateResourceIds>
+            <AlternateResourceId altResourceId="ISCRET0001"/>
+        </AlternateResourceIds>
+    </mashup>
+</mashups>

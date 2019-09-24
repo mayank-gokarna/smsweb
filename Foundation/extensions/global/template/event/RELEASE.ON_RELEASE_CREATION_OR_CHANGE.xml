@@ -1,0 +1,19 @@
+<OrderRelease MaxOrderReleaseStatus="" MinOrderReleaseStatus="" OrderReleaseKey="" OrderType="" Status="" ReqDeliveryDate="" ReqShipDate="" HoldFlag="" HoldReasonCode="" >
+<Order OrderHeaderKey="" OrderNo="" DocumentType="" MinOrderStatus="" MinOrderStatusDesc="" EnterpriseCode="" >
+   <Extn ExtnCustomerOrderNo="" />
+
+   <OrderLines>
+      <OrderLine OrderLineKey="" PrimeLineNo="" SubLineNo="" CustomerPONo="" OrderHeaderKey="" ReqShipDate="" OrderedQty="" MinLineStatus="" MinLineStatusDesc="" Purpose="" DeliveryMethod="">
+         <OrderHoldType Status="" HoldType="" ReasonText="" TransactionId="" OrderLineKey="" />
+
+         <OrderStatuses>
+            <OrderStatus OrderHeaderKey="" OrderLineKey="" Status="" StatusQty="">
+               <Details ExpectedDeliveryDate="" ExpectedShipmentDate="" ShipByDate="" />
+            </OrderStatus>
+         </OrderStatuses>
+      </OrderLine>
+   </OrderLines>
+</Order>
+
+
+</OrderRelease>

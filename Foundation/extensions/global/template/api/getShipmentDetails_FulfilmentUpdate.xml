@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shipment ShipmentKey="" ShipmentConsolidationGroupId="" DocumentType="">
+   <ShipmentLines>
+      <ShipmentLine ShipmentLineNo="" OrderHeaderKey="" OrderLineKey="" DocumentType="" ItemID="">
+         <Order OrderType="" DocumentType="" OrderHeaderKey="" OrderName="" OrderNo="">
+            <Extn ExtnCustomerOrderNo="" />
+         </Order>
+         <OrderLine OrderLineKey="" OrderHeaderKey="" CustomerPONo="" ItemID="" DeliveryMethod="">
+            <Extn>
+               <EXTNOrderLinePropertiesList>
+                  <EXTNOrderLineProperties PropertyKey="" DescribedByCharacteristicName="" DescribedByCharacteristic="" CharacteristicEntityId="" />
+               </EXTNOrderLinePropertiesList>
+            </Extn>
+         </OrderLine>
+      </ShipmentLine>
+   </ShipmentLines>
+</Shipment>
+

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.return.details.ReturnSummaryExtnBundle" screenId="extn.return.details.ReturnSummaryExtn">
+    <BundleEntries>
+        <BundleEntry
+            bundleEntryId="extn_pnlMoreAttributes_ContentPane_title"
+            bundleKey="extn_More_Attributes"
+            bundleValueFn="_scSimpleBundle" property="title"
+            type="WIDGET" uId="extn_pnlMoreAttributes"/>
+        <BundleEntry bundleEntryId="extn_btnSave_Button_label"
+            bundleKey="extn_Save" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_btnSave"/>
+        <BundleEntry
+            bundleEntryId="extn_Retry_Validation_btn_Button_label"
+            bundleKey="extn_Retry_Validation"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_Retry_Validation_btn"/>
+        <BundleEntry bundleEntryId="extn_Retrybtn_Button_label"
+            bundleKey="extn_Retry" bundleValueFn="_scSimpleBundle"
+            property="label" type="WIDGET" uId="extn_Retrybtn"/>
+        <BundleEntry
+            bundleEntryId="extn_MarkAsComplete_btn_Button_label"
+            bundleKey="extn_Mark_as_Complete"
+            bundleValueFn="_scSimpleBundle" property="label"
+            type="WIDGET" uId="extn_MarkAsComplete_btn"/>
+        <BundleEntry bundleEntryId="extn_view_50041_View_name"
+            bundleKey="extn_Value" bundleValueFn="_scSimpleBundle"
+            property="name" type="WIDGET" uId="extn_view_50041"/>
+        <BundleEntry bundleEntryId="extn_gridItemID_View_name"
+            bundleKey="extn_Item_Id" bundleValueFn="_scSimpleBundle"
+            property="name" type="WIDGET" uId="extn_gridItemID"/>
+        <BundleEntry bundleEntryId="extn_gridEntityId_View_name"
+            bundleKey="extn_Entity_Id" bundleValueFn="_scSimpleBundle"
+            property="name" type="WIDGET" uId="extn_gridEntityId"/>
+        <BundleEntry
+            bundleEntryId="extn_gridCharacteristicName_View_name"
+            bundleKey="extn_Characteristic_Name"
+            bundleValueFn="_scSimpleBundle" property="name"
+            type="WIDGET" uId="extn_gridCharacteristicName"/>
+        <BundleEntry bundleEntryId="extn_gridCharacteristic_View_name"
+            bundleKey="extn_Characteristic"
+            bundleValueFn="_scSimpleBundle" property="name"
+            type="WIDGET" uId="extn_gridCharacteristic"/>
+    </BundleEntries>
+</ScreenBundle>

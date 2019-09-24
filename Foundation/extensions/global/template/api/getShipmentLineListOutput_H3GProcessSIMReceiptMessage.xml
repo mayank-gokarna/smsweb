@@ -1,0 +1,5 @@
+<ShipmentLines>
+	<ShipmentLine DocumentType="" ItemID="" OrderHeaderKey="" OrderLineKey="" Quantity="" ShipmentKey="" ShipmentLineKey="" >
+	<Shipment ReceivingNode="" />
+	</ShipmentLine>
+</ShipmentLines>

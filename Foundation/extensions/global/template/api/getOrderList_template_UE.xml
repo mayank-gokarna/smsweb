@@ -1,0 +1,8 @@
+<OrderList>
+   <Order OrderNo="">
+      <Extn ExtnCustomerOrderNo="" />
+      <OrderLines>
+      	<OrderLine OrderLineKey="" CustomerPONo=""/>
+      </OrderLines>
+   </Order>
+</OrderList>

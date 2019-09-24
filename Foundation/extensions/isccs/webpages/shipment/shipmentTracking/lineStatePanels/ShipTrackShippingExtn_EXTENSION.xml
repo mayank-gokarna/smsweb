@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="ShipTrackShippingExtn"
+        extnPackage="extn.shipment.shipmentTracking.lineStatePanels"
+        originalScreen="isccs.shipment.shipmentTracking.lineStatePanels.ShipTrackShipping"
+        originalScreenPackage="isccs.shipment.shipmentTracking.lineStatePanels" type="diffrential">
+        <Items>
+            <Link _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lnkReship" renderHidden="true"/>
+            <Link _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lnkAdditionalInfo" renderHidden="true"/>
+        </Items>
+    </ScreenExtension>
+</ExtensionMetaData>

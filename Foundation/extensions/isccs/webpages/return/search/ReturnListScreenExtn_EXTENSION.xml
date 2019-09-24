@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="ReturnListScreenExtn"
+        extnPackage="extn.return.search"
+        originalScreen="isccs.return.search.ReturnListScreen"
+        originalScreenPackage="isccs.return.search" type="diffrential">
+        <Items>
+            <GridX _sc_extensibility_operation="change" _sc_extensibility_referenceUId="listReturnGrid">
+                <Structure>
+                    <Layout>
+                        <View _sc_extensibility_moveOrder="1"
+                            _sc_extensibility_operation="insert"
+                            _sc_extensibility_position="before"
+                            _sc_extensibility_referenceUId="tblColReturnNo"
+                            field="extn_listReturnGrid_view"
+                            name="$(_scSimpleBundle:extn_Test_Column)" uId="extn_listReturnGrid_view">
+                            <BindingData>
+                                <SourceBinding path="Order"/>
+                            </BindingData>
+                        </View>
+                    </Layout>
+                </Structure>
+            </GridX>
+        </Items>
+    </ScreenExtension>
+</ExtensionMetaData>

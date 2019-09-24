@@ -1,0 +1,24 @@
+<OrderList>
+	<Order OrderNo="" OrderHeaderKey="" MaxOrderStatus="">
+		<Extn>
+			<EXTNOrderHeaderLinksList>
+				<EXTNOrderHeaderLinks LinkageType=""
+					LinkedOrderType="" LinkedOrderNo="" LinkedOrderHeaderKey="" />
+			</EXTNOrderHeaderLinksList>
+			<EXTNOrderProcessingDataList>
+				<EXTNOrderProcessingData ExtnDataKey=""
+					ExtnDataType="" />
+			</EXTNOrderProcessingDataList>
+		</Extn>
+		<OrderLines>
+			<OrderLine OrderLineKey="">
+				<Extn>
+					<EXTNOrderLinePropertiesList>
+						<EXTNOrderLineProperties
+							CharacteristicEntityId="" PropertyKey="" OrderLineKey="" />
+					</EXTNOrderLinePropertiesList>
+				</Extn>
+			</OrderLine>
+		</OrderLines>
+	</Order>
+</OrderList>

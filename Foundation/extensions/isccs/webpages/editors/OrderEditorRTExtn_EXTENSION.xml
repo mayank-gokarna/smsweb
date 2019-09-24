@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="OrderEditorRTExtn"
+        extnPackage="extn.editors"
+        originalScreen="isccs.editors.OrderEditorRT"
+        originalScreenPackage="isccs.editors" type="diffrential">
+        <Items>
+            <Link _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="after"
+                _sc_extensibility_referenceUId="emailOrder"
+                class="relatedTaskLink" uId="extn_BuilPlanLink" value="$(_scSimpleBundle:extn_View_Build_Plan_Order_Summary)"/>
+        </Items>
+        <Subscribers>
+            <Local>
+                <Subscriber eventId="afterScreenInit" isExtn="true" sequence="51">
+                    <Handler methodName="hideViewBuildPlanDetails"/>
+                </Subscriber>
+                <Subscriber eventId="extn_BuilPlanLink_onClick"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="openBuildPlanDetails"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+    </ScreenExtension>
+</ExtensionMetaData>

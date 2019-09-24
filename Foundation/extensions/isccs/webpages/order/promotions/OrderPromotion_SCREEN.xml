@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed Materials - Property of IBM
+  IBM Call Center for Commerce (5725-P82)
+  (C) Copyright IBM Corp. 2013 All Rights Reserved.
+  US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<MetaData version="1.0" xmlns="http://ibm.com/sterling/afc/cuf/tns">
+    <Screen className="OrderPromotion"
+        description="This screen displays the promotions that may be applicable to this order."
+        extensible="true" package="isccs.order.promotions"
+        superClass="${conf:BaseScreen}" title="Screen" uId="OrderPromotion">
+        <Items>
+            <ContentPane
+                class="isccsScreen orderPromotion contentSeparator"
+                spanLabel="true" uId="pnlRoot">
+                <TableLayout cols="2"
+                    customClass="importantEventContainer" showLabels="false"/>
+                <Items>
+                    <ContentPane spanLabel="true" uId="pnlImportantEventHolder">
+                        <TableLayout cols="1"
+                            customClass="importantEventContainer" showLabels="false"/>
+                        <Items>
+                            <Image uId="itemImage">
+                                <BindingData>
+                                    <SourceBinding
+                                    namespace="OrderPromotion" path="Offer"/>
+                                    <ImageBindings>
+                                    <ImageUrl path="WebSiteOfferImageMedium"/>
+                                    <ImageIcon/>
+                                    <DefaultImage
+                                    class="noItemImage" src="" style=""/>
+                                    </ImageBindings>
+                                </BindingData>
+                            </Image>
+                            <Label class="importantEventsElement"
+                                spanLabel="true" uId="lblDate">
+                                <BindingData>
+                                    <SourceBinding
+                                    namespace="OrderPromotion" path="Offer.Description"/>
+                                </BindingData>
+                            </Label>
+                        </Items>
+                    </ContentPane>
+                </Items>
+            </ContentPane>
+        </Items>
+        <Subscribers>
+            <Local>
+                <Subscriber eventId="afterScreenInit" sequence="30">
+                    <Handler methodName="initializeScreen"/>
+                </Subscriber>
+                <Subscriber eventId="saveCurrentPage" sequence="25">
+                    <Handler methodName="save"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+        <Namespaces>
+            <SourceNamespaces>
+                <Source
+                    description="This contains the details of the important event." value="OrderPromotion"/>
+            </SourceNamespaces>
+        </Namespaces>
+        <Properties>
+            <Property initialValue="false" name="showRelatedTask" type="boolean"/>
+            <Property initialValue="true" name="isDirtyCheckRequired" type="Boolean"/>
+        </Properties>
+        <Events>
+            <Event name="saveCurrentPage"/>
+            <Event name="reloadScreen"/>
+        </Events>
+    </Screen>
+</MetaData>

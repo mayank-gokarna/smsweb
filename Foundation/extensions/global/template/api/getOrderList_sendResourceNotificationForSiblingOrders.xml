@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OrderList TotalNumberOfRecords="">
+   <Order OrderNo="" OrderType="" Status="" MinOrderStatus="" MinOrderStatusDesc="">
+      <Extn ExtnCustomerOrderNo="" ExtnBillCycleDate=""/>
+      <OrderLines>
+         <OrderLine CustomerPONo="" PrimeLineNo="" SubLineNo="" Status="" Purpose="" MinLineStatus="" MinLineStatusDesc="" DeliveryMethod="">
+         	<Extn ExtnPACCode="" ExtnContractId=""/>
+         </OrderLine>
+      </OrderLines>
+   </Order>
+</OrderList>
+

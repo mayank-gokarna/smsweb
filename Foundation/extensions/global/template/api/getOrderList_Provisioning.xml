@@ -1,0 +1,34 @@
+<OrderList>
+	<Order OrderHeaderKey="" BillToID="" OrderNo="" OrderType="" EnterpriseCode=""  SellerOrganizationCode="" EntryType="" ReqShipDate="" DocumentType="" OrderDate="">
+		<Extn ExtnTargetOSS="" ExtnGroupID="" ExtnCustomerOrderNo="" ExtnMIP27ACreated="" ExtnReturnNumber="" ExtnBillCycleDate="" ExtnOCSnBillingUpdateFlag="">
+			<EXTNOrderHeaderLinksList>
+			<EXTNOrderHeaderLinks LinkageKey=" "
+					LinkageType=" " LinkedOrderHeaderKey=" " LinkedOrderNo=" "
+					LinkedOrderType=" " OrderHeaderKey=" " /> 
+			</EXTNOrderHeaderLinksList>
+		</Extn>
+		<OrderLines>
+			<OrderLine Purpose="" ReqShipDate="" OrderedQty=""
+				LineType="" OrderLineKey="" ConditionVariable1="" CustomerPONo="" ShipNode=""
+				PrimeLineNo="" SubLineNo="" ReturnReason="">
+				<Item ItemID="" UnitOfMeasure="" ProductClass="" >
+				</Item>
+				<Extn ExtnStatus="" ExtnRequestType="" ExtnEntityId="" ExtnParentLineSeqNo="" ExtnPricePlanSpecId=""
+					ExtnSpecVersion="" ExtnCostCenter="" ExtnInventoryId="" ExtnAssociatedInventoryId="" 
+					ExtnParentOrderNo="" ExtnParentLineCustomerPONo="" ExtnBlindReturn=""  ExtnContractId="" ExtnReturnLineNumber="">
+					<EXTNOrderLinePropertiesList>
+						<EXTNOrderLineProperties
+							DescribedByCharacteristic="" DescribedByCharacteristicName=""
+							DescribedByType="" DescribedByValue="" CharacteristicValueGroup=""
+							ParentCharValueGroup="" CharacteristicValueGroupName="" CharacteristicEntityId="" CharacteristicPath="" />
+					</EXTNOrderLinePropertiesList>
+				</Extn>
+				<CustomAttributes hasStarted="" mandatory=""
+					serviceEnabled="" stateful="" status="" />
+				<PersonInfoShipTo AddressLine1="" AddressLine2="" AddressLine3="" City="" 
+				Country="" DayPhone="" EMailID="" FirstName="" IsAddressVerified="" 
+				LastName="" State="" ZipCode="" />
+			</OrderLine>
+		</OrderLines>
+	</Order>
+</OrderList>

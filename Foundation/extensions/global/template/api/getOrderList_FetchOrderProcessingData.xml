@@ -1,0 +1,10 @@
+<OrderList>
+	<Order OrderNo="" OrderHeaderKey="">
+		<Extn>
+			<EXTNOrderProcessingDataList>
+				<EXTNOrderProcessingData ExtnDataStore=""
+					ExtnDataType="" />
+			</EXTNOrderProcessingDataList>
+		</Extn>
+	</Order>
+</OrderList>

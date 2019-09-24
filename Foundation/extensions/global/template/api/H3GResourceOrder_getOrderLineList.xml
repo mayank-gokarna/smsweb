@@ -1,0 +1,14 @@
+<OrderLineList TotalLineList="">
+	<OrderLine OrderLineKey="" OrderHeaderKey="">
+		<Item ItemID="" />
+		<Extn>
+			<EXTNOrderLinePropertiesList>
+				<EXTNOrderLineProperties DescribedByValue=""
+					PropertyKey="" DescribedByCharacteristicName=""
+					CharacteristicEntityId="">
+
+				</EXTNOrderLineProperties>
+			</EXTNOrderLinePropertiesList>
+		</Extn>
+	</OrderLine>
+</OrderLineList>

@@ -1,0 +1,46 @@
+<DBSchema>
+   <Entities>
+      <Entity TableName="EOD_SALES_STOCK" Description="This view joins YFS_ORDER_LINE and YFS_ORDER_RELEASE_STATUS tables to enable querying for Demand Updates per Day" View="true" EntityType="VIEW" HasHistory="False" AuditRequired="N" ApiNeeded="Y" Prefix="EOD" XMLName="SalesStock" KeyType="Random">
+         <Attributes>
+            <Attribute ColumnName="SALES_STOCK_KEY" DataType="Key" Description="Primary key for this view." Nullable="false" XMLName="SalesStockKey" />
+
+            <Attribute ColumnName="ITEM_ID" DataType="ItemID" Description="Identifer for this inventory item." Nullable="false" XMLName="ItemID" />
+
+            <Attribute ColumnName="SHIPNODE_KEY" DataType="ShipNode" Description="Status of OrderLine" Name="Status" Nullable="true" XMLName="ShipNode" />
+
+            <Attribute ColumnName="STATUS_QUANTITY" DataType="Quantity" Description="Quantity of Sale" Nullable="true" XMLName="StatusQuantity" />
+			
+			<Attribute ColumnName="STATUS_DATE" DataType="TimeStamp" DefaultValue="sysdate" Description="Demands Shipped Date" Nullable="false" XMLName="StatusDate" />
+			
+			<Attribute ColumnName="CREATETS" DataType="TimeStamp" DefaultValue="sysdate" Description="Stores Time Stamp of row creation" Nullable="False" XMLName="Createts" />
+
+            <Attribute ColumnName="MODIFYTS" DataType="TimeStamp" DefaultValue="sysdate" Description="Stores Modified Time Stamp of the row" Nullable="False" XMLName="Modifyts" />
+
+            <Attribute ColumnName="CREATEUSERID" DataType="Createuserid" DefaultValue="' '" Description="Stores the Id of user who created the row" Nullable="False" XMLName="Createuserid" />
+
+            <Attribute ColumnName="MODIFYUSERID" DataType="Modifyuserid" DefaultValue="' '" Description="Stores the Id of user who modified the row last" Nullable="False" XMLName="Modifyuserid" />
+
+            <Attribute ColumnName="CREATEPROGID" DataType="ProgramID" DefaultValue="' '" Description="Stores the name of program which created the row" Nullable="False" XMLName="Createprogid" />
+
+            <Attribute ColumnName="MODIFYPROGID" DataType="ProgramID" DefaultValue="' '" Description="Stores the name of program which modified the row" Nullable="False" XMLName="Modifyprogid" />
+
+            <Attribute ColumnName="LOCKID" DataType="Lockid" DefaultValue="0" Description="Stores the Lock Id for the table" Nullable="False" XMLName="Lockid" />
+         </Attributes>
+
+         <PrimaryKey Name="EOD_SALES_STOCK_PK">
+            <Attribute ColumnName="SALES_STOCK_KEY" />
+         </PrimaryKey>
+
+         <Indices>
+            <Index Name="SALES_STOCK_I1" Unique="True">
+              <Column Name="SALES_STOCK_KEY" />
+            </Index>
+			<Index Name="SALES_STOCK_I2" Unique="False">
+               <Column Name="ITEM_ID" />
+               <Column Name="SHIPNODE_KEY" />
+            </Index>
+         </Indices>
+      </Entity>
+   </Entities>
+</DBSchema>
+

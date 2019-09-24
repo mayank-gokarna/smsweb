@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- 
+Licensed Materials - Property of IBM
+IBM Sterling Selling And Fulfillment Suite
+(C) Copyright IBM Corp. 2005, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+ -->
+<HoldType HoldType="">
+<OrderLines>
+	<OrderLine OrderLineKey="" PrimeLineNo="" SubLineNo="" CustomerPONo="" OrderHeaderKey="" ReqShipDate="">
+		<OrderHoldType Status="" HoldType="" ReasonText="" TransactionId="" OrderLineKey="" />
+		<OrderStatuses>
+		<OrderStatus OrderHeaderKey="" OrderLineKey="" Status="" StatusQty="">
+		<Details ExpectedDeliveryDate="" ExpectedShipmentDate="" ShipByDate="" />
+		</OrderStatus>
+		</OrderStatuses>
+	</OrderLine>
+</OrderLines>
+</HoldType>
+
+

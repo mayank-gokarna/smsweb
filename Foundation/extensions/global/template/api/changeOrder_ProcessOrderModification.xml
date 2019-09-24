@@ -1,0 +1,83 @@
+<Order Action="" ActualPricingDate="" AllAddressesVerified=""
+	AllocationRuleID="" ApprovalCycle="" AuthorizationExpirationDate=""
+	AuthorizedClient="" AutoCancelDate="" BillToID="" BillToKey=""
+	BuyerMarkForNodeId="" BuyerOrganizationCode="" BuyerReceivingNodeId=""
+	BuyerUserId="" CancelOrderOnBackorder="Y" CarrierAccountNo=""
+	CarrierServiceCode="" ChainType="" ChargeActualFreightFlag=""
+	ComplimentaryGiftBoxQty="" CreatedAtNode="" Createts="" Createuserid=""
+	CustCustPONo="" CustomerContactID="" CustomerEMailID=""
+	CustomerFirstName="" CustomerLastName="" CustomerPONo=""
+	CustomerPhoneNo="" CustomerZipCode="" DefaultCustomerInformation=""
+	DefaultTemplate="" DeliveryCode="" DepartmentCode="" Division=""
+	DocumentType="" DraftOrderFlag="" DriverDate="" EnteredBy=""
+	EnterpriseCode="" EntryType="" ExchangeType="" ExpirationDate=""
+	FreightTerms="" HasChainedLines="" HasDeliveryLines="" HasDerivedChild=""
+	HasDerivedParent="" HasPendingChanges="" HasProductLines=""
+	HasServiceLines="" HoldFlag="" HoldReasonCode=""
+	HoursBeforeNextIteration="" IsExpirationDateComputed=""
+	IsExpirationDateOverridden="" IsLineShipComplete="Y"
+	IsLineShipSingleNode="Y" IsShipComplete="Y" IsShipSingleNode="Y"
+	LevelOfService="" LinkedSourceKey="" MaxOrderStatus=""
+	MaxOrderStatusDesc="" MinOrderStatus="" MinOrderStatusDesc="" Modifyts=""
+	Modifyuserid="" MultipleStatusesExist="" NegotiationStatus=""
+	NegotiationStatusDesc="" NextIterationDate="" NextIterationSeqNo=""
+	NoOfAuthStrikes="" NotificationReference="" NotificationType=""
+	NotifyAfterShipmentFlag="" OpportunityKey="" OptimizationType=""
+	OrderComplete="" OrderDate="" OrderHeaderKey="" OrderName="" OrderNo=""
+	OrderPurpose="" OrderType="" OriginalContainerKey="" OriginalTax=""
+	OriginalTotalAmount="" OtherCharges="" PaymentRuleId="" PaymentStatus=""
+	PendingChangesUserID="" PendingTransferIn="" PersonalizeCode=""
+	PriceProgramKey="" PricingClassificationCode="" PriorityCode=""
+	PriorityNumber="" PurgeHistoryDate="" Purpose="" ReceivingNode=""
+	ReqCancelDate="" ReqDeliveryDate="" ReqShipDate=""
+	ReturnByGiftRecipient="" ReturnOrderHeaderKeyForExchange="" Role=""
+	SCAC="" SaleVoided="" ScacAndService="" ScacAndServiceKey=""
+	SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode=""
+	ShipNode="" ShipToID="" ShipToKey="" SoldToKey="" SourceIPAddress=""
+	SourceKey="" SourceType="" SourcingClassification="" Status=""
+	TaxExemptFlag="" TaxExemptionCertificate="" TaxJurisdiction=""
+	TaxPayerId="" TeamCode="" TermsCode="" TotalAdjustmentAmount=""
+	VendorID="" isHistory="">
+	<Extn>
+		<EXTNOrderHeaderLinksList>
+			<EXTNOrderHeaderLinks />
+		</EXTNOrderHeaderLinksList>
+		<EXTNOrderProcessingDataList>
+			<EXTNOrderProcessingData />
+		</EXTNOrderProcessingDataList>
+		<EXTNOrderHeaderPropertiesList>
+			<EXTNOrderHeaderProperties />
+		</EXTNOrderHeaderPropertiesList>
+	</Extn>
+	<OrderLines>
+		<OrderLine>
+			<Extn>
+				<EXTNOrderLinePropertiesList>
+					<EXTNOrderLineProperties />
+				</EXTNOrderLinePropertiesList>
+			</Extn>
+			<OrderDates>
+				<OrderDate ActualDate="" CommittedDate="" DateTypeId=""
+					ExpectedDate="" OrderHeaderKey="" OrderLineKey="" OrderReleaseKey=""
+					RequestedDate="" />
+			</OrderDates>
+			<ItemDetails>
+				<PrimaryInformation />
+			</ItemDetails>
+			<Item />
+		</OrderLine>
+
+	</OrderLines>
+	<OrderDates>
+		<OrderDate ActualDate="" CommittedDate="" DateTypeId=""
+			ExpectedDate="" OrderHeaderKey="" OrderLineKey="" OrderReleaseKey=""
+			RequestedDate="" />
+	</OrderDates>
+	<OrderLineRelationships>
+		<OrderLineRelationship RelationshipType="Required">
+			<ParentLine OrderLineKey="" PrimeLineNo="" SubLineNo="" />
+			<ChildLine OrderLineKey="" PrimeLineNo="" SubLineNo="" />
+		</OrderLineRelationship>
+	</OrderLineRelationships>
+
+</Order>

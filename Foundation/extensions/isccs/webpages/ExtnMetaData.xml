@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Extensions>
+    <Identifier id="">
+        <UIExtns>
+            <UIExtn appScreen="isccs.order.search.OrderListScreen"
+                extnScreen="extn.order.search.OrderListScreenExtn" type="diffrential"/>
+            <UIExtn appScreen="isccs.order.details.OrderSummary"
+                extnScreen="extn.order.details.OrderSummaryExtn" type="diffrential"/>
+            <UIExtn appScreen="isccs.order.details.OrderSummaryLines"
+                extnScreen="extn.order.details.OrderSummaryLinesExtn" type="diffrential"/>
+            <UIExtn appScreen="isccs.order.details.OrderLineSummary"
+                extnScreen="extn.order.details.OrderLineSummaryExtn" type="diffrential"/>
+            <UIExtn appScreen="isccs.order.search.OrderSearch"
+                extnScreen="extn.order.search.OrderSearchExtn" type="diffrential"/>
+            <UIExtn appScreen="isccs.editors.OrderEditorRT"
+                extnScreen="extn.editors.OrderEditorRTExtn" type="diffrential"/>
+            <UIExtn appScreen="isccs.home.portlets.OrderPortlet"
+                extnScreen="extn.home.portlets.OrderPortletExtn" type="diffrential"/>
+            <UIExtn
+                appScreen="isccs.shipment.shipmentTracking.lineStatePanels.ShipTrackShipping"
+                extnScreen="extn.shipment.shipmentTracking.lineStatePanels.ShipTrackShippingExtn" type="diffrential"/>
+            <UIExtn appScreen="isccs.common.customer.BusinessCard"
+                extnScreen="extn.common.customer.BusinessCardExtn" type="diffrential"/>
+            <UIExtn
+                appScreen="isccs.shipment.shipmentTracking.LineTracking"
+                extnScreen="extn.shipment.shipmentTracking.LineTrackingExtn" type="diffrential"/>
+            <UIExtn appScreen="isccs.return.details.ReturnSummary"
+                extnScreen="extn.return.details.ReturnSummaryExtn" type="diffrential"/>
+			 <UIExtn appScreen="isccs.return.details.ReturnSummaryLines"
+                extnScreen="extn.return.details.ReturnSummaryLinesExtn" type="diffrential"/>
+        </UIExtns>
+    </Identifier>
+</Extensions>

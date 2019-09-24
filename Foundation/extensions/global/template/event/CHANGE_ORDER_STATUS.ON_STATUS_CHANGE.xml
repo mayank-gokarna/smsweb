@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- 
+Licensed Materials - Property of IBM
+IBM Sterling Selling And Fulfillment Suite
+(C) Copyright IBM Corp. 2005, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+ -->
+<OrderStatusChange>
+   <OrderAudit AuditTransactionId="" OrderAuditKey="" OrderHeaderKey="" OrderLineKey="" OrderReleaseKey="" ReasonCode="" ReasonText="" Reference1="" Reference2="" Reference3="" Reference4="" XMLFlag="">
+      <Order EnterpriseCode="" OrderNo="" DocumentType="" OrderType="" Status="" MaxOrderStatus="" MinOrderStatus="" OrderHeaderKey="" MinOrderStatusDesc="" MaxOrderStatusDesc="">
+         <Extn ExtnCustomerOrderNo="" ExtnTargetOSS="" ExtnBillCycleDate="" ExtnOCSnBillingUpdateFlag=""/>
+      </Order>
+
+      <OrderAuditLevels>
+         <OrderAuditLevel ModificationLevel="" OrderReleaseKey="" OrderLineKey="">
+            <ModificationTypes>
+               <ModificationType Name="" />
+            </ModificationTypes>
+
+            <OrderLine PrimeLineNo="" SubLineNo="" CustomerPONo="" OrderLineKey="" LineType="" MaxLineStatus="" MinLineStatus="" MinLineStatusDesc="" MaxLineStatusDesc="" Purpose="" DeliveryMethod="">
+               <Item ItemID="" />
+
+               <Extn>
+                  <EXTNOrderLinePropertiesList />
+               </Extn>
+            </OrderLine>
+
+            <OrderRelease ReleaseNo="" />
+
+            <OrderAuditDetails>
+               <OrderAuditDetail Action="" AuditType="">
+                  <IDs>
+                     <ID Name="" Value="" />
+                  </IDs>
+
+                  <Attributes>
+                     <Attribute Name="" NewValue="" OldValue="" />
+                  </Attributes>
+               </OrderAuditDetail>
+            </OrderAuditDetails>
+         </OrderAuditLevel>
+      </OrderAuditLevels>
+   </OrderAudit>
+</OrderStatusChange>
+

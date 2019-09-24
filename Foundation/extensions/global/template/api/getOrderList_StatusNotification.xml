@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OrderList TotalNumberOfRecords="">
+   <Order BillToID="" OrderNo="" OrderHeaderKey="" OrderType="" Status="" MinOrderStatus="" MinOrderStatusDesc="">
+      <Extn ExtnCustomerOrderNo="" ExtnBillCycleDate="" ExtnOCSnBillingUpdateFlag=""/>
+      <OrderLines>
+         <OrderLine OrderLineKey="" CustomerPONo="" OrderedQty="" LineType="" MinLineStatus="" MinLineStatusDesc="" Purpose="" DeliveryMethod="">
+            <Item ItemID="" />
+            <Extn ExtnPACCode="" ExtnContractId="">
+               <EXTNOrderLinePropertiesList>
+                  <EXTNOrderLineProperties DescribedByCharacteristic="" DescribedByCharacteristicName="" DescribedByType="" DescribedByValue="" CharacteristicEntityId="" CharacteristicPath="" />
+               </EXTNOrderLinePropertiesList>
+            </Extn>
+         </OrderLine>
+      </OrderLines>
+   </Order>
+</OrderList>
+

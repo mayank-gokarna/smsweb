@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed Materials - Property of IBM
+IBM Sterling Selling and Fulfillment Suite
+(C) Copyright IBM Corp. 2001, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+
+<DBSchema>
+	<Entities>   
+		<Entity TableName="YFS_ORDER_LINE">
+			<Attributes>
+				<Attribute ColumnName="EXTN_PARENT_LINE_SEQ_NO" 
+						Name="Extn_Parent_Line_Seq_No"
+	              		Nullable="true" DataType="Text-40"
+	              		Description="LineSeqNo of the parent line. The Line Sequence No will be of the format - PrimeLineNo.SubLineNo"
+	              		XMLName="ExtnParentLineSeqNo" XMLGroup="Extn">
+				</Attribute>
+				<Attribute ColumnName="EXTN_REQUEST_TYPE" 
+						Name="EXTN_REQUEST_TYPE"
+	              		Nullable="true" DataType="Text-128"
+	              		Description="Identifier for sales, return and exchange orders.Valid values are 'Sales','Return' and 'Exchange"
+	              		XMLName="ExtnRequestType" XMLGroup="Extn">
+				</Attribute>
+				<Attribute ColumnName="EXTN_PAC_CODE" 
+						Name="EXTN_PAC_CODE"
+	              		Nullable="true" DataType="Text-128"
+	              		Description="PAC code for port-in orders and port-out orders"
+	              		XMLName="ExtnPACCode" XMLGroup="Extn">
+				</Attribute>
+				<Attribute ColumnName="EXTN_PRODUCT_CATEGORY" 
+						Name="EXTN_PRODUCT_CATEGORY"
+	              		Nullable="true" DataType="CLOB"
+	              		Description="It is the category of the product to which it belongs"
+	              		XMLName="ExtnProdCategory" XMLGroup="Extn">
+				</Attribute>
+				<!-- MODIFICATION for Compensation Flag -->
+				<Attribute ColumnName="EXTN_COMPENSATION_FLAG" DataType="Flag"
+					Description="This flag indicates whether this orderline is sent as compensation;."
+					Type="CHAR" XMLName="ExtnCompensationFlag" XMLGroup="Extn"
+					Name="Extn_Compensation_Flag" Nullable="false" DefaultValue="N" />
+				<Attribute ColumnName="EXTN_PRICE_PLAN_SPEC_ID" 
+						Name="EXTN_PRICE_PLAN_SPEC_ID"
+	              		Nullable="true" DataType="Text-128"
+	              		Description="Price plan specification ID"
+	              		XMLName="ExtnPricePlanSpecId" XMLGroup="Extn">
+				</Attribute>
+				<Attribute ColumnName="EXTN_SPEC_VERSION" 
+						Name="EXTN_SPEC_VERSION"
+	              		Nullable="true" DataType="Text-128"
+	              		Description="Specification Version"
+	              		XMLName="ExtnSpecVersion" XMLGroup="Extn">
+				</Attribute>
+				<!-- Added for CIT8 Task  Start-->
+				<Attribute ColumnName="EXTN_INVENTORY_ID" 
+						Name="EXTN_INVENTORY_ID"
+	              		Nullable="true" DataType="Text-128"
+	              		Description="Inventory Id Coming from Vlocity"
+	              		XMLName="ExtnInventoryId" XMLGroup="Extn">
+				</Attribute>
+				<!-- Added for CIT8 Task  End-->
+				<!-- START: CIT41 Changes-->
+				<Attribute ColumnName="EXTN_ENTITY_ID" 
+						Name="EXTN_ENTITY_ID"
+	              		Nullable="true" DataType="Text-128"
+	              		Description="Entity Id for child orders"
+	              		XMLName="ExtnEntityId" XMLGroup="Extn">
+				</Attribute>
+				<!-- END: CIT41 Changes-->
+                <!--START: Change for Disruptive Props -->
+              	<Attribute ColumnName="EXTN_ASSOCIATED_INVENTORY_ID" 
+						Name="EXTN_ASSOCIATED_INVENTORY_ID"
+	              		Nullable="true" DataType="Text-128"
+	              		Description="Associated Inventory Id Coming from Vlocity for offer-offer linkage"
+	              		XMLName="ExtnAssociatedInventoryId" XMLGroup="Extn">
+				</Attribute>
+                <!--END: Change for Disruptive Props -->
+                <!-- START: ATP - Return and Exchange Changes-->
+				<Attribute ColumnName="EXTN_PARENT_ORDER_NO"	
+						Name="EXTN_PARENT_ORDER_NO"
+	              		Nullable="true" DataType="Text-128"
+	              		Description="Parent customer order number"
+	              		XMLName="ExtnParentOrderNo" XMLGroup="Extn">
+				</Attribute>
+				<Attribute ColumnName="EXTN_PARENT_LINE_CUST_PO_NO"
+						Name="EXTN_PARENT_LINE_CUST_PO_NO"
+	              		Nullable="true" DataType="Text-128"
+	              		Description="Parent line customer PO number"
+	              		XMLName="ExtnParentLineCustomerPONo" XMLGroup="Extn">
+				</Attribute>
+				<Attribute ColumnName="EXTN_BLIND_RETURN" 		
+						Name="EXTN_BLIND_RETURN"
+				        Nullable="true" DataType="Text-40" Type="CHAR"
+				        Description="Flag indicating blind return"
+				        XMLName="ExtnBlindReturn" XMLGroup="Extn">
+				</Attribute>
+				<Attribute ColumnName="EXTN_RETURN_CANCLE_RESN_CODE"
+						Name="EXTN_RETURN_CANCLE_RESN_CODE"
+	              		Nullable="true" DataType="Text-100" Type="CHAR"
+	              		Description="Reason code for return cancellation"
+	              		XMLName="ExtnReturnCancellationReasonCode" XMLGroup="Extn">
+				</Attribute>
+				<Attribute ColumnName="EXTN_RETURN_LINE_NUMBER" 
+						Name="EXTN_RETURN_LINE_NUMBER"
+	              		Nullable="true" DataType="Text-40" Type="CHAR"
+	              		Description="Return Line Number"
+	              		XMLName="ExtnReturnLineNumber" XMLGroup="Extn">
+				</Attribute>
+					
+				<!-- END: ATP - Return and Exchange Changes-->
+				<Attribute ColumnName="EXTN_CONTRACT_ID" 
+						Name="EXTN_CONTRACT_ID" 
+						Nullable="true" DataType="Text-40" 
+						Description="Contract ID from CRM. This will be the Subscriber ID in OCS" 
+						XMLName="ExtnContractId" XMLGroup="Extn"/>
+			</Attributes>
+		</Entity>   
+	</Entities>
+</DBSchema>
+
+		
+		
+		
+
+	

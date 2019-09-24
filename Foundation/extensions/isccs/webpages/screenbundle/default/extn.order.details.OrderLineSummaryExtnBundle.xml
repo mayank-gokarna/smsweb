@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.order.details.OrderLineSummaryExtnBundle" screenId="extn.order.details.OrderLineSummaryExtn">
+    <BundleEntries>
+        <BundleEntry bundleEntryId="extn_view_9506_View_name"
+            bundleKey="extn_Characteristic"
+            bundleValueFn="_scSimpleBundle" property="name"
+            type="WIDGET" uId="extn_view_9506"/>
+        <BundleEntry bundleEntryId="extn_Value_View_name"
+            bundleKey="extn_Value" bundleValueFn="_scSimpleBundle"
+            property="name" type="WIDGET" uId="extn_Value"/>
+        <BundleEntry
+            bundleEntryId="extn_OLStpDescription_TitlePane_title"
+            bundleKey="extn_Description" bundleValueFn="_scSimpleBundle"
+            property="title" type="WIDGET" uId="extn_OLStpDescription"/>
+    </BundleEntries>
+</ScreenBundle>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed Materials - Property of IBM
+IBM Sterling Selling and Fulfillment Suite
+(C) Copyright IBM Corp. 2001, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+
+<DBSchema>
+	<Entities>   
+		<Entity TableName="YFS_SHIPMENT_CONTAINER">
+			<Attributes>
+				<Attribute ColumnName="EXTN_TRACKING_URL"
+			           	DataType="Text-255"
+			           	Description="This is the tracking url of the shipment"
+			           	XMLName="ExtnTrackingUrl"
+			           	XMLGroup="Extn"
+			           	Name="TrackingUrl"
+			           	Nullable="true"/>
+			</Attributes>
+		</Entity>
+	</Entities>
+</DBSchema>
+
+		
+		
+		
+
+	

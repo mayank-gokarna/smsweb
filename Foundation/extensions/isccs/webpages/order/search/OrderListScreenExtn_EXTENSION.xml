@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+	<ScreenExtension extnClassName="OrderListScreenExtn" extnPackage="extn.order.search" originalScreen="isccs.order.search.OrderListScreen" originalScreenPackage="isccs.order.search" type="diffrential">
+		<Items>
+			<GridX _sc_extensibility_operation="change" _sc_extensibility_referenceUId="listGrid">
+				<Structure>
+					<Layout>
+						<View _sc_extensibility_moveOrder="1" _sc_extensibility_operation="insert" _sc_extensibility_position="before" _sc_extensibility_referenceUId="tblColCustomerName" field="extn_fieldOrderName" name="$(_scSimpleBundle:extn_Order_Name)" uId="extn_listGrid_viewOrderName" width="10%">
+							<BindingData>
+								<SourceBinding path="OrderName"/>
+							</BindingData>
+						</View>
+						<View _columnParentGridxUId="listGrid" _sc_extensibility_moveOrder="2" _sc_extensibility_operation="remove" _sc_extensibility_position="first" _sc_extensibility_referenceUId="_extensibilityHiddenWidgetsHolder" uId="tblColOrderTotal"/>
+						<View _sc_extensibility_moveOrder="3" _sc_extensibility_operation="insert" _sc_extensibility_position="after" _sc_extensibility_referenceUId="tblColZipCode" field="extn_PersonInfoBillTo.ZipCode" name="$(_scSimpleBundle:ZipCodeCol)" uId="extn_tblColZipCode" width="12%">
+							<BindingData>
+								<SourceBinding path="PersonInfoBillTo.ZipCode"/>
+							</BindingData>
+						</View>
+						<View _sc_extensibility_operation="change" _sc_extensibility_referenceUId="tblColZipCode" hidden="true" uId="tblColZipCode"/>
+						<View _columnParentGridxUId="listGrid" _sc_extensibility_moveOrder="4" _sc_extensibility_operation="remove" _sc_extensibility_position="first" _sc_extensibility_referenceUId="_extensibilityHiddenWidgetsHolder" uId="tblColZipCode"/>
+					</Layout>
+				</Structure>
+			</GridX>
+		</Items>
+		<Subscribers>
+			<Local>
+				<Subscriber eventId="beforeBehaviorMashupCall" isExtn="true" sequence="51">
+					<Handler methodName="customBeforeBehaviourMashup"/>
+				</Subscriber>
+			</Local>
+		</Subscribers>
+	</ScreenExtension>
+</ExtensionMetaData>

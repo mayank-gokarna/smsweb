@@ -1,0 +1,6 @@
+<Shipment DocumentType="" EnterpriseCode="" OrderHeaderKey="" OrderReleaseKey="" SellerOrganizationCode="" ShipNode="" ShipmentKey="" ShipmentNo="" Status="" StatusDate="" ShipmentConsolidationGroupId="">
+   <ShipmentLines>
+      <ShipmentLine CustomerPoNo="" DocumentType="" OrderHeaderKey="" OrderLineKey="" OrderNo="" OrderReleaseKey="" PrimeLineNo="" ProductClass="" Quantity="" ReleaseNo="" ShipmentKey="" ShipmentLineKey="" ShipmentLineNo="" ShipmentSubLineNo="" SubLineNo="" UnitOfMeasure="">
+      </ShipmentLine>
+   </ShipmentLines>
+</Shipment>

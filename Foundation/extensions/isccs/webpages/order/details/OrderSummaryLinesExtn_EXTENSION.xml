@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="OrderSummaryLinesExtn"
+        extnPackage="extn.order.details"
+        originalScreen="isccs.order.details.OrderSummaryLines"
+        originalScreenPackage="isccs.order.details" type="diffrential">
+        <Items>
+            <GridX _sc_extensibility_operation="change" _sc_extensibility_referenceUId="OLST_listGrid">
+                <Structure>
+                    <Layout>
+                        <View _sc_extensibility_moveOrder="1"
+                            _sc_extensibility_operation="insert"
+                            _sc_extensibility_position="before"
+                            _sc_extensibility_referenceUId="tblColProductAddItems"
+                            field="extn_Action"
+                            name="$(_scSimpleBundle:extn_Action)"
+                            uId="extn_tblClmAction" width="8%">
+                            <BindingData>
+                                <SourceBinding path="Purpose"/>
+                            </BindingData>
+                        </View>
+                        <View _sc_extensibility_operation="change"
+                            _sc_extensibility_referenceUId="tblColUnitPrice"
+                            hidden="true" uId="tblColUnitPrice"/>
+                        <View _sc_extensibility_operation="change"
+                            _sc_extensibility_referenceUId="tblColDeliveryMethod"
+                            hidden="true" uId="tblColDeliveryMethod"/>
+                        <View _sc_extensibility_operation="change"
+                            _sc_extensibility_referenceUId="tblColExpectedOn"
+                            hidden="true" uId="tblColExpectedOn"/>
+                        <View _sc_extensibility_moveOrder="1"
+                            _sc_extensibility_operation="insert"
+                            _sc_extensibility_position="before"
+                            _sc_extensibility_referenceUId="tblColUnitPrice"
+                            field="extn_tblColDesc" hidden="true"
+                            name="$(_scSimpleBundle:extn_Description)"
+                            scuiDataType="Text-100"
+                            uId="extn_tblColDesc" width="30%">
+                            <BindingData>
+                                <SourceBinding path="Item.ManufacturerItemDesc"/>
+                            </BindingData>
+                        </View>
+                        <View _sc_extensibility_operation="change"
+                            _sc_extensibility_referenceUId="tblColProductAddItems"
+                            hidden="true" uId="tblColProductAddItems" width="10%"/>
+                        <View _sc_extensibility_moveOrder="2"
+                            _sc_extensibility_operation="insert"
+                            _sc_extensibility_position="after"
+                            _sc_extensibility_referenceUId="tblColPrimeLineNo"
+                            field="extn_LineSeqNo"
+                            name="$(_scSimpleBundle:Line_Number_Header)"
+                            uId="extn_OLST_listGrid_LineSeqNo" width="5%">
+                            <BindingData>
+                                <SourceBinding path="LineSeqNo"/>
+                            </BindingData>
+                        </View>
+                        <View _sc_extensibility_moveOrder="3"
+                            _sc_extensibility_operation="insert"
+                            _sc_extensibility_position="before"
+                            _sc_extensibility_referenceUId="extn_tblColDesc"
+                            field="extn_OrderNo" linkField="true"
+                            name="$(_scSimpleBundle:OrderNo)"
+                            uId="extn_OLST_listGrid_BP_OrderNo" width="20%">
+                            <BindingData>
+                                <SourceBinding
+                                    dynamicBindingFunc="getBuildPlanOrderNo" path="Extn.EXTNOrderLineLinksList.EXTNOrderLineLinks.LinkedOrderNo"/>
+                            </BindingData>
+                        </View>
+                        <View _sc_extensibility_moveOrder="4"
+                            _sc_extensibility_operation="insert"
+                            _sc_extensibility_position="before"
+                            _sc_extensibility_referenceUId="extn_tblColDesc"
+                            field="extn_OrderType"
+                            name="$(_scSimpleBundle:extn_Order_Type)"
+                            uId="extn_OLST_listGrid_BP_OrderType" width="10%">
+                            <BindingData>
+                                <SourceBinding
+                                    dynamicBindingFunc="getBuildPlanOrderType" path="Extn.EXTNOrderLineLinksList.EXTNOrderLineLinks.LinkedOrderLineType"/>
+                            </BindingData>
+                        </View>
+                        <View _sc_extensibility_moveOrder="5"
+                            _sc_extensibility_operation="insert"
+                            _sc_extensibility_position="before"
+                            _sc_extensibility_referenceUId="extn_tblColDesc"
+                            field="extn_DependentOn"
+                            name="$(_scSimpleBundle:extn_Dependent_On)"
+                            uId="extn_OLST_listGrid_BP_DependentOn" width="20%">
+                            <BindingData>
+                                <SourceBinding
+                                    dynamicBindingFunc="getBuildPlanDepandentOnList" path="Extn.EXTNOrderLineLinksList.EXTNOrderLineLinks"/>
+                            </BindingData>
+                        </View>
+                        <View _sc_extensibility_moveOrder="6"
+                            _sc_extensibility_operation="insert"
+                            _sc_extensibility_position="before"
+                            _sc_extensibility_referenceUId="extn_OLST_listGrid_BP_OrderNo"
+                            field="extn_ProductDetails"
+                            name="$(_scSimpleBundle:extn_Product)"
+                            uId="extn_OLST_Product_view" width="20%">
+                            <BindingData>
+                                <SourceBinding
+                                    dynamicBindingClassName="OrderLineUtils"
+                                    dynamicBindingFunc="getProductHTML"
+                                    dynamicBindingPackage="extn.utils" path="ItemDetails.PrimaryInformation.ExtendedDisplayDescription"/>
+                            </BindingData>
+                        </View>
+                    </Layout>
+                </Structure>
+            </GridX>
+        </Items>
+        <Subscribers>
+            <Local>
+                <Subscriber eventId="OLST_listGrid_ScDoubleClick"
+                    isExtn="true" sequence="19">
+                    <Handler methodName="StopClickEvent"/>
+                </Subscriber>
+                <Subscriber eventId="OLST_listGrid_ScRowSelect"
+                    isExtn="true" sequence="19">
+                    <Handler methodName="StopClickEvent"/>
+                </Subscriber>
+                <Subscriber
+                    eventId="OLST_listGrid_Link_ScHandleLinkClicked"
+                    isExtn="true" sequence="19">
+                    <Handler methodName="OpenBuildJobDetails"/>
+                </Subscriber>
+                <Subscriber eventId="afterScreenInit" isExtn="true" sequence="51">
+                    <Handler methodName="extnAfterScreenInit"/>
+                </Subscriber>
+                <Subscriber eventId="onExtnMashupCompletion"
+                    isExtn="true" sequence="51">
+                    <Handler methodName="onExtnMashupCompletion"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+        <MashupRefs>
+            <Behavior>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_OrderSummaryLins_getCompleteOrderDetails" mashupRefId="extn_OrderSummaryLins_getCompleteOrderDetails"/>
+                <MashupRef extnType="ADD"
+                    mashupId="extn_OrderSummaryLins_getOrderList" mashupRefId="extn_OrderSummaryLins_getOrderList"/>
+            </Behavior>
+        </MashupRefs>
+    </ScreenExtension>
+</ExtensionMetaData>

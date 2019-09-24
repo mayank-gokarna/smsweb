@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle screenBundleId="extn.editors.OrderEditorRTExtnBundle" screenId="extn.editors.OrderEditorRTExtn">
+    <BundleEntries>
+        <BundleEntry bundleEntryId="extn_BuilPlanLink_Link_value"
+            bundleKey="extn_View_Build_Plan_Order_Summary"
+            bundleValueFn="_scSimpleBundle" property="value"
+            type="WIDGET" uId="extn_BuilPlanLink"/>
+    </BundleEntries>
+</ScreenBundle>

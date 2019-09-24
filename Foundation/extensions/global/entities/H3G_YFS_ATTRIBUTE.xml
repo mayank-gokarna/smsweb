@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed Materials - Property of IBM
+IBM Sterling Selling and Fulfillment Suite
+(C) Copyright IBM Corp. 2001, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+
+<DBSchema>
+	<Entities>   
+		<Entity TableName="YFS_ATTRIBUTE">
+			<Attributes>
+				<Attribute ColumnName="EXTN_COMMERCIAL"
+				           DataType="Text-40"
+				           Description="This flag indicates whether a set of allowed values are defined for this attribute. Default value: &quot;N&quot;."
+				           Type="CHAR"
+				           XMLName="ExtnCommercial"
+				           XMLGroup="Extn"
+				           Name="IsitCommercial"
+				           Nullable="true"/>
+
+				<Attribute ColumnName="EXTN_EDITABLE"
+				           DataType="Text-40"
+				           Description="This flag indicates whether a set of allowed values are defined for this attribute. Default value: &quot;N&quot;."
+				           Type="CHAR"
+				           XMLName="ExtnEditable"
+				           XMLGroup="Extn"
+				           Name="IsitEditable"
+				           Nullable="true"/>
+
+				<Attribute ColumnName="EXTN_MANDATORY"
+				           DataType="Text-40"
+				           Description="This flag indicates whether a set of allowed values are defined for this attribute. Default value: &quot;N&quot;."
+				           Type="CHAR"
+				           XMLName="ExtnMandatory"
+				           XMLGroup="Extn"
+				           Name="IsitMandatory"
+				           Nullable="true"/>
+
+				<Attribute ColumnName="EXTN_VISIBLE"
+				           DataType="Text-40"
+				           Description="This flag indicates whether a set of allowed values are defined for this attribute. Default value: &quot;N&quot;."
+				           Type="CHAR"
+				           XMLName="ExtnVisible"
+				           XMLGroup="Extn"
+				           Name="IsitVisible"
+				           Nullable="true"/>
+
+				<Attribute ColumnName="EXTN_MIN_MULTIPLICITY"
+				           DataType="Text-40"
+				           Description="This field captures Min Multiplicity of the attribute"
+				           Type="CHAR"
+				           XMLName="ExtnMinMultiplicity"
+				           XMLGroup="Extn"
+				           Name="DefinesMinMultiplicity"
+				           Nullable="true"/>
+				
+				<Attribute ColumnName="EXTN_MAX_MULTIPLICITY"
+				           DataType="Text-40"
+				           Description="This field captures Max Multiplicity of the attribute"
+				           Type="CHAR"
+				           XMLName="ExtnMaxMultiplicity"
+				           XMLGroup="Extn"
+				           Name="DefinesMaxMultiplicity"
+				           Nullable="true"/>
+
+				<Attribute ColumnName="EXTN_MINVALUE"
+				           DataType="Text-40"
+				           Description="This field is for capturing minimum value of attributes"
+				           Type="CHAR"
+				           XMLName="ExtnMinValue"
+				           XMLGroup="Extn"
+				           Name="MinimumValue"
+				           Nullable="true"/>
+
+				<Attribute ColumnName="EXTN_MAXVALUE"
+				           DataType="Text-40"
+				           Description="This field is for capturing maximum value of attributes"
+				           Type="CHAR"
+				           XMLName="ExtnMaxValue"
+				           XMLGroup="Extn"
+				           Name="MaximumValue"
+				           Nullable="true"/>
+
+				<Attribute ColumnName="EXTN_PARAMPATH"
+				           DataType="Text-255"
+				           Description="This field is for capturing parameter path"
+				           Type="CHAR"
+				           XMLName="ExtnParamPath"
+				           XMLGroup="Extn"
+				           Name="ParameterPath"
+				           Nullable="true"/>
+					   
+				<Attribute ColumnName="EXTN_DATATYPE"
+				           DataType="Text-40"
+				           Description="This field is for capturing maximum value of attributes"
+				           Type="CHAR"
+				           XMLName="ExtnDataType"
+				           XMLGroup="Extn"
+				           Name="SourceDataType"
+				           Nullable="true"/>
+				<Attribute ColumnName="EXTN_PRINTABLE"
+				           DataType="Text-40"
+				           Description="This field is for capturing if the item is printable"
+				           Type="CHAR"
+				           XMLName="ExtnPrintable"
+				           XMLGroup="Extn"
+				           Name="Printable"
+				           Nullable="true"/>
+			
+			</Attributes>
+		</Entity>
+	</Entities>
+</DBSchema>
+
+		
+		
+		
+
+	

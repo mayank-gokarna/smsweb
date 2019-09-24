@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionMetaData>
+    <ScreenExtension extnClassName="OrderLineSummaryExtn"
+        extnPackage="extn.order.details"
+        originalScreen="isccs.order.details.OrderLineSummary"
+        originalScreenPackage="isccs.order.details" type="diffrential">
+        <Items>
+            <DataLabel _sc_extensibility_operation="change"
+                _sc_extensibility_referenceUId="lblUnitPrice" renderHidden="true"/>
+            <GridX _sc_extensibility_moveOrder="5"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="extn_OLStpDescription"
+                cacheClass="gridx/core/model/cache/Async" uId="extn_gridLineAttributes">
+                <Modules>
+                    <Module isExtn="true" name="columnResizer">
+                        <Properties>
+                            <Property initialValue="0" name="minWidth"
+                                scExtensibilityArrayItemId="extn_ModuleProperty_1" type="Number"/>
+                        </Properties>
+                    </Module>
+                    <Module isExtn="true" name="columnWidth">
+                        <Properties>
+                            <Property initialValue="true"
+                                name="autoResize"
+                                scExtensibilityArrayItemId="extn_ModuleProperty_1" type="Boolean"/>
+                        </Properties>
+                    </Module>
+                    <Module isExtn="true" name="selectRow">
+                        <Properties>
+                            <Property initialValue="true"
+                                name="triggerOnCell"
+                                scExtensibilityArrayItemId="extn_ModuleProperty_1" type="Boolean"/>
+                        </Properties>
+                    </Module>
+                </Modules>
+                <Structure>
+                    <Layout>					
+						<View _sc_extensibility_moveOrder="6"
+                            _sc_extensibility_operation="insert"
+                            _sc_extensibility_position="first"
+                            _sc_extensibility_referenceUId="extn_gridLineAttributes"
+                            field="extn_Characteristic"
+                            name="$(_scSimpleBundle:extn_Characteristic)" uId="extn_view_9506">
+                            <BindingData>
+                                <SourceBinding path="DescribedByCharacteristic"/>
+                            </BindingData>
+                        </View>
+                        <View _sc_extensibility_moveOrder="7"
+                            _sc_extensibility_operation="insert"
+                            _sc_extensibility_position="last"
+                            _sc_extensibility_referenceUId="extn_gridLineAttributes"
+                            field="extn_Value"
+                            name="$(_scSimpleBundle:extn_Value)" uId="extn_Value">
+                            <BindingData>
+                                <SourceBinding path="DescribedByValue"/>
+                            </BindingData>
+                        </View>
+                    </Layout>
+                </Structure>
+                <BindingData>
+                    <SourceBinding
+                        namespace="getCompleteOrderLineDetails_output" path="OrderLine.Extn.EXTNOrderLinePropertiesList.EXTNOrderLineProperties"/>
+                </BindingData>
+                <__scModuleInfo>
+                    <Modules>
+                        <Module isExtn="true" name="columnResizer">
+                            <Properties>
+                                <Property initialValue="0"
+                                    name="minWidth"
+                                    scExtensibilityArrayItemId="extn_ModuleProperty_1" type="Number"/>
+                            </Properties>
+                        </Module>
+                        <Module isExtn="true" name="columnWidth">
+                            <Properties>
+                                <Property initialValue="true"
+                                    name="autoResize"
+                                    scExtensibilityArrayItemId="extn_ModuleProperty_1" type="Boolean"/>
+                            </Properties>
+                        </Module>
+                        <Module isExtn="true" name="selectRow">
+                            <Properties>
+                                <Property initialValue="true"
+                                    name="triggerOnCell"
+                                    scExtensibilityArrayItemId="extn_ModuleProperty_1" type="Boolean"/>
+                            </Properties>
+                        </Module>
+                    </Modules>
+                </__scModuleInfo>
+            </GridX>
+            <TitlePane _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="insert"
+                _sc_extensibility_position="last"
+                _sc_extensibility_referenceUId="ContentPane10"
+                class="accentPanel"
+                title="$(_scSimpleBundle:extn_Description)" uId="extn_OLStpDescription"/>
+            <ScreenRef _sc_extensibility_moveOrder="1"
+                _sc_extensibility_operation="remove"
+                _sc_extensibility_position="first"
+                _sc_extensibility_referenceUId="_extensibilityHiddenWidgetsHolder"
+                className="OrderLinePriceSummary" handleInit="true"
+                packageName="isccs.common.pricing" uId="scrfOrderLinePriceSummary"/>
+        </Items>
+        <Namespaces>
+            <TargetNamespaces>
+                <Target description="Contains Input to ChangeOrder"
+                    isExtn="true"
+                    scExtensibilityArrayItemId="extn_TargetNamespaces_3" value="extn_ChangeOrderInput"/>
+            </TargetNamespaces>
+        </Namespaces>
+        <Subscribers>
+            <Local>
+                <Subscriber description="Calls changeseOrder API"
+                    eventId="extn_OLSCbtnSave_onClick" isExtn="true" sequence="51">
+                    <Handler
+                        description="Calls changeseOrder API to save changes" methodName="invokeChangeOrder"/>
+                </Subscriber>
+                <Subscriber description="Calls changeseOrder API"
+                    eventId="extn_OLSCbtnSave_onKeyUp" isExtn="true" sequence="51">
+                    <Handler
+                        description="Calls changeseOrder API to save changes" methodName="invokeChangeOrder"/>
+                </Subscriber>
+            </Local>
+        </Subscribers>
+    </ScreenExtension>
+</ExtensionMetaData>

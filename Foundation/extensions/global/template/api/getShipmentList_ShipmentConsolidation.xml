@@ -1,0 +1,13 @@
+<Shipments>
+   <Shipment ShipmentKey="" ShipmentNo="" ShipmentConsolidationGroupId="" DocumentType="">
+      <ShipmentLines>
+         <ShipmentLine ShipmentLineNo="" OrderHeaderKey="" OrderLineKey="" DocumentType="">
+            <Order OrderType="" DocumentType="" OrderHeaderKey="" OrderName="" OrderNo="">
+               <Extn ExtnCustomerOrderNo="" />
+            </Order>
+            <OrderLine DeliveryMethod="" CustomerPONo="" ChainedFromOrderHeaderKey="" ChainedFromOrderLineKey="" ConditionVariable1="" OrderHeaderKey="" OrderLineKey="" />
+         </ShipmentLine>
+      </ShipmentLines>
+   </Shipment>
+</Shipments>
+

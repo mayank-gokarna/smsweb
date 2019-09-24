@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScreenBundle
+    screenBundleId="extn.order.details.OrderSummaryLinesExtnBundle" screenId="extn.order.details.OrderSummaryLinesExtn">
+    <BundleEntries>
+        <BundleEntry bundleEntryId="extn_tblClmAction_View_name"
+            bundleKey="extn_Action" bundleValueFn="_scSimpleBundle"
+            property="name" type="WIDGET" uId="extn_tblClmAction"/>
+        <BundleEntry bundleEntryId="extn_tblColDesc_View_name"
+            bundleKey="extn_Description" bundleValueFn="_scSimpleBundle"
+            property="name" type="WIDGET" uId="extn_tblColDesc"/>
+        <BundleEntry
+            bundleEntryId="extn_OLST_listGrid_LineSeqNo_View_name"
+            bundleKey="Line_Number_Header"
+            bundleValueFn="_scSimpleBundle" property="name"
+            type="WIDGET" uId="extn_OLST_listGrid_LineSeqNo"/>
+        <BundleEntry
+            bundleEntryId="extn_OLST_listGrid_BP_OrderNo_View_name"
+            bundleKey="OrderNo" bundleValueFn="_scSimpleBundle"
+            property="name" type="WIDGET" uId="extn_OLST_listGrid_BP_OrderNo"/>
+        <BundleEntry
+            bundleEntryId="extn_OLST_listGrid_BP_OrderType_View_name"
+            bundleKey="extn_Order_Type" bundleValueFn="_scSimpleBundle"
+            property="name" type="WIDGET" uId="extn_OLST_listGrid_BP_OrderType"/>
+        <BundleEntry
+            bundleEntryId="extn_OLST_listGrid_BP_DependentOn_View_name"
+            bundleKey="extn_Dependent_On"
+            bundleValueFn="_scSimpleBundle" property="name"
+            type="WIDGET" uId="extn_OLST_listGrid_BP_DependentOn"/>
+        <BundleEntry bundleEntryId="extn_OLST_Product_view_View_name"
+            bundleKey="extn_Product" bundleValueFn="_scSimpleBundle"
+            property="name" type="WIDGET" uId="extn_OLST_Product_view"/>
+    </BundleEntries>
+</ScreenBundle>

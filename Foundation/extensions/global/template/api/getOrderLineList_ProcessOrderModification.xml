@@ -1,0 +1,8 @@
+<OrderLineList>
+	<OrderLine OrderLineKey="" MinLineStatus="" CustomerPONo="" DeliveryMethod="" LineType="" OrderHeaderKey="" >
+		<Item ItemID="" UnitOfMeasure="" ProductClass=""/>
+		<Order OrderNo="" OrderDate="" OrderHeaderKey="" OrderType="">
+			<Extn  ExtnCustomerOrderNo=""/>
+		</Order>
+	</OrderLine>
+</OrderLineList>

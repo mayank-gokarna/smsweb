@@ -1,0 +1,19 @@
+<Order DocumentType="" EnterpriseCode="" OrderHeaderKey="" OrderNo="" MaxOrderStatus="" MinOrderStatus="" MinOrderStatusDesc="">
+<Extn ExtnCustomerOrderNo="" />
+    <OrderLines >
+        <OrderLine OrderLineKey="" OrderedQty="" PrimeLineNo="" SubLineNo="" LineType="" MaxLineStatus="" MaxLineStatusDesc="" MinLineStatus="" MinLineStatusDesc="" Purpose="" DeliveryMethod="">
+            <Item ItemID="" />
+            <StatusBreakupForCanceledQty >
+                <CanceledFrom 
+                 Quantity="" Status=""
+                 StatusDate="" StatusDescription="">
+             </CanceledFrom>
+            </StatusBreakupForCanceledQty>
+            <Extn>
+            <EXTNOrderLinePropertiesList>
+               <EXTNOrderLineProperties DescribedByCharacteristic="" DescribedByCharacteristicName="" DescribedByType="" DescribedByValue="" CharacteristicEntityId="" CharacteristicPath="" />
+            </EXTNOrderLinePropertiesList>
+         </Extn>
+        </OrderLine>
+    </OrderLines>
+</Order>

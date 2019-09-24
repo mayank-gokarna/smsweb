@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed Materials - Property of IBM
+IBM Sterling Selling And Fulfillment Suite
+(C) Copyright IBM Corp. 2005, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<!-- Create_Exception.On_Success Event XML-->
+<Inbox      Description=""
+    DetailDescription="" EnterpriseKey="" ErrorReason="" ErrorType=""
+    ExceptionType=""   FlowName="" InboxAddnlData=""
+    InboxKey="" InboxType="" ItemId="" LastOccurredOn=""
+    ListDescription="" OrderHeaderKey=""
+    OrderLineKey="" OrderNo=""   Priority=""
+    ShipmentNo="" ShipnodeKey="" Status="" SubFlowName="" >
+    <InboxReferencesList> 
+        <InboxReferences InboxReferenceKey="" Name=""
+            ReferenceType="" Value=""/>
+    </InboxReferencesList>
+	<Extn ExtnIncidentNo="" ExtnRaiseTicket=""/>
+    <Order OrderNo="" OrderType="">
+		<Extn ExtnCustomerOrderNo=""/>
+	</Order>
+</Inbox>

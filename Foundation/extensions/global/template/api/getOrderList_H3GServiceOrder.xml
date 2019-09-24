@@ -1,0 +1,28 @@
+<OrderList>
+	<Order OrderNo="" OrderType="">
+		<Extn>
+			<EXTNOrderHeaderLinksList>
+				<EXTNOrderHeaderLinks LinkageKey=" "
+					LinkageType=" " LinkedOrderHeaderKey=" " LinkedOrderNo=" "
+					LinkedOrderType=" " OrderHeaderKey=" " />
+			</EXTNOrderHeaderLinksList>
+		</Extn>
+		<OrderLines>
+			<OrderLine LineType="" Purpose="" >
+				<Item ItemID="">
+				</Item>
+				<Extn ExtnStatus="" ExtnEntityId="">
+
+					<EXTNOrderLinePropertiesList>
+						<EXTNOrderLineProperties
+							DescribedByCharacteristic=" " DescribedByCharacteristicName=" "
+							DescribedByType=" " DescribedByValue=" "
+							DescribingSpecApplicationDN=" " DescribingSpecPrimaryKey=" "
+							DescribingSpecType=" " CharacteristicEntityId=""
+							CharacteristicPath="" />
+					</EXTNOrderLinePropertiesList>
+				</Extn>
+			</OrderLine>
+		</OrderLines>
+	</Order>
+</OrderList>

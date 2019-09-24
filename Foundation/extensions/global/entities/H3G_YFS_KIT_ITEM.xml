@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed Materials - Property of IBM
+IBM Sterling Selling and Fulfillment Suite
+(C) Copyright IBM Corp. 2001, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+
+<DBSchema>
+	<Entities>   
+		<Entity Cacheable="true"
+		        Description="This table stores kit definitions."
+		        EntityType="CATALOG_MASTER"
+		        Extensible="Y"
+		        Module="ycm"
+		        Name="Kit_Item"
+		        Prefix="YFS_"
+		        TableName="YFS_KIT_ITEM"
+		        TableType="MASTER"
+		        XMLName="KitItem"
+		        LockingEntity="Item">
+			<Attributes>
+				<Attribute ColumnName="EXTN_KITMINMULTIPLICITY"
+			           DataType="Text-40"
+			           Description="This field captures Min Multiplicity of the kit item"
+			           Type="CHAR"
+			           XMLName="ExtnKitMinMultiplicity"
+			           XMLGroup="Extn"
+			           Name="DefinesKitMinMultiplicity"
+			           Nullable="true"/>
+		
+				<Attribute ColumnName="EXTN_KITMAXMULTIPLICITY"
+			           DataType="Text-40"
+			           Description="This field captures Max Multiplicity of the kit item"
+			           Type="CHAR"
+			           XMLName="ExtnKitMaxMultiplicity"
+			           XMLGroup="Extn"
+			           Name="DefinesKitMaxMultiplicity"
+			           Nullable="true"/>
+					   
+				
+			</Attributes>
+		</Entity>
+	</Entities>
+</DBSchema>
+
+		
+		
+		
+
+	

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PromiseHeader OrganizationCode="">
+   <PromiseLines TotalNumberOfRecords="">
+      <PromiseLine DeliveryMethod="" ItemID="" LineId="" ReqEndDate="" ReqStartDate="" RequiredQty="">
+         <Reservations AvailableQty="" QtyToBeReserved="" TotalReservedQty="">
+            <Reservation ExpirationDate="" ExternalNode="" IsProcured="" IsSubstituted="" ItemID="" MergeNode="" ProcureToNode="" ProductAvailabilityDate="" ProductClass="" QuantityFromUnplannedInventory="" ReservationID="" ReservationNodeShipDate="" ReservedQty="" ShipDate="" ShipNode="" UnitOfMeasure="" />
+         </Reservations>
+      </PromiseLine>
+   </PromiseLines>
+</PromiseHeader>

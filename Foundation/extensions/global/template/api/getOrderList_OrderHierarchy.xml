@@ -1,0 +1,24 @@
+<OrderList TotalOrderList="">
+	<Order OrderHeaderKey="" DocumentType="" EnterpriseCode=""
+		OrderNo="" OrderType="" DraftOrderFlag="" Status="" BillToID="">
+		<Extn ExtnCustomerOrderNo="" ExtnTargetOSS="">
+			<EXTNOrderHeaderLinksList>
+				<EXTNOrderHeaderLinks LinkageType=""
+					LinkedOrderNo="" LinkedOrderType="" OrderHeaderKey="" />
+			</EXTNOrderHeaderLinksList>
+		</Extn>
+		<OrderLines>
+			<OrderLine LineType="" PrimeLineNo="" SubLineNo=""
+				CustomerPONo="" Purpose="">
+				<Item ItemID="" UnitOfMeasure="" />
+				<Extn>
+					<EXTNOrderLineLinksList>
+						<EXTNOrderLineLinks LinkageType=""
+							LinkedOrderLineType="" LinkedOrderNo="" LinkedCustomerPONo=""
+							LinkedLineSeqNo="" OrderLineKey="" />
+					</EXTNOrderLineLinksList>
+				</Extn>
+			</OrderLine>
+		</OrderLines>
+	</Order>
+</OrderList>

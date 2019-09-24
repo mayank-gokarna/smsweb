@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed Materials - Property of IBM
+IBM Sterling Selling and Fulfillment Suite
+(C) Copyright IBM Corp. 2001, 2013 All Rights Reserved.
+US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+
+<DBSchema>
+	<Entities>   
+		<Entity TableName="EXTN_ORDER_HEADER_LINKS"
+			Description="Hang off table for Order Header"
+			HasHistory="N" AuditRequired="N" ApiNeeded="Y" Prefix="EXTN">
+			<!-- table columns -->
+			<Attributes>
+				<!-- Keys columns -->
+				<Attribute ColumnName="LINKAGE_KEY" DataType="Key"
+						Description="Order Linkage Key"
+						Nullable="false" XMLName="LinkageKey" />
+				<Attribute ColumnName="ORDER_HEADER_KEY" DataType="Key"
+						Description="Order Key from parent table"
+						Nullable="false" XMLName="OrderHeaderKey" />
+				<Attribute ColumnName="LINKAGE_TYPE" DataType="Text-128"
+						Description="Linkage Type"
+						Nullable="true" XMLName="LinkageType" />					
+				<Attribute ColumnName="LINKED_ORDER_KEY" DataType="Text-128"
+						Description="Linked Order Key"
+						Nullable="true" XMLName="LinkedOrderHeaderKey" />						
+				<Attribute ColumnName="LINKED_ORDER_TYPE" DataType="Text-128"
+						Description="Linked Order Type"
+						Nullable="true" XMLName="LinkedOrderType" />						
+				<Attribute ColumnName="LINKED_ORDER_NO" DataType="Text-128"
+						Description="Linked Order No"
+						Nullable="true" XMLName="LinkedOrderNo" />	
+				<Attribute ColumnName="CREATETS" DataType="TimeStamp"
+						DefaultValue="SYSDATE" Description="create Timestamp"
+						Name="Createts" />
+				<Attribute ColumnName="MODIFYTS" DataType="TimeStamp"
+						DefaultValue="SYSDATE" Description="Modify Timestamp"
+						Name="Modifyts" />
+				<Attribute ColumnName="CREATEUSERID" DataType="UserId"
+						DefaultValue="' ' " Description="Creating User id"
+						Name="Createuserid" Nullable="false" />
+				<Attribute ColumnName="MODIFYUSERID" DataType="UserId"
+						DefaultValue="' ' " Description="Modifying User id"
+						Name="Modifyuserid" Nullable="false" />
+				<Attribute ColumnName="CREATEPROGID"
+						DataType="ProgramID" DefaultValue="' ' "
+						Description="Creating Program ID" Name="Createprogid"
+						Nullable="false" />
+				<Attribute ColumnName="MODIFYPROGID"
+						DataType="ProgramID" DefaultValue="' ' "
+						Description="Modifying Program ID" Name="Modifyprogid"
+						Nullable="false" />
+				<Attribute ColumnName="LOCKID" DataType="Lockid"
+						DefaultValue="0" Description="Lock ID" Name="Lockid"
+						Nullable="false" />
+			</Attributes>
+			<!-- PrimaryKey is a mandatory attribute in entity definition. This element can have ONLY ONE attribute element -->
+
+			<PrimaryKey Name="ORD_HD_LINK_PK">
+				<Attribute ColumnName="LINKAGE_KEY" />
+			</PrimaryKey>
+
+			<Parent ParentTableName="YFS_ORDER_HEADER" XMLName="YFSOrderHeader">
+				<Attribute ColumnName="ORDER_HEADER_KEY"
+						ParentColumnName="ORDER_HEADER_KEY" />
+			</Parent>
+			<Indices>
+				<Index Name="EXTNORDLINKS_I01" Unique="True"> 
+					<Column Name="ORDER_HEADER_KEY" /> 
+					<Column Name="LINKED_ORDER_NO" />
+				</Index>
+			</Indices>
+		</Entity>
+	</Entities>
+</DBSchema>
+
+		
+		
+		
+
+	
