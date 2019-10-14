@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ScreenBundle
-    screenBundleId="extn.return.details.ReturnSummaryLinesExtnBundle" screenId="extn.return.details.ReturnSummaryLinesExtn">
-    <BundleEntries>
-        <BundleEntry bundleEntryId="extn_OLST_listGrid_view_View_name"
-            bundleKey="Test_Screen" bundleValueFn="_scSimpleBundle"
-            property="name" type="WIDGET" uId="extn_OLST_listGrid_view"/>
-    </BundleEntries>
-</ScreenBundle>

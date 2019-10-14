@@ -1,0 +1,134 @@
+yfs.api.security.enabled=N
+yfs.api.security.token.enabled=N
+yfs.log4j.configuration=/resources/log4jconfig.custom.xml
+yfs.httpOnlyCookie=false
+yfs.interopservlet.auth.userPassword.enabled=false
+yfs.interopservlet.auth.token.enabled=false
+yfs.interopservlet.security.enabled=false
+#Provider URL and QCF for Internal Queues
+yfs.H3G_PROVIDER_URL_1=corbaloc::10.81.101.59:2809
+yfs.H3G_QCF_1=MCTEST_QCF
+#Provider URL and QCF for External(BPM) Queues
+yfs.H3G_PROVIDER_URL_2=corbaloc::10.81.101.59:2809
+yfs.H3G_QCF_2=MCTEST_QCF
+
+yfs.H3G_INT_BUILDPLAN_TRIGGER_Q=H3G_INT_BUILDPLAN_TRIGGER_Q
+yfs.H3G_INT_RUNNING_UPDATE_Q=H3G_INT_RUNNING_UPDATE_Q
+yfs.H3G_INT_DECOMP_TRIGGER_Q=H3G_INT_DECOMP_TRIGGER_Q
+yfs.H3G_INT_ORDER_VALIDATION_Q=H3G_INT_ORDER_VALIDATION_Q
+yfs.H3G_IN_SUBMIT_CUSTOMER_ORDER_Q=H3G_IN_SUBMIT_CUSTOMER_ORDER_Q
+yfs.H3G_INT_BUILDPLAN_PROCESS_Q=H3G_INT_BUILDPLAN_PROCESS_Q
+
+yfs.H3G_INT_PURGE_MISC_ALERT_Q=H3G_INT_PURGE_MISC_ALERT_Q
+yfs.H3G_INT_PURGE_ORDER_HISTORY_Q=H3G_INT_PURGE_ORDER_HISTORY_Q
+yfs.H3G_INT_PURGE_ORDER_HIST_Q=H3G_INT_PURGE_ORDER_HIST_Q
+yfs.H3G_INT_PURGE_ORDER_Q=H3G_INT_PURGE_ORDER_Q
+# Added for Modification
+yfs.H3G_IN_MODIFY_ORDER_Q=H3G_IN_MODIFY_ORDER_Q
+yfs.H3G_OUT_REJECTED_MODIFICATION_Q=H3G_OUT_REJECTED_MODIFICATION_Q
+yfs.H3G_OUT_SHIPMENT_UPDATE_Q=H3G_OUT_SHIPMENT_UPDATE_Q
+# Billing Request Response
+yfs.H3G_OUT_BILLING_REQUEST_Q=H3G_OUT_BILLING_REQUEST_Q
+yfs.H3G_IN_PRODUCT_ORDER_RESPONSE_Q=H3G_IN_PRODUCT_ORDER_RESPONSE_Q
+# Service Order Activation
+yfs.H3G_OUT_SERVICE_REQUEST_Q=H3G_OUT_SERVICE_REQUEST_Q
+yfs.H3G_IN_SERVICE_ORDER_RESPONSE_Q=H3G_IN_SERVICE_ORDER_RESPONSE_Q
+# Return Request Response
+yfs.H3G_OUT_RETURN_REQUEST_Q=H3G_OUT_RETURN_REQUEST_Q
+yfs.H3G_IN_RETURN_ORDER_RESPONSE_Q=H3G_IN_RETURN_ORDER_RESPONSE_Q
+
+yfs.H3G_OUT_RESOURCE_REQUEST_Q=H3G_OUT_RESOURCE_REQUEST_Q
+yfs.H3G_IN_RESOURCE_ORDER_RESPONSE_Q=H3G_IN_RESOURCE_ORDER_RESPONSE_Q
+
+yfs.VALIDATION_URL=http://10.81.101.60:9080/DecisionService/ws/IBMOrderManagerRules/1.0/IBMOMValidation/v75
+yfs.DECOMPOSE_URL=http://10.81.101.60:9080/DecisionService/ws/IBMOrderManagerRules/1.0/IBMOMDecomposition/v75
+yfs.BUILDPLAN_URL=http://10.81.101.60:9080/DecisionService/ws/IBMOrderManagerRules/1.0/IBMOMBuildPlan/v75
+
+# Exception Handling
+yfs.H3G_INT_CLOSE_ALERTS_Q=H3G_INT_CLOSE_ALERTS_Q
+# Activation Request and Response Queues
+yfs.H3G_IN_FULFILMENT_RESPONSE_Q=H3G_IN_FULFILMENT_RESPONSE_Q
+yfs.H3G_IN_RESOURCE_ORDER_RESPONSE_Q=H3G_IN_RESOURCE_ORDER_RESPONSE_Q
+yfs.H3G_OUT_RESOURCE_REQUEST_Q=H3G_OUT_RESOURCE_REQUEST_Q
+yfs.H3G_OUT_SHIPMENT_REQUEST_Q=H3G_OUT_SHIPMENT_REQUEST_Q
+
+yfs.H3G_OUT_ORDER_STATUS_UPDATE=H3G_OUT_ORDER_STATUS_UPDATE
+yfs.H3G_INIT_EXECUTION_SYNC_Q=H3G_INIT_EXECUTION_SYNC_Q
+
+# Catalog
+yfs.H3G_INT_CATALOG_MGMT_Q=H3G_INT_CATALOG_MGMT_Q
+yfs.H3G_CATALOG_FILE_INCOMING=/opt/IBM/h3goms/catalog/incoming
+yfs.H3G_CATALOG_FILE_WORKING=/opt/IBM/h3goms/catalog/working
+yfs.H3G_CATALOG_FILE_ERROR=/opt/IBM/h3goms/catalog/outgoing/error
+yfs.H3G_CATALOG_FILE_COMPLETE=/opt/IBM/h3goms/catalog/outgoing/complete
+yfs.H3G_CATALOG_FILE_FULLFEED_INCOMING=/opt/IBM/h3goms/catalog/incoming
+yfs.H3G_CATALOG_FILE_FULLFEED_WORKING=/opt/IBM/h3goms/catalog/working
+yfs.H3G_CATALOG_FILE_FULLFEED_ERROR=/opt/IBM/h3goms/catalog/outgoing/error
+yfs.H3G_CATALOG_FILE_FULLFEED_COMPLETE=/opt/IBM/h3goms/catalog/outgoing/complete
+
+yfs.H3G_CATALOG_FILE_PROCESSING_DONE=/opt/IBM/h3goms/catalog/processing/complete
+yfs.H3G_CATALOG_FILE_PROCESSING_ARCHIVE=/opt/IBM/h3goms/catalog/processing/archive
+yfs.H3G_CATALOG_FILE_PROCESSING_ERROR=/opt/IBM/h3goms/catalog/processing/error
+yfs.H3G_CATALOG_ACK_RESPONSE_FILENAME=Response_OMS.csv
+
+# State Machine Queues
+yfs.H3G_INT_SCHEDULED_ACTIVATION_Q = H3G_INT_SCHEDULED_ACTIVATION_Q
+
+# Trouble Ticket
+yfs.H3G_OUT_TROUBLE_TICKET_REQUEST_Q=H3G_OUT_TROUBLE_TICKET_REQUEST_Q
+yfs.H3G_IN_TROUBLE_TICKET_UPDATE_Q=H3G_IN_TROUBLE_TICKET_UPDATE_Q
+
+# Customer Notification
+yfs.H3G_OUT_ORDER_STATUS_NOTIFICATION_Q=H3G_OUT_ORDER_STATUS_NOTIFICATION_Q
+yfs.H3G_INT_CANCEL_STATUS_Q=H3G_INT_CANCEL_STATUS_Q
+yfs.H3G_INT_CHANGE_STATUS_Q = H3G_INT_CHANGE_STATUS_Q
+
+# BPM Queue Authentication parameters
+yfs.naming_security_principal_prop_2_val=admin
+yfs.naming_security_credentials_prop_2_val=password
+yfs.queuebasedsecurity_userid_prop_2_val=admin
+yfs.queuebasedsecurity_password_prop_2_val=password
+yfs.yfs.app.identifyconnection=Y
+
+# REST Integration properties
+xapirest.servlet.authstyle=OPEN
+xapirest.servlet.userid=admin
+yfs.config.httprest.enabled=true
+
+#Changes made for Return and Exchange
+yfs.H3G_OUT_NOTIFY_ORDER_COLLECTED_SIM_Q=H3G_OUT_NOTIFY_ORDER_COLLECTED_SIM_Q
+yfs.H3G_OUT_RETURN_CANCELLATION_Q=H3G_OUT_RETURN_CANCELLATION_Q
+yfs.H3G_IN_CANCEL_RETURN_ORDER_Q=H3G_IN_CANCEL_RETURN_ORDER_Q
+
+# Queue Inventory Management
+yfs.H3G_OUT_POST_RTAM_FEED_Q=H3G_OUT_POST_RTAM_FEED_Q
+yfs.H3G_INT_RTAM_Q=H3G_INT_RTAM_Q
+
+# Inventory Feed Location Folders
+yfs.H3G_INVENTORY_FEED_INCOMING=/opt1/opt/IBM/h3goms/inventory/incoming
+yfs.H3G_INVENTORY_FEED_COMPLETION=/opt1/opt/IBM/h3goms/inventory/complete
+yfs.H3G_INVENTORY_FEED_WORKING=/opt1/opt/IBM/h3goms/inventory/outgoing/working
+yfs.H3G_INVENTORY_FEED_ERROR=/opt1/opt/IBM/h3goms/inventory/outgoing/error
+
+# Queue For Inventory Purge
+yfs.H3G_INT_PURGE_INVENTORY_DETAILS_Q=H3G_INT_PURGE_INVENTORY_DETAILS_Q
+
+# Queues for Store Order Fulfillment
+yfs.H3G_IN_CC_ORDER_COLLECT_UPDATE_Q=H3G_IN_CC_ORDER_COLLECT_UPDATE_Q
+
+#TO Receipt Location
+yfs.H3G_TO_RECEIPT_FEED_INCOMING=/opt1/opt/IBM/h3goms/receipt/incoming
+yfs.H3G_TO_RECEIPT_FEED_COMPLETION=/opt1/opt/IBM/h3goms/receipt/complete
+yfs.H3G_TO_RECEIPT_FEED_WORKING=/opt1/opt/IBM/h3goms/receipt/outgoing/working
+yfs.H3G_TO_RECEIPT_FEED_ERROR=/opt1/opt/IBM/h3goms/receipt/outgoing/error
+
+# Sales Order Fulfillment Queues
+yfs.H3G_INT_SEND_SALE_UPDATE_Q=H3G_INT_SEND_SALE_UPDATE_Q
+yfs.H3G_INT_SEND_DEMAND_UPDATE_Q=H3G_INT_SEND_DEMAND_UPDATE_Q
+yfs.H3G_OUT_SEND_DEMAND_UPDATE_Q=H3G_OUT_SEND_DEMAND_UPDATE_Q
+yfs.H3G_SCHEDULE_ORDER_AGT_Q=H3G_SCHEDULE_ORDER_AGT_Q
+yfs.H3G_SCHEDULE_TO_AGT_Q=H3G_SCHEDULE_TO_AGT_Q
+yfs.H3G_RELEASE_ORDER_AGT_Q=H3G_RELEASE_ORDER_AGT_Q
+yfs.H3G_RELEASE_TO_AGT_Q=H3G_RELEASE_TO_AGT_Q
+yfs.H3G_IBA_AGT_Q=H3G_IBA_AGT_Q
+yfs.H3G_INT_PR_CHANGE_STATUS_Q=H3G_INT_PR_CHANGE_STATUS_Q
