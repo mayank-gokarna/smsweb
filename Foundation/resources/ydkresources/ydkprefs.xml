@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+    <configsynch>
+        <Settings ReportsDir="">
+            <AuditDeployment ValidateLockid="N" ValidateOldValues="Y" ValidateRecordExistsBeforeDelete="Y"/>
+        </Settings>
+        <SourceDatabases>
+            <Database Name="Slocalxmls" className="" dbType="xml"
+                folder="/opt/IBM/versions/cdt/sourcexmls"
+                jdbcURL="" password="" schema="" user=""/>
+            <Database Name="Slocaldb"
+                className="oracle.jdbc.driver.OracleDriver"
+                dbType="Oracle" folder=""
+                jdbcURL="jdbc:oracle:thin:@10.20.103.7:1521:OMSDDB"
+                schema="OMSUSER" user="omsuser"/>
+        </SourceDatabases>
+        <TargetDatabases>
+            <Database Name="Tlocaldb"
+                className="oracle.jdbc.driver.OracleDriver"
+                dbType="Oracle" folder=""
+                jdbcURL="jdbc:oracle:thin:@10.20.103.7:1521:OMSDDB"
+                schema="OMSUSER" user="omsuser"/>
+             <Database Name="Tlocalxmls" className="" dbType="xml"
+                folder="/opt/IBM/versions/cdt/localxmls"
+                jdbcURL="" password="" schema="" user=""/>
+        </TargetDatabases>
+        <SourceTargetPrefs>
+            <SourceTargetPrefs>
+                <SourceTargetPair SourceDatabase="Slocalxmls" TargetDatabase="Tlocaldb">
+                    <Transformations/>
+                    <Ignore>
+                        <Table Name="YFS_ASSET"/>
+                        <Table Name="YFS_ITEM_OPTION"/>
+						<Table Name="YFS_ITEM_EXCLUSION"/>
+						<Table Name="YFS_ITEM_INSTRUCTION"/>
+						<Table Name="YFS_ITEM_INSTRUCTION_CODE"/>
+						<Table Name="YFS_ITEM_LOCALE"/>
+						<Table Name="YFS_ITEM_UOM"/>
+						<Table Name="YFS_ITEM_TAG"/>
+						<Table Name="YFS_ITEM_NODE_DEFN"/>
+						<Table Name="YFS_ITEM_SERVICE_SKILL"/>
+						<Table Name="YFS_ITEM_SERVICE_ASSOC"/>
+						<Table Name="YFS_ITEM_SERVICE_ASSC_SKILL"/>
+						<Table Name="YFS_LANGUAGE_DESCRIPTION"/>
+						<Table Name="YFS_CATEGORY"/>
+						<Table Name="YFS_CATEGORY_LOCALE"/>
+						<Table Name="YFS_CAT_DOMAIN_LOCALE"/>
+						<Table Name="YFS_ROUTING_GUIDE"/>
+						<Table Name="YFS_ROUTING_GUIDE_DETAIL"/>
+						<Table Name="YFS_ROUTING_GUIDE_ATTR"/>
+						<Table Name="YFS_USER"/>
+                    </Ignore>
+                    <AppendOnly>
+						<Table Name="YFS_ORGANIZATION"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_ITEM_SHIP_NODE"/>
+						<Table Name="YFS_ENTERPRISE"/>
+						<Table Name="YFS_SHIP_NODE"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_MASTER_CATALOG"/>
+						<Table Name="YFS_KIT_ITEM"/>
+						<Table Name="YFS_CATEGORY_DOMAIN"/>
+						<Table Name="YFS_CATEGORY_ITEM"/>
+						<Table Name="YFS_ATTRIBUTE"/>
+						<Table Name="YFS_ATTRIBUTE_GROUP"/>
+						<Table Name="YFS_ITEM_ATTR"/>
+						<Table Name="YFS_ITEM_ATTR_GROUP"/>
+						<Table Name="YFS_ITEM_ATTR_GROUP_TYPE"/>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ADDITIONAL_ATTRIBUTE"/>
+                    </AppendOnly>
+                </SourceTargetPair>
+                <SourceTargetPair SourceDatabase="Slocaldb" TargetDatabase="Tlocalxmls">
+                    <Transformations/>
+                    <Ignore>
+                        <Table Name="YFS_ASSET"/>
+                        <Table Name="YFS_ITEM_OPTION"/>
+						<Table Name="YFS_ITEM_EXCLUSION"/>
+						<Table Name="YFS_ITEM_INSTRUCTION"/>
+						<Table Name="YFS_ITEM_INSTRUCTION_CODE"/>
+						<Table Name="YFS_ITEM_LOCALE"/>
+						<Table Name="YFS_ITEM_UOM"/>
+						<Table Name="YFS_ITEM_TAG"/>
+						<Table Name="YFS_ITEM_NODE_DEFN"/>
+						<Table Name="YFS_ITEM_SERVICE_SKILL"/>
+						<Table Name="YFS_ITEM_SERVICE_ASSOC"/>
+						<Table Name="YFS_ITEM_SERVICE_ASSC_SKILL"/>
+						<Table Name="YFS_LANGUAGE_DESCRIPTION"/>
+						<Table Name="YFS_CATEGORY"/>
+						<Table Name="YFS_CATEGORY_LOCALE"/>
+						<Table Name="YFS_CAT_DOMAIN_LOCALE"/>
+						<Table Name="YFS_ROUTING_GUIDE"/>
+						<Table Name="YFS_ROUTING_GUIDE_DETAIL"/>
+						<Table Name="YFS_ROUTING_GUIDE_ATTR"/>
+						<Table Name="YFS_USER"/>
+                    </Ignore>
+                    <AppendOnly>
+						<Table Name="YFS_ORGANIZATION"/>
+						<Table Name="YFS_PERSON_INFO"/>
+						<Table Name="YFS_ITEM_SHIP_NODE"/>
+						<Table Name="YFS_ENTERPRISE"/>
+						<Table Name="YFS_SHIP_NODE"/>
+						<Table Name="YFS_ITEM_ALIAS"/>
+						<Table Name="YFS_MASTER_CATALOG"/>
+						<Table Name="YFS_KIT_ITEM"/>
+						<Table Name="YFS_CATEGORY_DOMAIN"/>
+						<Table Name="YFS_CATEGORY_ITEM"/>
+						<Table Name="YFS_ATTRIBUTE"/>
+						<Table Name="YFS_ATTRIBUTE_GROUP"/>
+						<Table Name="YFS_ITEM_ATTR"/>
+						<Table Name="YFS_ITEM_ATTR_GROUP"/>
+						<Table Name="YFS_ITEM_ATTR_GROUP_TYPE"/>
+						<Table Name="YFS_ITEM"/>
+						<Table Name="YFS_ADDITIONAL_ATTRIBUTE"/>
+                    </AppendOnly>                    
+                </SourceTargetPair>
+            </SourceTargetPrefs>
+        </SourceTargetPrefs>
+    </configsynch>
+</preferences>
