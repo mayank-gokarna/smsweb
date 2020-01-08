@@ -83,6 +83,10 @@ appVersion: "1.0"
 apiVersion: v1
 rm -rf linux-amd64
 
+wget https://releases.hashicorp.com/terraform/0.13.5/terraform_0.13.5_linux_amd64.zip
+sudo apt-get install zip -y
+unzip terraform*.zip
+
 echo "======================================="
 echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] 
 
