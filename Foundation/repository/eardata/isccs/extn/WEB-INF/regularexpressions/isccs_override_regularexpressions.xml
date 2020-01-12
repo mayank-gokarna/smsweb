@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  Licensed Materials - Property of IBM
+  IBM Call Center for Commerce (5725-P82)
+  (C) Copyright IBM Corp. 2013 , 2015 All Rights Reserved.
+  US Government Users Restricted Rights - Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<RegularExpressions>
+	<RegularExpression id="sc-parameter-value-pattern"
+		javaPattern="^[A-Za-z0-9[-~_\s.!,\#$%^\*\?|\`/+=()\x3C\x3e\x22{}'\&quot;@\\:;&amp;\[\]\u007F-\uFFFF]]*" 
+		jsPattern="^[a-zA-Z0-9-~_\s.!,\#$%^\*\?|\`/+=(){}\x3C\x3e\x22'\&quot;@\\:;&amp;\[\]\u007F-\uFFFF]*" />
+	<RegularExpression id="open-text-param-value-pattern" jsPattern="^(.*[\s]*)*$"/>
+	<RegularExpression id="isccs-masked-pattern"
+		javaPattern="^[A-Za-z0-9-~_\s.!,/+=()'\&quot;@\\:;&amp;\*\[\]\#$%^\*\?|\`\u007F-\uFFFF]*$" 
+		jsPattern="^[a-zA-Z0-9-~_\s.!,\#$%^\*\?|\`/+=()'\&quot;@\\:;&amp;\*\\[\]\u007F-\uFFFF]*$" />
+</RegularExpressions>
