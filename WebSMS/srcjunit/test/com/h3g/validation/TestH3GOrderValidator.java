@@ -63,14 +63,6 @@ public class TestH3GOrderValidator {
 		Document Expected_OutputDoc_ForPrepareCustomerOrderDoc = SCXmlUtil.createFromFileOrUrl(
 				"resources/com/h3g/validation/TestH3GOrderValidator/Expected_OutputDoc_ForPrepareCustomerOrderDoc.xml");
 		
-		
-		Document Expected_Output_For_OrderValidation_WebserviceCall = SCXmlUtil.createFromFileOrUrl(
-				"resources/com/h3g/validation/TestH3GOrderValidator/Expected_Output_For_OrderValidation_WebserviceCall.xml");
-		
-		PowerMockito.when(H3GDecompProcessor.prepareCustomerOrderDoc(any(YFSEnvironment.class), any(Document.class)))
-				.thenReturn(Expected_OutputDoc_ForPrepareCustomerOrderDoc);
-
-		
 		PowerMockito
 				.when(H3GUtil.getProcessedOrderData(any(YFSEnvironment.class), any(String.class), any(String.class)))
 				.thenReturn(null);
