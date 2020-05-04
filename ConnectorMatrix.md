@@ -17,7 +17,7 @@
 | Mobilant | [Google Play](https://play.google.com/store/apps/details?id=de.webdroid.android.websms.connector.mobilant) (c) Stefan Weber |
 | [My-Cool-SMS ](http://www.my-cool-sms.com/en/sms-gateway-sms-app-sms-service-sms-provider-sms-api/ref/websms/) | [Google Play](https://play.google.com/store/apps/details?id=org.herrlado.websms.connector.mycoolsms) (c) Lado Kumsiashvili |
 | [myphone.ge ](http://myphone.ge) | [Google Play](https://play.google.com/store/apps/details?id=org.herrlado.websms.connector.myphone) (c) Lado Kumsiashvili |
-| [pbxnetwork](http://www.personal-voip.de/) | [Google Play](https://play.google.com/store/apps/details?id=com.websms.connector.pbxnetwork) (c) Lorenz Bauer, Felix Bechstein |
+| [pbxnetwork](http://www.personal-voip.de/) | [Google Play](https://play.google.com/store/apps/details?id=com.websms.connector.pbxnetwork) (c) Lorenz Bauer, Mayank G |
 | [Schoolnet](http://schoolnet.ch) | [Google Play](https://play.google.com/store/apps/details?id=com.rothconsulting.android.websms.connector.schoolnet) (c) Koni | | earn points on the website and have almost unlimited sms | for students only | medium | no restrictions known | Switzerland | utf8 |
 | [sipgate](http://sipgate.com/) | [Google Play](https://play.google.com/store/apps/details?id=de.ub0r.android.websms.connector.sipgate) (c) Felix Bechstein, Mirko Weber | ? | 7,9ct/SMS |
 | [sloono](http://sloono.de/) | [Google Play](https://play.google.com/store/apps/details?id=de.ub0r.android.websms.connector.sloono) (c) Felix Bechstein |
