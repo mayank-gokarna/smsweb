@@ -1,0 +1,273 @@
+apiVersion: v1
+kind: Template
+labels:
+    template: generic-java-jenkins-pipeline
+metadata:
+    annotations:
+        description: 'Application template for JWS applications built using a Jenkins Pipeline'
+        iconClass: icon-tomcat
+        tags: 'tomcat,tomcat8,java,jboss,xpaas,jenkins-ci'
+        version: 1.2.0
+    name: generic-java-jenkins-pipeline
+objects:
+  - apiVersion: v1
+    kind: BuildConfig
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: ${APPLICATION_NAME}
+        name: ${APPLICATION_NAME} 
+      name: ${APPLICATION_NAME}
+    spec:
+      output: {}
+      postCommit: {}
+      resources: {}
+      runPolicy: Serial
+      source:
+      type: None
+      strategy:
+        jenkinsPipelineStrategy:
+          type: JenkinsPipeline
+          jenkinsfile: |-
+                  pipeline {
+                    agent any
+ 
+                    tools {nodejs "node"}
+                    stages{
+                      stage('Build'){ 
+                       steps {
+                         git url: "https://${GIT_TOKEN}@${GIT_URL}"
+                         script{
+                          sh 'npm install'
+                          if (${ANGULAR_JS} == true){
+                            sh "npm run ng -- build"
+                          }
+                        }
+                      }
+                      }
+                      stage('Test') {
+ 
+                        steps {
+                         script{      
+                           echo "Test is called"
+                           }
+                        }  
+                      }
+                      stage('Code Analysis') {
+
+                        steps {
+                          script {
+                            def scannerHome = tool 'sonarscanner';
+                            withSonarQubeEnv('sonarqube') {
+                              sh "${scannerHome}/bin/sonar-scanner -X -Dsonar.verbose=true -Dsonar.projectKey=${APPLICATION_NAME} -Dsonar.sources=.  -Dsonar.projectName=${APPLICATION_NAME} -Dsonar.projectVersion=1.0"
+                            }
+                        }
+                      }
+                     }
+
+                      stage('Create Image Builder') {
+                        steps {
+                          script {
+                            openshift.withCluster() {
+                                openshift.withProject("${DEV_PROJECT}") {
+                                    if (${DOCKER_STRATEGY} == true) {
+                                    openshift.newBuild("--name=${APPLICATION_NAME}", "--strategy=docker", "--allow-missing-imagestream-tags=true", "--binary=true")
+                                    }
+                                }
+                            }
+                         }
+                        }
+                      }
+                      stage('Build Image') {
+
+                        steps {
+                          script {
+                            openshift.withCluster() {
+                              openshift.withProject("${DEV_PROJECT}") {
+                               if (${DOCKER_STRATEGY} == true) {
+                                openshift.selector("bc", "${APPLICATION_NAME}").startBuild("--from-dir=.")
+                                }
+                              }
+                            }
+                          }
+                         }
+                      }
+
+                      stage('Tag Image') {
+                        steps {
+                          script {
+                            openshift.withCluster() {
+                            openshift.withProject("${DEV_PROJECT}"){
+                            openshift.tag("${APPLICATION_NAME}", "${APPLICATION_NAME}:dev")
+                           }
+                         }
+                       }
+                      }
+                     }
+                      stage('Deploy In Dev') {
+                            steps {
+                              script {
+                                openshift.withCluster() {
+                                  openshift.withProject("${DEV_PROJECT}") {
+                                    def app
+                                    if (${DOCKER_STRATEGY} == true) {
+                                     echo "Docker strategy selected"
+                                     app = openshift.newApp("${DEV_PROJECT}/${APPLICATION_NAME}","--allow-missing-imagestream-tags=true", "-e PROFILE=sandbox","-e LOG_PATH=/tmp/logs" )
+                                    }else{
+                                      if (${SOURCE_STRATEGY} == true){
+                                        app = openshift.newApp("https://${GIT_TOKEN}@${GIT_URL} --name=${APPLICATION_NAME}")
+                                      }else{
+                                        if (${ANGULAR_JS} == false){
+                                          if(${USEADDITIONAL_PATH} == true){
+                                              app = openshift.newApp("https://${GIT_TOKEN}@${GIT_URL} --name=${APPLICATION_NAME}" ,"--context-dir=${ADDITIONAL_PATH}")
+
+                                          }
+                                        }
+                                     }
+                                    }
+                                    def bc
+                                    if (${ANGULAR_JS} == false){
+                                     bc = app.narrow("bc")
+                                    }else{
+                                      bc = openshift.selector("bc", "${APPLICATION_NAME}")
+                                    }
+                                    def builds = bc.related('builds')
+                                    timeout(10) {
+                                        builds.watch {
+                                          return it.count() > 0
+                                        }
+                                        builds.watch {
+                                          if ( it.count() == 0 ) return false
+                                          def allDone = true
+                                          it.withEach{
+                                              def buildModel = it.object()
+                                          if ( it.object().status.phase != "Complete" ) {
+                                             allDone = false
+                                             }
+                                          }
+
+                                            return allDone;
+                                          } 
+                                          builds.untilEach(1) { 
+                                            return it.object().status.phase == "Complete"
+                                          }
+                                         }
+                                    app.narrow("svc").expose();
+                                    def dc = openshift.selector("dc", "${APPLICATION_NAME}")
+                                    openshift.set("triggers", "dc/${APPLICATION_NAME}")
+                                    if(true == true){ 
+                                       dc = openshift.selector("dc", "${APPLICATION_NAME}")
+                                       def dcmap = dc.object()
+                                       dcmap.spec.template.metadata.annotations.put("sidecar.istio.io/inject", "true")
+                                       openshift.apply(dcmap)
+                                       minReplicas: ${MIN_POD}
+                                       maxReplicas: ${MAX_POD} 
+                                    }  
+                            openshift.tag("${APPLICATION_NAME}", "${APPLICATION_NAME}:promoteToQA")
+                                  }
+                                }
+                              }
+                            }
+                      }
+                     stage('Deploy in test')
+                        { 
+                        steps {
+                              script {
+                                openshift.withCluster() {
+                                  openshift.withProject("${TEST_PROJECT}") {
+                                    def app = openshift.newApp("${DEV_PROJECT}/${APPLICATION_NAME}:promoteToQA","--allow-missing-imagestream-tags=true", "-e CONFIG_SERVER_URI=http://9.42.62.186:8888/configserver/","-e PROFILE=sandbox","-e LOG_PATH=/tmp/logs" )
+                                    app.narrow("svc").expose();
+                                    def dc = openshift.selector("dc", "${APPLICATION_NAME}")
+                                    openshift.set("triggers", "dc/${APPLICATION_NAME}", "--manual")
+                                   }
+                                  openshift.withProject("${DEV_PROJECT}"){
+                                   openshift.tag("${APPLICATION_NAME}:latest", "${APPLICATION_NAME}:promoteToStage")
+                                  }
+                                }
+                              }
+                           }
+                         }
+                         stage('Vulnerability Test'){
+                           agent any
+                           steps{
+                             script{
+                               openshift.withCluster() {
+                                 openshift.withProject("${DEV_PROJECT}") {
+                                   aquaMicroscanner imageName: '${DEV_PROJECT}/${APPLICATION}:promoteToStage', notCompliesCmd: 'exit 1', onDisallowed: 'fail'
+                                 }
+                                 openshift.withProject("${TEST_PROJECT}") {
+                                   mail (to: 'bhjayara@in.ibm.com', subject: "FYI: Job '${env.JOB_NAME}' (${env.BUILD_NUMBER}) deployed to Test", body: "See ${env.BUILD_URL}/input ");
+                                 }
+                               } 
+                             } 
+                            }
+                          }
+                         stage("Deploy in Stage based on input")
+                         {
+                          steps {
+                            script {
+                              def userInput = input(id: 'Proceed1', message: 'Promote build?', parameters: [[$class: 'BooleanParameterDefinition', defaultValue: true, description: '', name: 'Please confirm you agree with this']])
+                              echo 'userInput: ' + userInput
+                              if(userInput == true) {
+                                mail (to: 'bhjayara@in.ibm.com', subject: "FYI: Job '${env.JOB_NAME}' (${env.BUILD_NUMBER}) deployed to stage", body: "See ${env.BUILD_URL} for details. ");
+                                openshift.withCluster() {
+                                  openshift.withProject("${STAGE_PROJECT}") {
+                                    def app = openshift.newApp("${DEV_PROJECT}/${APPLICATION_NAME}:promoteToStage","--allow-missing-imagestream-tags=true", "-e CONFIG_SERVER_URI=http://9.42.62.186:8888/configserver/","-e PROFILE=sandbox","-e LOG_PATH=/tmp/logs" )
+                                    app.narrow("svc").expose();
+                                    def dc = openshift.selector("dc", "${APPLICATION_NAME}")
+                                    openshift.set("triggers", "dc/${APPLICATION_NAME}", "--manual")
+                                    }
+                                 }
+                                }
+                               else {
+                              mail (to: 'bhjayara@in.ibm.com', subject: "FYI: Job '${env.JOB_NAME}' (${env.BUILD_NUMBER}) to stage is aborted", body: "See ${env.BUILD_URL} for details. ");
+                        
+                              }
+
+                          }    
+                         }
+                        }  
+                      }
+                    }
+    triggers:
+      - github:
+          secret: secret101
+        type: GitHub
+      - generic:
+          secret: secret101
+        type: Generic
+    status:
+      lastVersion: 0
+parameters:
+  - name: APPLICATION_NAME
+    required: true
+  - name: DEV_PROJECT
+    required: true
+  - name: TEST_PROJECT
+    required: true
+  - name: STAGE_PROJECT
+    required: true
+  - name: GIT_URL
+    required: true
+  - name: GIT_TOKEN
+    required: true 
+  - name: DEVOPS_PROJECT
+    required: true 
+  - name: NODEJS
+    required: true 
+  - name: ADDITIONAL_PATH
+  - name: DOCKER_STRATEGY
+    required: true
+  - name: IMAGE_NAME
+  - name: SOURCE_STRATEGY
+    required: true
+  - name: ANGULAR_JS
+    required: true
+  - name: USEADDITIONAL_PATH
+    required: true
+  - name: ISTIO_REQUIRED
+    required: true
+  - name: MIN_POD
+    required: true
+  - name: MAX_POD
+    required: true
