@@ -1,0 +1,10 @@
+kind: ImageStream
+metadata:
+  labels:
+    app: {{app}}
+  name: {{app}}
+spec:
+  lookupPolicy:
+    local: false
+status:
+  dockerImageRepository: ""
