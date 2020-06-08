@@ -1,0 +1,65 @@
+- debug:
+    msg: " {{ nodejs }} value is passed"
+  when: "{{ nodejs }} == false"
+   
+- name: Copy Java Template File
+  vars:
+    test: "{{ nodejs }}"
+  copy:
+    src: javaTemplate.yaml
+    dest: /tmp
+  when: test == "false"
+  
+- name: Copy Nodejs Template File
+  vars:
+    test: "{{ nodejs }}"
+  copy:
+    src: nodejsTemplate.yaml
+    dest: /tmp
+  when: test == "true"
+
+
+- name: Create the Project
+  shell: "oc new-project {{ appproject_dev }} " 
+- name: Create the test Project
+  shell: "oc new-project {{ appproject_test }} "
+- name: Create the stage Project
+  shell:  "oc new-project {{ appproject_stage }} "
+- name: Create the prod Project
+  shell: "oc new-project {{ appproject_prod }} "
+
+- name: Give access to jenkins service on dev 
+  shell: "oc policy add-role-to-user edit system:serviceaccount:{{ project }}:jenkins   -n {{ appproject_dev }} "
+- name: Give access to jenkins service on test
+  shell: "oc policy add-role-to-user edit system:serviceaccount:{{ project }}:jenkins     -n {{ appproject_test }} "
+- name: Give access to jenkins service on stage
+  shell: "oc policy add-role-to-user edit system:serviceaccount:{{ project }}:jenkins     -n {{ appproject_stage }} "
+- name: Give access to jenkins service on prod
+  shell: "oc policy add-role-to-user edit system:serviceaccount:{{ project }}:jenkins     -n {{ appproject_prod }} "
+
+- name: Move to Devops Project
+  shell: "oc project {{ project }} "
+
+
+
+
+- name: Create the java  pipeline
+  vars:
+    test: "{{ nodejs }}"
+  shell: oc process -f /tmp/javaTemplate.yaml -p APPLICATION_NAME={{ app }} -p EXT={{ext}} -p DEV_PROJECT={{ appproject_dev }} -p TEST_PROJECT={{ appproject_test }}  -p STAGE_PROJECT={{appproject_stage}} -p GIT_URL={{ gitrepo }} -p GIT_TOKEN={{ gittoken }} -p DEVOPS_PROJECT={{ project }} -p NODEJS={{ nodejs }} -p IMAGE_NAME="{{ image }}" -p ISTIO_REQUIRED="{{ istio_required }}" -p DOCKER_STRATEGY={{ dockerstrategy }}  -p MIN_POD={{ min }} -p MAX_POD={{ max }}  | oc create -f-
+  when: test == "false"
+
+- name: Create the nodejs pipeline
+  vars: 
+    test: "{{ nodejs }}"
+  shell: oc process -f /tmp/nodejsTemplate.yaml -p APPLICATION_NAME={{ app }} -p EXT={{ext}} -p DEV_PROJECT={{ appproject_dev }} -p TEST_PROJECT={{ appproject_test }}  -p STAGE_PROJECT={{appproject_stage}} -p GIT_URL={{ gitrepo }} -p GIT_TOKEN={{ gittoken }} -p DEVOPS_PROJECT={{ project }} -p NODEJS={{ nodejs }} -p IMAGE_NAME="{{ image }}" -p ISTIO_REQUIRED="{{ istio_required }}" -p DOCKER_STRATEGY={{ dockerstrategy }}   -p MIN_POD={{ min }} -p MAX_POD={{ max }}  -p SOURCE_STRATEGY={{ sourcestrategy }} -p ADDITIONAL_PATH={{ additional_path }} -p ANGULAR_JS={{ angularjs }} -p USEADDITIONAL_PATH={{ isAdditionalPath }} | oc create -f-
+  when: test == "true"
+
+
+
+
+
+- name: Start the build
+  shell: "oc start-build {{ app }}"
+
+
