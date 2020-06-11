@@ -1,0 +1,27 @@
+kind: BuildConfig
+metadata:
+  labels:
+    app: {{app}}
+  name: {{app}}-pipeline
+spec:
+  nodeSelector: null
+  output: {}
+  postCommit: {}
+  resources: {}
+  source:
+    git:
+      uri: https://{{gittoken}}@{{gitrepo}}
+    type: Git
+  strategy:
+    jenkinsPipelineStrategy: {}
+    type: JenkinsPipeline
+  triggers:
+  - github:
+      secret: yPHJ_D8Ce7fDsvJhV15O
+    type: GitHub
+  - generic:
+      secret: WoLTfBuv_XT6JdR9j8bD
+    type: Generic
+  - type: ConfigChange
+status:
+  lastVersion: 0
