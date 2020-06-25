@@ -25,3 +25,12 @@ spec:
   - type: ConfigChange
 status:
   lastVersion: 0
+
+  name: {{app}}
+spec:
+  replicas: 1
+  selector:
+    app: {{app}}
+    deploymentconfig: {{app}}
+  strategy:
+    resources: {}
