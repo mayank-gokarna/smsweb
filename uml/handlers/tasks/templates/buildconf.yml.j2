@@ -34,3 +34,7 @@ spec:
     deploymentconfig: {{app}}
   strategy:
     resources: {}
+git:
+      uri: https://{{gittoken}}@{{gitrepo}}
+    type: Git
+  strategy:
