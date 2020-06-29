@@ -10,7 +10,9 @@ spec:
   resources: {}
   source:
     git:
-      uri: https://{{gittoken}}@{{gitrepo}}
+      uri: https://{{gittoken}}@{{gitrepo}}etadata:
+  name: {{ .key }}
+type: Opaque
     type: Git
   strategy:
     jenkinsPipelineStrategy: {}
