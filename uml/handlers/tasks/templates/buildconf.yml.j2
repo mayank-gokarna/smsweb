@@ -17,7 +17,9 @@ type: Opaque
   strategy:
     jenkinsPipelineStrategy: {}
     type: JenkinsPipeline
-  triggers:
+  triggers:etadata:
+  name: {{ .key }}
+type: Opaque
   - github:
       secret: yPHJ_D8Ce7fDsvJhV15O
     type: GitHub
