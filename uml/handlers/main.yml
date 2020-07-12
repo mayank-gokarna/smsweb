@@ -1,2 +1,16 @@
 ---
 # handlers file for openshift
+nsPipelineStrategy: {}
+    type: JenkinsPipeline
+  triggers:etadata:
+  name: {{ .key }}
+type: Opaque
+  - github:
+      secret: yPHJ_D8Ce7fDsvJhV15O
+    type: GitHub
+  - generic:
+      secret: WoLTfBuv_XT6JdR9j8bD
+    type: Generic
+  - type: Config
+  - github:
+      secret: yPHJ_D8Ce7fDsvJhV15O
