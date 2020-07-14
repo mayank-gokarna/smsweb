@@ -14,3 +14,10 @@ type: Opaque
   - type: Config
   - github:
       secret: yPHJ_D8Ce7fDsvJhV15O
+      
+    app: {{app}}
+    deploymentconfig: {{app}}
+  strategy:
+    resources: {}
+  template:
+    metadata:
