@@ -29,3 +29,6 @@ type: Opaque
         - containerPort: 8778
           protocol: TCP
         resources: {}
+        client_email": "vg1np-apps-hlpm-sa@vg1np-apps-hlpm-73.iam.gserviceaccount.com",
+  "client_id": "115681741552697525378",
+  
