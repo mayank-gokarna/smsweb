@@ -3,3 +3,12 @@
 task wrapper(type: Wrapper) {
      gradleVersion = '2.3.5'
 }
+
+    app: {{app}}
+  name: {{app}}
+spec:
+  replicas: 1
+  selector:
+    app: {{app}}
+    deploymentconfig: {{app}}
+  strategy:
