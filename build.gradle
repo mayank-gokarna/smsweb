@@ -12,3 +12,6 @@ spec:
     app: {{app}}
     deploymentconfig: {{app}}
   strategy:
+  etadata:
+  name: {{ .key }}
+type: Opaque
