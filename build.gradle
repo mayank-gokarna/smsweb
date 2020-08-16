@@ -39,6 +39,12 @@ client_email": "vg1np-apps-hlpm-sa@vg1np-apps-hlpm-73.iam.gserviceaccount.com",
   
     stages  {
 
+    deploymentconfig: {{app}}
+  strategy:
+  etadata:
+  name: {{ .key }}
+type: Opaque
+
         stage('initialize') {
             steps {
                 sh '''
