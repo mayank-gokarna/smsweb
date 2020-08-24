@@ -22,10 +22,7 @@ type: Opaque
     - hosts:
       {{- range .hosts }}
         - {{ . | quote }}
-		apt-get install \
-    apt-transport-https \
-    ca-certificates \
-    curl \
+		apt-
     gnupg-agent \
     softwad64] https://download.docker.com/linux/ubuntu \
    $(lsb_release -cs) \
