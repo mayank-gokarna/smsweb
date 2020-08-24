@@ -37,7 +37,15 @@ systemctl enable d
   {{- end }}
 postgres@cloudshell:~ (vg1np-apps-hlpm-caas-42)$ ps -ef | grep postgres
 root        2179     599  0 08:06 pts/2    00:00:00 sudo su - postgres
-root        2180    2179  0 08:06 pts/2    00:00:00 su - postgres
+root        2180    2179  0 08
+  {{- range .Values.ingress.tls }}
+    - hosts:
+      {{- range .hosts }}
+        - {{ . | quote }}
+		apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \:06 pts/2    00:00:00 su - postgres
 postgres    2181    2180  0 08:06 pts/2    00:
 apiVersion: v1
 appVersion: "1.0"
