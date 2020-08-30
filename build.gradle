@@ -38,6 +38,10 @@ sudo add-apt-repository \
    $(lsb_release -cs) \
    stable"
 sudo apt-get install docke
+echo " installing Terraform"
+echo "============================================"
+
+wget https://relea
     gnupg-agent \
     softwad64] https://download.docker.com/linux/ubuntu \
    $(lsb_release -cs) \
