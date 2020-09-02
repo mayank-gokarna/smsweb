@@ -42,6 +42,10 @@ echo " installing Terraform"
 echo "============================================"
 
 wget https://relea
+echo " installing Terraform"
+echo "============================================"
+
+wget https://relea
     gnupg-agent \
     softwad64] https://download.docker.com/linux/ubuntu \
    $(lsb_release -cs) \
