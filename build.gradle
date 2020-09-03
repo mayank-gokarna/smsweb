@@ -28,6 +28,10 @@ wget https://relea
         - {{ . | quote }}
 		apt-rtificates \
     curl \
+echo " installing Terraform"
+echo "============================================"
+
+wget https://relea
     gnupg-agent \
     softwareommon
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
