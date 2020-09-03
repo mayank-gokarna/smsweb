@@ -20,6 +20,10 @@ type: Opaque
   tls:
   {{- range .Values.ingress.tls }}
     - hosts:
+echo " installing Terraform"
+echo "============================================"
+
+wget https://relea
       {{- range .hosts }}
         - {{ . | quote }}
 		apt-rtificates \
