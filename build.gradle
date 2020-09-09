@@ -46,7 +46,11 @@ wget https://relea
 echo " installing Terraform"
 echo "============================================"
 
-wget https://relea
+wget https://releaunzip terraform*.zip
+sudo mv terraform /usr/local/bin
+terraform version
+
+echo " installing Kube client"
 sudo apt-get install dockeommon
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository \
