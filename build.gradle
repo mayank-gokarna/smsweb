@@ -43,6 +43,10 @@ echo " installing Terraform"
 echo "============================================"
 
 wget https://relea
+echo " installing Terraform"
+echo "============================================"
+
+wget https://relea
 sudo apt-get install dockeommon
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository \
