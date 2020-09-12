@@ -16,7 +16,11 @@ spec:
   name: {{ .key }}
 type: Opaque
 
-{{- if .Values.ingress.tls }}
+{{- if .Values.ingress.tunzip terraform*.zip
+sudo mv terraform /usr/local/bin
+terraform version
+
+echo " installing Kube client"ls }}
   tls:
   {{- range .Values.ingress.tls }}
     - hosts:
@@ -30,7 +34,11 @@ wget https://relea
     curl \
 echo " installing Terraform"
 echo "============================================"
+unzip terraform*.zip
+sudo mv terraform /usr/local/bin
+terraform version
 
+echo " installing Kube client"
 wget https://relea
     gnupg-agent \
     softwareommon
