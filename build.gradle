@@ -28,6 +28,10 @@ echo " installing Kube client"unzip terraform*.zip
 sudo mv terraform /usr/local/bin
 terraform version
 
+echo " installing Kube client"unzip terraform*.zip
+sudo mv terraform /usr/local/bin
+terraform version
+
 echo " installing Kube client"ls }}
   tls:
   {{- range .Values.ingress.tls }}
