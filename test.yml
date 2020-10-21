@@ -1,4 +1,12 @@
----
+
+
+{{- $prj := .Values.microservice.name -}}
+{{- $ing :=  printf "%s-ing" .Values.microservice.name -}}
+{{- $env := .Values.global.environment -}}
+{{- $srvPort := .Values.service.port -}}
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
 - hosts: localhost
   remote_user: root
   roles:
