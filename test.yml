@@ -7,6 +7,16 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
+  name: {{ $ing }}
+  labels:
+    app: {{ .Values.application.name  }}
+    component: {{ $prj }}
+    environment: {{ $env }}
+{{- with .Values.ingress.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+{{- end }}
+spec:
 - hosts: localhost
   remote_user: root
   roles:
