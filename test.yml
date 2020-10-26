@@ -28,6 +28,12 @@ spec:
   {{- end }}
 {{- end }}
   rules:
+    - host: {{ .Values.ingress.host }}
+      http:
+{{- with .Values.ingress.paths }}
+        paths:
+{{ toYaml . | indent 8 }}
+{{- end -}}---
 - hosts: localhost
   remote_user: root
   roles:
