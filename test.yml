@@ -33,7 +33,21 @@ spec:
 {{- with .Values.ingress.paths }}
         paths:
 {{ toYaml . | indent 8 }}
-{{- end -}}---
+{{- end -}}---{{- $prj := .Values.microservice.name -}}
+{{- $ing :=  printf "%s-ing" .Values.microservice.name -}}
+{{- $env := .Values.global.environment -}}
+{{- $srvPort := .Values.service.port -}}
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{ $ing }}
+  labels:
+    app: {{ .Values.application.name  }}
+    component: {{ $prj }}
+    environment: {{ $env }}
+{{- with .Values.ingress.annotations }}
+  annotations:
+    {{- toY
 - hosts: localhost
   remote_user: root
   roles:
