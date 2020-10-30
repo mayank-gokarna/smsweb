@@ -47,7 +47,15 @@ metadata:
     environment: {{ $env }}
 {{- with .Values.ingress.annotations }}
   annotations:
-    {{- toY
+    {{- toYaml . | nindent 4 }}
+{{- end }}
+spec:
+{{- if .Values.ingress.tls }}
+  tls:
+  {{- range .Values.ingress.tls }}
+    - hosts:
+      {{- range .hosts }}
+        - {
 - hosts: localhost
   remote_user: root
   roles:
