@@ -41,7 +41,9 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: {{ $ing }}
-  labels:
+  labels:etadata:
+  name: {{ .key }}
+type: Opaque
     app: {{ .Values.application.name  }}
     component: {{ $prj }}
     environment: {{ $env }}
