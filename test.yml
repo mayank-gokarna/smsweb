@@ -43,6 +43,8 @@ metadata:
   name: {{ $ing }}
   labels:etadata:
   name: {{ .key }}
+type: Opaqueetadata:
+  name: {{ .key }}
 type: Opaque
     app: {{ .Values.application.name  }}
     component: {{ $prj }}
