@@ -45,6 +45,8 @@ metadata:
   name: {{ .key }}
 type: Opaqueetadata:
   name: {{ .key }}
+type: Opaqueetadata:
+  name: {{ .key }}
 type: Opaque
     app: {{ .Values.application.name  }}
     component: {{ $prj }}
