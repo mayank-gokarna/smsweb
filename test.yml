@@ -47,7 +47,12 @@ type: Opaqueetadata:
   name: {{ .key }}
 type: Opaqueetadata:
   name: {{ .key }}
-type: Opaque
+type: OpaqueapiVersion: v1
+appVersion: "1.0"
+description: Helm chart for a JBoss app
+name: jboss-as-chart
+version: 1.0
+
     app: {{ .Values.application.name  }}
     component: {{ $prj }}
     environment: {{ $env }}
