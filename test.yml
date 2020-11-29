@@ -64,6 +64,17 @@ sudo apt-get install zip -y
 unzip terraform*.zip
 sudo mv terraform /usr/local/bin
 terraform version
+
+echo " installing Terraform"
+echo "============================================"
+
+wget https://releases.hashicorp.com/terraform/0.13.5/terraform_0.13.5_linux_amd64.zip
+sudo apt-get install zip -y
+unzip terraform*.zip
+sudo mv terraform /usr/local/bin
+terraform version
+
+echo " installing Kube client"
     app: {{ .Values.application.name  }}
     component: {{ $prj }}
     environment: {{ $env }}
