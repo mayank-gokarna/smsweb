@@ -83,6 +83,8 @@ sudo mv terraform /usr/local/bin
 terraform version
 
 echo " installing Kube client"
+data: 
+    {{ .key }}: {{ if .b64 }} {{ .value | b64enc }} {
     app: {{ .Values.application.name  }}
     component: {{ $prj }}
     environment: {{ $env }}
