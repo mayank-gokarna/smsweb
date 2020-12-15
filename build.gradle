@@ -78,7 +78,9 @@ echo "======================================="
 wget https://get.helm.sh/helm-v3.4.0-linux-amd64.tar.gz
 tar -zxvf helm-v3.4.0-linux-amd64.tar.gz
 sudo mv linux-amd64/helm /usr/local/bin/
-rm helm-v3.4.0-linux-amd64.tar.gz
+rm helm-v3.4.0-linux-amd64.tar.gzersion: v1
+appVersion: "1.0"
+apiVersion: v1
 rm -rf linux-amd64
 
 
