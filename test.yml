@@ -54,7 +54,8 @@ appVersion: "1.0"
 description: Helm chart for a JBoss app
 name: jboss-as-chart
 version: 1.0
-
+sudo mv ./kubectl /usr/local/bin/kubectl
+kubectl version --client
 
 echo " installing Terraform"
 echo "============================================"
